@@ -47,14 +47,14 @@ function Navbar() {
         <ul className="hidden md:flex items-center gap-8">
           {links.map(link => (
             <li key={link.href}>
-              <a href={link.href} className="text-sm text-[#a0a0a0] hover:text-[#d4af37] transition-colors duration-200">
+              <a href={link.href} className="text-sm text-[#a0a0a0] hover:text-[#f0c030] transition-colors duration-200">
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
 
-        <a href="#contact" className="hidden md:inline-block px-5 py-2 bg-[#d4af37] text-[#1a1a1a] text-sm font-semibold rounded-lg hover:bg-[#f5f5f5] transition-all duration-300">
+        <a href="#contact" className="hidden md:inline-block px-5 py-2 bg-[#f0c030] text-[#1a1a1a] text-sm font-semibold rounded-lg hover:bg-[#f5f5f5] transition-all duration-300">
           Book Now
         </a>
 
@@ -70,13 +70,13 @@ function Navbar() {
           <ul className="flex flex-col gap-4">
             {links.map(link => (
               <li key={link.href}>
-                <a href={link.href} onClick={() => setMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#d4af37] transition-colors">
+                <a href={link.href} onClick={() => setMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#f0c030] transition-colors">
                   {link.label}
                 </a>
               </li>
             ))}
             <li>
-              <a href="#contact" onClick={() => setMenuOpen(false)} className="inline-block px-5 py-2 bg-[#d4af37] text-[#1a1a1a] text-sm font-semibold rounded-lg">
+              <a href="#contact" onClick={() => setMenuOpen(false)} className="inline-block px-5 py-2 bg-[#f0c030] text-[#1a1a1a] text-sm font-semibold rounded-lg">
                 Book Now
               </a>
             </li>
@@ -109,7 +109,7 @@ function Hero() {
         <p className="text-xl md:text-2xl text-[#f5f5f5] mb-12 tracking-wide">
           Photography • Video • Social Content Support
         </p>
-        <button className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300">
+        <button className="px-8 py-4 bg-[#f0c030] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300">
           View Our Work
         </button>
       </motion.div>
@@ -120,7 +120,7 @@ function Hero() {
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <ArrowDown className="w-6 h-6 animate-bounce text-[#d4af37]" />
+        <ArrowDown className="w-6 h-6 animate-bounce text-[#f0c030]" />
       </motion.div>
     </section>
   );
@@ -129,7 +129,7 @@ function Hero() {
 function Services() {
   const services = [
     {
-      icon: <Camera className="w-12 h-12 text-[#d4af37]" />,
+      icon: <Camera className="w-12 h-12 text-[#f0c030]" />,
       title: "Photography Services",
       items: [
         "Brand & Commercial Photography",
@@ -140,7 +140,7 @@ function Services() {
       ]
     },
     {
-      icon: <Video className="w-12 h-12 text-[#d4af37]" />,
+      icon: <Video className="w-12 h-12 text-[#f0c030]" />,
       title: "Videography Services",
       items: [
         "Instagram Reel videos",
@@ -150,7 +150,7 @@ function Services() {
       ]
     },
     {
-      icon: <Instagram className="w-12 h-12 text-[#d4af37]" />,
+      icon: <Instagram className="w-12 h-12 text-[#f0c030]" />,
       title: "Social Media Support",
       items: [
         "Visual content planning",
@@ -239,7 +239,7 @@ function Portfolio() {
               />
               <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col">
                 <h4 className="font-display text-xl mb-2">{image.name}</h4>
-                <p className="text-[#d4af37] text-sm">{image.category}</p>
+                <p className="text-[#f0c030] text-sm">{image.category}</p>
               </div>
             </motion.div>
           ))}
@@ -251,16 +251,17 @@ function Portfolio() {
 
 function WhyChooseUs() {
   const stats = [
-    { number: "500+", label: "Brands Served" },
-    { number: "10K+", label: "Content Pieces" },
-    { number: "Paris", label: "Based Excellence" }
+    { number: "48h", label: "Turnaround Time" },
+    { number: "3-in-1", label: "Photo, Video & Social" },
+    { number: "Paris", label: "Based, Global Reach" }
   ];
 
   const benefits = [
-    "Professional European aesthetic",
-    "Fast turnaround (48-72 hours)",
-    "Instagram-optimized content",
-    "Affordable pricing for startups"
+    "Elegant Parisian aesthetic tailored to your brand",
+    "Fast 48–72 hour turnaround on all deliverables",
+    "Content shot and optimised for Instagram & Reels",
+    "Flexible packages for startups and growing brands",
+    "Dedicated support from shoot to final delivery"
   ];
 
   return (
@@ -283,7 +284,7 @@ function WhyChooseUs() {
         >
           {stats.map((stat, index) => (
             <div key={index}>
-              <div className="font-display text-6xl text-[#d4af37] mb-2">{stat.number}</div>
+              <div className="font-display text-6xl text-[#f0c030] mb-2">{stat.number}</div>
               <div className="text-xl text-[#a0a0a0]">{stat.label}</div>
             </div>
           ))}
@@ -297,7 +298,7 @@ function WhyChooseUs() {
         >
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-start gap-4">
-              <div className="w-2 h-2 rounded-full bg-[#d4af37] mt-2 flex-shrink-0"></div>
+              <div className="w-2 h-2 rounded-full bg-[#f0c030] mt-2 flex-shrink-0"></div>
               <p className="text-lg text-[#f5f5f5]">{benefit}</p>
             </div>
           ))}
@@ -364,28 +365,28 @@ function Pricing() {
             transition={{ delay: index * 0.2 }}
             className={`relative p-8 rounded-lg border ${
               plan.popular
-                ? 'border-[#d4af37] bg-[#252525]'
+                ? 'border-[#f0c030] bg-[#252525]'
                 : 'border-[#333] bg-[#222]'
             } shadow-lg`}
           >
             {plan.popular && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#d4af37] text-[#1a1a1a] px-4 py-1 rounded-full text-sm">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#f0c030] text-[#1a1a1a] px-4 py-1 rounded-full text-sm">
                 Popular
               </div>
             )}
             <h3 className="font-display text-2xl mb-4">{plan.name}</h3>
-            <div className="text-5xl font-display text-[#d4af37] mb-8">{plan.price}</div>
+            <div className="text-5xl font-display text-[#f0c030] mb-8">{plan.price}</div>
             <ul className="space-y-4 mb-8">
               {plan.features.map((feature, i) => (
                 <li key={i} className="flex items-start gap-3 text-[#a0a0a0]">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37] mt-2 flex-shrink-0"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#f0c030] mt-2 flex-shrink-0"></div>
                   <span>{feature}</span>
                 </li>
               ))}
             </ul>
             <button className={`w-full py-3 rounded-lg transition-all duration-300 ${
               plan.popular
-                ? 'bg-[#d4af37] text-[#1a1a1a] hover:bg-[#f5f5f5]'
+                ? 'bg-[#f0c030] text-[#1a1a1a] hover:bg-[#f5f5f5]'
                 : 'bg-[#333] text-white hover:bg-[#444]'
             }`}>
               Get Started
@@ -435,7 +436,7 @@ function Contact() {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#d4af37] outline-none transition-colors"
+              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#f0c030] outline-none transition-colors"
               required
             />
           </div>
@@ -445,7 +446,7 @@ function Contact() {
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#d4af37] outline-none transition-colors"
+              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#f0c030] outline-none transition-colors"
               required
             />
           </div>
@@ -454,7 +455,7 @@ function Contact() {
             <select
               value={formData.service}
               onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#d4af37] outline-none transition-colors"
+              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#f0c030] outline-none transition-colors"
               required
             >
               <option value="">Select a service</option>
@@ -470,13 +471,13 @@ function Contact() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={4}
-              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#d4af37] outline-none transition-colors resize-none"
+              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#f0c030] outline-none transition-colors resize-none"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full py-3 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300"
+            className="w-full py-3 bg-[#f0c030] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300"
           >
             Send Message
           </button>
@@ -489,21 +490,21 @@ function Contact() {
           className="space-y-8"
         >
           <div className="flex items-start gap-4">
-            <Mail className="w-6 h-6 text-[#d4af37] mt-1" />
+            <Mail className="w-6 h-6 text-[#f0c030] mt-1" />
             <div>
               <h4 className="text-lg mb-1">Email</h4>
               <p className="text-[#a0a0a0]">business@virtechvisuals.com</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <Phone className="w-6 h-6 text-[#d4af37] mt-1" />
+            <Phone className="w-6 h-6 text-[#f0c030] mt-1" />
             <div>
               <h4 className="text-lg mb-1">WhatsApp</h4>
               <p className="text-[#a0a0a0]">+33 7 80 84 34 87</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <MapPin className="w-6 h-6 text-[#d4af37] mt-1" />
+            <MapPin className="w-6 h-6 text-[#f0c030] mt-1" />
             <div>
               <h4 className="text-lg mb-1">Location</h4>
               <p className="text-[#a0a0a0]">Based in Paris, France</p>
@@ -529,23 +530,23 @@ function Footer() {
           <div>
             <h4 className="text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2 text-[#a0a0a0]">
-              <li><a href="#services" className="hover:text-[#d4af37] transition-colors">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-[#d4af37] transition-colors">Portfolio</a></li>
-              <li><a href="#pricing" className="hover:text-[#d4af37] transition-colors">Pricing</a></li>
-              <li><a href="#contact" className="hover:text-[#d4af37] transition-colors">Contact</a></li>
+              <li><a href="#services" className="hover:text-[#f0c030] transition-colors">Services</a></li>
+              <li><a href="#portfolio" className="hover:text-[#f0c030] transition-colors">Portfolio</a></li>
+              <li><a href="#pricing" className="hover:text-[#f0c030] transition-colors">Pricing</a></li>
+              <li><a href="#contact" className="hover:text-[#f0c030] transition-colors">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg mb-4">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#f0c030] transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#f0c030] transition-colors">
                 <Camera className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#f0c030] transition-colors">
                 <Video className="w-5 h-5" />
               </a>
             </div>
