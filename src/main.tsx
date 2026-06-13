@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 import App from "./app/App.tsx";
 import TechLayout from "./app/tech/TechLayout.tsx";
 import TechHome from "./app/tech/TechHome.tsx";
@@ -12,7 +12,7 @@ import CaseStudies from "./app/tech/CaseStudies.tsx";
 import "./styles/index.css";
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/tech" element={<TechLayout />}>
@@ -25,5 +25,5 @@ createRoot(document.getElementById("root")!).render(
         <Route path="case-studies" element={<CaseStudies />} />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );

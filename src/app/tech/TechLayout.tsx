@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Outlet, NavLink, Link } from 'react-router';
-import { Menu, X, Cpu } from 'lucide-react';
+import { Outlet, NavLink } from 'react-router';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Smart Factory', to: '/tech/smart-factory' },
@@ -18,7 +18,7 @@ export default function TechLayout() {
     <div className="min-h-screen bg-[#0a0f1e] text-white">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0f1e]/95 backdrop-blur-sm border-b border-[#1e2a4a]">
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-          <Link to="/tech" className="flex items-center gap-3">
+          <NavLink to="/tech" className="flex items-center gap-3">
             <img src="/logo.png" alt="Virtech Visuals" className="h-8 w-auto" />
             <span className="text-sm text-[#f0c030] font-semibold tracking-widest uppercase">Tech Solutions</span>
           </Link>
@@ -39,9 +39,9 @@ export default function TechLayout() {
           </ul>
 
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/" className="text-sm text-[#a0b0cc] hover:text-[#f0c030] transition-colors">
+            <a href="/" className="text-sm text-[#a0b0cc] hover:text-[#f0c030] transition-colors">
               ← Photography
-            </Link>
+            </a>
             <a href="mailto:business@virtechvisuals.com" className="px-4 py-2 bg-[#f0c030] text-[#0a0f1e] text-sm font-semibold rounded-lg hover:bg-white transition-all duration-300">
               Contact Us
             </a>
@@ -69,7 +69,7 @@ export default function TechLayout() {
                 </li>
               ))}
               <li>
-                <Link to="/" className="text-sm text-[#a0b0cc] hover:text-[#f0c030]">← Photography</Link>
+                <a href="/" className="text-sm text-[#a0b0cc] hover:text-[#f0c030]">← Photography</a>
               </li>
             </ul>
           </div>
