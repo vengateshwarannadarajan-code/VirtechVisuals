@@ -21,7 +21,7 @@ export default function TechLayout() {
           <NavLink to="/tech" className="flex items-center gap-3">
             <img src="/logo.png" alt="Virtech Visuals" className="h-8 w-auto" />
             <span className="text-sm text-[#f0c030] font-semibold tracking-widest uppercase">Tech Solutions</span>
-          </Link>
+          </NavLink>
 
           <ul className="hidden md:flex items-center gap-6">
             {navLinks.map(link => (
