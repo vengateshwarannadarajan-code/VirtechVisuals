@@ -13,6 +13,7 @@ export default function App() {
       <WhyChooseUs />
       <Pricing />
       <Contact />
+      <TechBanner />
       <Footer />
     </div>
   );
@@ -513,6 +514,19 @@ function Contact() {
           </div>
         </motion.div>
       </div>
+    </section>
+  );
+}
+
+function TechBanner() {
+  return (
+    <section className="bg-[#0a0f1e] py-16 px-4 text-center">
+      <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">Also from Virtech Visuals</p>
+      <h2 className="font-display text-3xl md:text-4xl text-white mb-4">Smart Factory & Industrial Tech Solutions</h2>
+      <p className="text-[#a0b0cc] mb-8 max-w-xl mx-auto">Beyond visuals — we deliver cutting-edge industrial automation and AI solutions from Paris, France.</p>
+      <a href="/tech" className="inline-block px-8 py-4 bg-[#f0c030] text-[#0a0f1e] font-semibold rounded-lg hover:bg-white transition-all duration-300">
+        Explore Tech Solutions →
+      </a>
     </section>
   );
 }
