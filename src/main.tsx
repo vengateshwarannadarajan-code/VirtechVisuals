@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { HashRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route, Navigate } from "react-router";
 import Layout from "./app/Layout";
 import Home from "./app/pages/Home";
 import SmartFactory from "./app/pages/SmartFactory";
@@ -19,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<Home />} />
         <Route path="/smart-factory" element={<SmartFactory />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:slug" element={<Navigate to="/products" replace />} />
         <Route path="/services" element={<Services />} />
         <Route path="/technologies" element={<Technologies />} />
         <Route path="/ai" element={<AI />} />

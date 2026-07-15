@@ -131,10 +131,13 @@ export default function SmartFactory() {
               {group.items.map((item, ii) => (
                 <div
                   key={ii}
-                  className="p-6 bg-[#222] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 transition-colors duration-300"
+                  className="p-6 bg-[#222] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 transition-colors duration-300 group/card"
                 >
-                  <h3 className="font-semibold text-white mb-2">{item.name}</h3>
-                  <p className="text-[#777] text-sm leading-relaxed">{item.desc}</p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-2 h-2 rounded-full bg-[#d4af37] flex-shrink-0" />
+                    <h3 className="font-semibold text-white group-hover/card:text-[#d4af37] transition-colors">{item.name}</h3>
+                  </div>
+                  <p className="text-[#777] text-sm leading-relaxed pl-4">{item.desc}</p>
                 </div>
               ))}
             </div>
