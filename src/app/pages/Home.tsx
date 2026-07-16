@@ -46,11 +46,11 @@ const products = [
   { icon: <Activity className="w-6 h-6 text-[#d4af37]" />, name: 'PredictPulse', tagline: 'Predictive Maintenance', desc: 'Predictive maintenance with vibration analysis, thermal monitoring, and failure prediction.', to: '/products' },
 ];
 
-const stats = [
-  { value: '24', label: '{t('home.stats.solutions')}' },
-  { value: '40%', label: '{t('home.stats.gain')}' },
-  { value: '18+', label: '{t('home.stats.industries')}' },
-  { value: '99.9%', label: '{t('home.stats.uptime')}' },
+const statsData = [
+  { value: '24', key: 'home.stats.solutions' },
+  { value: '40%', key: 'home.stats.gain' },
+  { value: '18+', key: 'home.stats.industries' },
+  { value: '99.9%', key: 'home.stats.uptime' },
 ];
 
 const highlights = [
@@ -128,10 +128,10 @@ export default function Home() {
       {/* Stats */}
       <section className="border-y border-[#2a2a2a] py-12 px-4 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((s, i) => (
+          {statsData.map((s, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
               <div className="font-display text-4xl md:text-5xl text-[#d4af37] mb-2">{s.value}</div>
-              <div className="text-[#a0a0a0] text-sm">{s.label}</div>
+              <div className="text-[#a0a0a0] text-sm">{t(s.key)}</div>
             </motion.div>
           ))}
         </div>
@@ -151,24 +151,23 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/30" />
             </div>
             <div className="bg-[#222] p-10 md:p-14 flex flex-col justify-center">
-              <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-4">{h.tag}</span>
-              <h3 className="font-display text-4xl mb-5">{h.title}</h3>
-              <p className="text-[#a0a0a0] leading-relaxed mb-8">{h.desc}</p>
+              <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-4">{t(h.tagKey)}</span>
+              <h3 className="font-display text-4xl mb-5">{t(h.titleKey)}</h3>
+              <p className="text-[#a0a0a0] leading-relaxed mb-8">{t(h.descKey)}</p>
               <Link to={h.to} className="inline-flex items-center gap-2 text-[#d4af37] hover:text-white transition-colors group/link">
-                {h.cta} <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                {t(h.ctaKey)} <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
               </Link>
             </div>
           </motion.div>
         ))}
       </section>
 
-      {/* {t('home.stats.solutions')} */}
       <section className="py-24 px-4 md:px-8 bg-[#111]">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
             <div>
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Smart Factory</span>
-              <h2 className="font-display text-4xl md:text-5xl">End-to-End {t('home.stats.solutions')}</h2>
+              <h2 className="font-display text-4xl md:text-5xl">{t('home.sf.title')}</h2>
               <p className="text-[#a0a0a0] mt-4 max-w-2xl text-sm leading-relaxed">24 solutions across shopfloor operations, enterprise functions, and corporate governance.</p>
             </div>
             <Link to="/smart-factory" className="inline-flex items-center gap-2 text-sm text-[#d4af37] border border-[#d4af37]/30 px-5 py-2.5 rounded-lg hover:bg-[#d4af37]/10 transition-colors whitespace-nowrap flex-shrink-0">
@@ -270,7 +269,7 @@ export default function Home() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#2a2a2a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
             {[
-              { icon: <Cpu className="w-5 h-5 text-[#d4af37]" />, label: '24 {t('home.stats.solutions')}', body: 'From OEE & quality to warehouse, safety, and digital twins, one platform covering shopfloor to boardroom.' },
+              { icon: <Cpu className="w-5 h-5 text-[#d4af37]" />, label: '24 Smart Factory Solutions', body: 'From OEE & quality to warehouse, safety, and digital twins, one platform covering shopfloor to boardroom.' },
               { icon: <Layers className="w-5 h-5 text-[#d4af37]" />, label: '12 Technology Services', body: 'Custom software, cloud & DevOps, cybersecurity, IoT, talent solutions, and training. End-to-end delivery under one roof.' },
               { icon: <Brain className="w-5 h-5 text-[#d4af37]" />, label: 'Production-Grade AI', body: 'Computer vision, NLP, predictive analytics, generative AI, and edge AI. Deployed in real manufacturing environments.' },
               { icon: <Package className="w-5 h-5 text-[#d4af37]" />, label: 'Ready-to-Deploy Products', body: 'GateKeeper, VisionSafe AI, DigiTrack, PredictPulse, and PermitFlows. Purpose-built tools that go live in weeks, not months.' },
@@ -280,9 +279,9 @@ export default function Home() {
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }} className="bg-[#1a1a1a] p-8 flex flex-col gap-4 hover:bg-[#1f1f1f] transition-colors duration-300 group">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-[#d4af37]/10 rounded-lg group-hover:bg-[#d4af37]/20 transition-colors flex-shrink-0">{item.icon}</div>
-                  <h3 className="font-display text-base leading-snug">{item.label}</h3>
+                  <h3 className="font-display text-base leading-snug">{t(item.labelKey)}</h3>
                 </div>
-                <p className="text-[#777] text-sm leading-relaxed">{item.body}</p>
+                <p className="text-[#777] text-sm leading-relaxed">{t(item.bodyKey)}</p>
               </motion.div>
             ))}
           </div>
