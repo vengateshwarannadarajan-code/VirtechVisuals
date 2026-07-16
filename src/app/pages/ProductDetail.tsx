@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, ArrowLeft, CheckCircle2, Plug, ExternalLink } from 'lucide-react';
+import { Footer } from '../components/Footer';
 import { getProductBySlug } from '../data/products';
 
 export default function ProductDetail() {
@@ -333,6 +334,7 @@ export default function ProductDetail() {
           ) : <div />}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -14,13 +14,13 @@ export function Footer() {
             <div className="flex flex-col gap-1">
               <span className="text-[10px] text-[#333] tracking-widest uppercase">Industrial Tech</span>
               <span className="font-display text-base text-[#a0a0a0]">Digi Sailor</span>
-              <span className="text-[10px] text-[#444]">hello@virtechvisuals.com</span>
+              <span className="text-[10px] text-[#444]">business@virtechvisuals.com</span>
             </div>
             <div className="w-px bg-[#1e1e1e] hidden md:block" />
             <div className="flex flex-col gap-1">
               <span className="text-[10px] text-[#333] tracking-widest uppercase">Creative Services</span>
               <span className="font-display text-base text-[#a0a0a0]">Creative Studio</span>
-              <span className="text-[10px] text-[#444]">hello@virtechvisuals.com</span>
+              <span className="text-[10px] text-[#444]">business@virtechvisuals.com</span>
             </div>
           </div>
         </div>
@@ -43,15 +43,15 @@ export function Footer() {
             <h4 className="text-xs text-[#d4af37] tracking-widest uppercase mb-5">Solutions</h4>
             <ul className="space-y-3">
               {[
-                'Production Performance',
-                'Quality Intelligence',
-                'Maintenance & Reliability',
-                'Warehouse Intelligence',
-                'Spatial & Vision AI',
-                'Digital Twin & Robotics',
+                { label: 'Production Performance', slug: 'production-performance-planning' },
+                { label: 'Quality Intelligence', slug: 'quality-intelligence' },
+                { label: 'Maintenance & Reliability', slug: 'maintenance-reliability-intelligence' },
+                { label: 'Warehouse Intelligence', slug: 'warehouse-intelligence' },
+                { label: 'Spatial & Vision AI', slug: 'spatial-intelligence-asset-tracking' },
+                { label: 'Digital Twin & Robotics', slug: 'digital-twins-simulation' },
               ].map(item => (
-                <li key={item}>
-                  <Link to="/smart-factory" className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors">{item}</Link>
+                <li key={item.label}>
+                  <Link to={`/smart-factory/${item.slug}`} className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -78,9 +78,16 @@ export function Footer() {
           <div>
             <h4 className="text-xs text-[#d4af37] tracking-widest uppercase mb-5">Products</h4>
             <ul className="space-y-3">
-              {['GateKeeper', 'IncidentGPT', 'VisionSafe AI', 'DigiTrack', 'PermitFlows', 'PredictPulse'].map(item => (
-                <li key={item}>
-                  <Link to="/products" className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors">{item}</Link>
+              {[
+                { label: 'GateKeeper', slug: 'gatekeeper' },
+                { label: 'IncidentGPT', slug: 'incidentgpt' },
+                { label: 'VisionSafe AI', slug: 'visionsafe-ai' },
+                { label: 'DigiTrack', slug: 'digitrack' },
+                { label: 'PermitFlows', slug: 'permitflows' },
+                { label: 'PredictPulse', slug: 'predictpulse' },
+              ].map(item => (
+                <li key={item.label}>
+                  <Link to={`/products/${item.slug}`} className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -101,8 +108,8 @@ export function Footer() {
               ))}
             </ul>
             <h4 className="text-xs text-[#d4af37] tracking-widest uppercase mb-3">Get in Touch</h4>
-            <a href="mailto:hello@virtechvisuals.com" className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors block mb-1">
-              hello@virtechvisuals.com
+            <a href="mailto:business@virtechvisuals.com" className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors block mb-1">
+              business@virtechvisuals.com
             </a>
           </div>
         </div>

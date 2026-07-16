@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
 
 const services = [
@@ -256,6 +257,7 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, ArrowLeft, Plus, Minus, CheckCircle2, Package } from 'lucide-react';
+import { Footer } from '../components/Footer';
 import { getSolutionBySlug, sharedFaqs } from '../data/solutions';
 
 export default function SolutionDetail() {
@@ -340,6 +341,7 @@ export default function SolutionDetail() {
           ) : <div />}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

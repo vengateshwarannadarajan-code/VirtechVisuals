@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
 
 type Industry = 'All' | 'Automotive' | 'Food & Beverage' | 'Pharma' | 'Electronics';
@@ -161,6 +162,7 @@ export default function CaseStudies() {
           </button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

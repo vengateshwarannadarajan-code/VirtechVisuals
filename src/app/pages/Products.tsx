@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { ArrowRight } from 'lucide-react';
+import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
 
 type Category = 'All' | 'Hardware' | 'Software' | 'Platform';
@@ -375,6 +376,7 @@ export default function Products() {
           })}
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
   FileText, HeadphonesIcon, FolderKanban,
 } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
+import { Footer } from '../components/Footer';
 
 const shopfloorSolutions = [
   { icon: <BarChart3 className="w-6 h-6 text-[#d4af37]" />, title: 'Production Performance & Planning', desc: 'Improve OEE/OLE and delivery with real-time control and smart scheduling.', slug: 'production-performance-planning' },
@@ -209,6 +210,7 @@ export default function SmartFactory() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
