@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
-import { Camera, Video, Instagram, ArrowDown, Mail, Phone, MapPin } from 'lucide-react';
+import { Camera, Video, Instagram, ArrowDown, Mail, Phone, MapPin, Globe, Clock, Sparkles, TrendingUp, CheckCircle2, MessageCircle } from 'lucide-react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { motion } from 'motion/react';
 
@@ -183,16 +183,32 @@ function Portfolio() {
 
 function WhyChooseUs() {
   const stats = [
-    { number: '500+', label: 'Brands Served' },
-    { number: '10K+', label: 'Content Pieces' },
     { number: 'Paris', label: 'Based Excellence' },
+    { number: '48–72h', label: 'Turnaround Time' },
+    { number: '100%', label: 'Instagram-Ready' },
   ];
 
   const benefits = [
-    { title: 'Professional European Aesthetic', desc: 'Every frame is crafted with a refined, editorial sensibility shaped by Paris — the global capital of fashion and visual culture.' },
-    { title: 'Fast Turnaround (48–72 Hours)', desc: 'Receive polished, ready-to-post content within 48–72 hours of your shoot. No waiting weeks for deliverables.' },
-    { title: 'Instagram-Optimized Content', desc: 'Every photo and reel is composed, cropped, and color-graded specifically for maximum impact on Instagram feeds and stories.' },
-    { title: 'Affordable Pricing for Startups', desc: 'Premium quality without the agency price tag. Flexible packages designed for growing brands and independent businesses.' },
+    {
+      icon: <Globe className="w-5 h-5 text-[#d4af37]" />,
+      title: 'Professional European Aesthetic',
+      desc: 'Every frame is crafted with a refined, editorial sensibility shaped by Paris — the global capital of fashion and visual culture.',
+    },
+    {
+      icon: <Clock className="w-5 h-5 text-[#d4af37]" />,
+      title: 'Fast Turnaround (48–72 Hours)',
+      desc: 'Receive polished, ready-to-post content within 48–72 hours of your shoot. No waiting weeks for deliverables.',
+    },
+    {
+      icon: <Sparkles className="w-5 h-5 text-[#d4af37]" />,
+      title: 'Instagram-Optimized Content',
+      desc: 'Every photo and reel is composed, cropped, and color-graded specifically for maximum impact on Instagram feeds and stories.',
+    },
+    {
+      icon: <TrendingUp className="w-5 h-5 text-[#d4af37]" />,
+      title: 'Affordable Pricing for Startups',
+      desc: 'Premium quality without the agency price tag. Flexible packages designed for growing brands and independent businesses.',
+    },
   ];
 
   return (
@@ -219,13 +235,13 @@ function WhyChooseUs() {
               transition={{ delay: i * 0.1 }}
               className="bg-[#1a1a1a] px-8 py-10 text-center"
             >
-              <div className="font-display text-5xl md:text-6xl text-[#d4af37] mb-2">{stat.number}</div>
+              <div className="font-display text-4xl md:text-5xl text-[#d4af37] mb-2">{stat.number}</div>
               <div className="text-[#666] text-sm tracking-wide">{stat.label}</div>
             </motion.div>
           ))}
         </div>
 
-        {/* Benefits grid */}
+        {/* Benefits grid — icons instead of dots */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {benefits.map((benefit, i) => (
             <motion.div
@@ -236,8 +252,8 @@ function WhyChooseUs() {
               transition={{ delay: i * 0.08 }}
               className="flex gap-5 p-7 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl hover:border-[#d4af37]/30 transition-colors duration-300 group"
             >
-              <div className="w-8 h-8 rounded-full bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-[#d4af37]/20 transition-colors">
-                <div className="w-2 h-2 rounded-full bg-[#d4af37]" />
+              <div className="w-10 h-10 rounded-xl bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-[#d4af37]/20 transition-colors">
+                {benefit.icon}
               </div>
               <div>
                 <h3 className="font-display text-base mb-2 group-hover:text-[#d4af37] transition-colors">{benefit.title}</h3>
@@ -329,7 +345,7 @@ function ShootPackages() {
                 <ul className="space-y-3.5 mb-8 flex-1">
                   {pkg.features.map((feat, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37] mt-[7px] flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#d4af37] mt-0.5 flex-shrink-0" />
                       <span className={`text-sm leading-snug ${feat.bold ? 'text-white font-display' : 'text-[#888]'}`}>
                         {feat.text}
                       </span>
@@ -464,7 +480,7 @@ function Pricing() {
                 <ul className="space-y-3.5 mb-8 flex-1">
                   {plan.features.map((feat, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37] mt-[7px] flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#d4af37] mt-0.5 flex-shrink-0" />
                       <span className={`text-sm leading-snug ${feat.bold ? 'text-white font-display' : 'text-[#888]'}`}>
                         {feat.text}
                       </span>
@@ -586,7 +602,7 @@ function Contact() {
             <Phone className="w-6 h-6 text-[#d4af37] mt-1" />
             <div>
               <h4 className="text-lg mb-1">WhatsApp</h4>
-              <p className="text-[#a0a0a0]">+33 7 80 84 34 87</p>
+              <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" className="text-[#a0a0a0] hover:text-[#d4af37] transition-colors">+33 7 80 84 34 87</a>
             </div>
           </div>
           <div className="flex items-start gap-4">
