@@ -938,7 +938,7 @@ export const solutions: Solution[] = [
     slug: 'copper-refinery-operations-intelligence',
     title: 'Copper Refinery Operations Intelligence',
     tagline: 'Tankhouse production planning, stripping & changeover decisions, crane scheduling, PLC-driven readings and SAP/ERP-integrated forecasting for electrolytic copper refineries.',
-    image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&h=700&fit=crop&auto=format',
     intro: 'An end-to-end copper refinery operations intelligence solution built for electrolytic copper tankhouses. Replace Excel-based daily planning, manual meter readings, and tribal-knowledge decisions with a structured, integration-ready platform covering stripping planning, anode changeover decisions, crane scheduling, PLC-based current readings, production forecasting, MIS reporting, and SAP/ERP-connected refinery operations.',
     problem: 'Daily tankhouse planning still relies on Excel files, manual meter readings, and senior-engineer experience. Planning engineers spend hours collecting readings, calculating stripping eligibility, reviewing anode changeover requirements, and coordinating crane availability. SAP, ERP, PLC, MIS and production data remain disconnected; monthly forecasting becomes reactive; crane and machine conflicts surface only after operations begin.',
     modules: [

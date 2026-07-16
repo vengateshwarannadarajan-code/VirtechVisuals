@@ -1,92 +1,100 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
-import { ArrowRight, Code2, Cpu, Brain, Cloud, Wifi, Lock, Users, BookOpen, BarChart3, Settings, Palette, Wrench } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
+import { Footer } from '../components/Footer';
 
 const services = [
   {
-    icon: <Code2 className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'custom-software',
     title: 'Custom Software Development',
-    tagline: 'Web · Mobile · Enterprise · SaaS',
-    desc: 'Full-stack web and mobile applications, enterprise portals, cloud-native architecture, API integrations, and legacy modernisation. We build for performance, security, and scale.',
-    highlights: ['React, Node.js, Python, .NET', 'Cloud-native & microservices', 'Legacy migration & replatforming'],
+    desc: 'Tailored digital solutions built for your unique business needs',
+    highlights: ['Web Application Development', 'Mobile App Development', 'Enterprise Software Solutions', 'API Development & Integrations'],
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800',
   },
   {
-    icon: <Cpu className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'industrial-automation',
     title: 'Industrial Automation & Smart Factory',
-    tagline: 'IIoT · MES · Industry 4.0',
-    desc: 'End-to-end shopfloor digitisation: PLC & SCADA programming, IIoT connectivity, MES/MOM integration, digital twins, and full Industry 4.0 transformation.',
-    highlights: ['PLC/SCADA programming', 'OPC-UA / MQTT integration', 'MES & digital twin deployment'],
+    desc: 'End-to-end shopfloor digitization for operational excellence',
+    highlights: ['Production Intelligence (OEE/OLE)', 'Production Planning & Scheduling', 'Quality & Traceability', 'Warehouse Intelligence'],
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800',
   },
   {
-    icon: <Brain className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'artificial-intelligence',
     title: 'Artificial Intelligence',
-    tagline: 'CV · GenAI · MLOps · Edge AI',
-    desc: 'Production-grade AI: computer vision, NLP, predictive analytics, generative AI & LLMs, edge AI inference, and MLOps pipelines. Real environments, not just demos.',
-    highlights: ['Computer vision & defect detection', 'Generative AI & RAG pipelines', 'Edge AI deployment'],
+    desc: 'Intelligent solutions that automate, predict, and optimize operations',
+    highlights: ['Computer Vision', 'Predictive Analytics', 'NLP / Chatbots', 'Anomaly Detection'],
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800',
   },
   {
-    icon: <Wifi className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'iot-edge-computing',
     title: 'IoT & Edge Computing',
-    tagline: 'Sensors · Gateways · Real-time',
-    desc: 'Connect machines, sensors, and systems for real-time industrial intelligence. Edge gateways, MQTT/OPC-UA bridging, BLE/LoRaWAN, and condition monitoring.',
-    highlights: ['Edge gateway deployment', 'MQTT / OPC-UA / BLE / LoRaWAN', 'Real-time condition monitoring'],
+    desc: 'Connect machines, sensors, and systems for real-time industrial intelligence',
+    highlights: ['PLC/SCADA Data Acquisition', 'Edge Gateways & Real-time Data', 'BLE / LoRaWAN / MQTT Integration', 'Edge AI Deployment'],
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
   },
   {
-    icon: <Cloud className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'cloud-devops',
     title: 'Cloud & DevOps Services',
-    tagline: 'AWS · Azure · GCP · Kubernetes',
-    desc: 'Cloud architecture, migration, Kubernetes, CI/CD pipelines, infrastructure as code, and multi-cloud management. Certified partners with AWS, Azure, and GCP.',
-    highlights: ['Cloud migration & architecture', 'Kubernetes & container orchestration', 'CI/CD & GitOps'],
+    desc: 'Architect, migrate, and operate cloud infrastructure with confidence',
+    highlights: ['Cloud Architecture (AWS/Azure/GCP)', 'Cloud Migration & Modernization', 'DevOps / CI-CD Pipelines', 'Kubernetes / Containerization'],
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800',
   },
   {
-    icon: <BarChart3 className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'data-engineering',
     title: 'Data Engineering & Analytics',
-    tagline: 'Lakehouse · BI · Real-time',
-    desc: 'Modern data platforms, ETL/ELT pipelines, data lakes and warehouses, BI dashboards, and real-time streaming analytics for operational intelligence.',
-    highlights: ['Data lakehouse & ETL pipelines', 'Real-time streaming analytics', 'BI dashboards & visualisation'],
+    desc: 'Turn raw data into actionable intelligence with modern data platforms',
+    highlights: ['Data Pipelines (ETL/ELT)', 'Data Warehouse / Lakehouse', 'BI Dashboards & Reporting', 'Data Governance & Quality'],
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
   },
   {
-    icon: <Lock className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'cybersecurity',
     title: 'Cybersecurity',
-    tagline: 'VAPT · OT Security · Compliance',
-    desc: 'VAPT, SOC operations, OT/ICS security, compliance auditing (ISO 27001, NIST, GDPR), incident response, and zero-trust architecture.',
-    highlights: ['VAPT & penetration testing', 'OT/ICS network security', 'ISO 27001 & GDPR compliance'],
+    desc: 'End-to-end cybersecurity services protecting your digital assets and ensuring compliance',
+    highlights: ['VAPT', 'Security Audits & Hardening', 'OT/ICS Security', 'Privacy Compliance'],
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800',
   },
   {
-    icon: <Settings className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'cad-cam',
     title: 'CAD CAM Services',
-    tagline: '3D Modelling · CNC · Reverse Eng.',
-    desc: '3D CAD modelling, CNC programming, CAM simulation, fixture and tooling design, sheet metal fabrication, and reverse engineering from physical parts.',
-    highlights: ['SolidWorks, CATIA, AutoCAD', 'CNC programming & simulation', 'Reverse engineering & 3D scanning'],
+    desc: 'Advanced CAD/CAM solutions powering precision manufacturing',
+    highlights: ['3D CAD Modeling & Detailing', 'CNC Programming & Toolpath Optimization', 'CAM Simulation & Verification', 'Reverse Engineering'],
+    image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800',
   },
   {
-    icon: <Users className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'talent-solutions',
     title: 'Talent Solutions',
-    tagline: 'Permanent · Contract · RPO',
-    desc: 'Permanent recruitment, contract staffing, executive search, managed teams, ODC setup, RPO, and payroll processing across engineering and technology roles.',
-    highlights: ['Permanent & contract staffing', 'Executive search & ODC', 'RPO & payroll processing'],
+    desc: 'End-to-end staffing, recruitment, payroll, and workforce management solutions',
+    highlights: ['Permanent Recruitment', 'Contract Staffing', 'Executive Search', 'Payroll Outsourcing'],
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800',
   },
   {
-    icon: <BookOpen className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'training',
     title: 'Training',
-    tagline: 'Technical · Leadership · Safety',
-    desc: 'Technical training, corporate workshops, leadership development, certification programs, industrial safety training, and e-learning content development.',
-    highlights: ['Technical & certification programs', 'Leadership development', 'Industrial safety & e-learning'],
+    desc: 'Upskill your workforce with industry-relevant, hands-on training programs',
+    highlights: ['Technical Training', 'Corporate Workshops', 'Industrial Automation Training', 'AI / Data Training'],
+    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800',
   },
   {
-    icon: <Palette className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'digital-marketing',
     title: 'Digital Marketing',
-    tagline: 'SEO · PPC · Content · Social',
-    desc: 'SEO, PPC, content marketing, social media management, email marketing, branding, and analytics-driven conversion optimisation.',
-    highlights: ['SEO & PPC campaigns', 'Content & social media', 'Analytics & conversion optimisation'],
+    desc: 'Data-driven marketing strategies that deliver measurable growth',
+    highlights: ['SEO & Search Marketing', 'Social Media Marketing', 'Content Marketing', 'Performance Marketing (Ads)'],
+    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800',
   },
   {
-    icon: <Wrench className="w-7 h-7 text-[#d4af37]" />,
+    slug: 'managed-services',
     title: 'Managed Services & Support',
-    tagline: '24/7 SLA · Monitoring · Helpdesk',
-    desc: 'SLA-backed 24/7 support, application management, infrastructure monitoring, helpdesk operations, and proactive maintenance.',
-    highlights: ['24/7 SLA-backed support', 'Application & infra monitoring', 'Proactive maintenance'],
+    desc: 'Reliable, SLA-backed support to keep your systems running at peak performance',
+    highlights: ['Application Support (L1/L2/L3)', 'Cloud Ops / SRE', 'Monitoring & Incident Handling', 'Continuous Improvement Roadmap'],
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800',
+  },
+  {
+    slug: 'vr-ar',
+    title: 'VR/AR & Spatial Intelligence',
+    desc: 'Immersive experiences and spatial computing for industry and enterprise',
+    highlights: ['Immersive VR Training & Simulation', 'AR Remote Assistance & Guided Work', '3D Visualization & Digital Twins', 'Indoor Positioning & Spatial Mapping'],
+    image: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=800',
   },
 ];
 
@@ -94,58 +102,75 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
       <PageHero
-        tag="12 Service Lines"
-        title="Technology Services We Deliver"
-        subtitle="Full-spectrum technology services from software development to industrial automation — delivered to European businesses, supported by 250+ engineers."
-        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920"
+        tag="What We Do"
+        title="Comprehensive Technology Services"
+        subtitle="From custom software to AI solutions, we deliver end-to-end services that help businesses innovate, automate, and scale with confidence."
+        image="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920"
       />
 
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <motion.div
-              key={s.title}
-              initial={{ opacity: 0, y: 24 }}
+              key={s.slug}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="p-8 bg-[#222] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 transition-colors duration-300 group"
+              className="group bg-[#1e1e1e] border border-[#2e2e2e] rounded-xl overflow-hidden hover:border-[#d4af37]/40 transition-colors duration-300"
             >
-              <div className="flex items-start gap-5 mb-5">
-                <div className="p-3 bg-[#d4af37]/10 rounded-lg flex-shrink-0 group-hover:bg-[#d4af37]/20 transition-colors">
-                  {s.icon}
-                </div>
-                <div>
-                  <h3 className="font-display text-xl mb-1">{s.title}</h3>
-                  <span className="text-xs text-[#d4af37]/70 tracking-wider">{s.tagline}</span>
-                </div>
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-[#1e1e1e]/40 to-transparent" />
               </div>
-              <p className="text-[#a0a0a0] text-sm leading-relaxed mb-5">{s.desc}</p>
-              <ul className="space-y-2">
-                {s.highlights.map(h => (
-                  <li key={h} className="flex items-center gap-2 text-xs text-[#777]">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37]/60 flex-shrink-0" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
+              <div className="p-6">
+                <h3 className="font-display text-lg mb-2">{s.title}</h3>
+                <p className="text-[#a0a0a0] text-sm leading-relaxed mb-4">{s.desc}</p>
+                <ul className="space-y-1 mb-5">
+                  {s.highlights.map((h, hi) => (
+                    <li key={hi} className="flex items-center gap-2 text-xs text-[#777]">
+                      <span className="w-1 h-1 rounded-full bg-[#d4af37] flex-shrink-0" />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to={`/services/${s.slug}`}
+                  className="inline-flex items-center gap-2 text-[#d4af37] text-sm hover:gap-3 transition-all duration-200"
+                >
+                  Explore Service <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      <section className="bg-[#111] py-20 px-4 md:px-8">
+      <section className="bg-[#111] border-t border-[#1e1e1e] py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-4xl mb-6">Let's discuss your project</h2>
-          <p className="text-[#a0a0a0] mb-10">Our team is ready to scope your requirements and propose the right engagement model — fixed price, T&M, or managed service.</p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-3xl md:text-4xl mb-4"
+          >
+            Need a Custom Solution?
+          </motion.h2>
+          <p className="text-[#a0a0a0] mb-8">Let's discuss how our services can help you achieve your business goals.</p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 font-medium"
           >
-            Start the Conversation <ArrowRight className="w-4 h-4" />
+            Get in Touch <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
