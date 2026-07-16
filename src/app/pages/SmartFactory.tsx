@@ -52,11 +52,11 @@ const metrics = [
 
 const faqs = [
   { q: 'What is a Smart Factory solution?', a: 'A Smart Factory solution connects machines, people, and processes through digital technologies like IIoT, AI, and real-time analytics to improve manufacturing efficiency, quality, and safety.' },
-  { q: 'How many solutions does Virtech Visuals offer?', a: 'We offer 24 solutions, 18 covering shopfloor operations and 6 covering enterprise and corporate functions, all built to scale from a single pilot line to multi-plant deployment.' },
-  { q: 'Can solutions be deployed independently?', a: 'Yes. Every solution is modular and can be deployed standalone or integrated with others. You can start with one area, like OEE monitoring or quality inspection, and expand from there.' },
+  { q: 'How many solutions does Virtech Visuals offer?', a: 'We offer 24 solutions: 18 covering shopfloor operations and 6 covering enterprise and corporate functions. All built to scale from a single pilot line to multi-plant deployment.' },
+  { q: 'Can solutions be deployed independently?', a: 'Yes. Every solution is modular and can be deployed standalone or integrated with others. You can start with one area like OEE monitoring or quality inspection and expand from there.' },
   { q: 'How long does implementation typically take?', a: 'A pilot line deployment typically goes live in 4-8 weeks. Full multi-plant rollouts are phased over 3-12 months depending on scope and complexity.' },
   { q: 'Do you integrate with existing ERP and MES systems?', a: 'Yes. We integrate with SAP, Oracle, Microsoft Dynamics, Infor, and all major MES platforms through standard APIs, OPC-UA, and custom connectors.' },
-  { q: 'What industries do your solutions support?', a: 'Our solutions are deployed across automotive, pharma, food & beverage, chemicals, oil & gas, metals & mining, electronics, and FMCG, among 18+ industries.' },
+  { q: 'What industries do your solutions support?', a: 'Our solutions are deployed across automotive, pharma, food & beverage, chemicals, oil & gas, metals & mining, electronics, and FMCG among 18+ industries.' },
   { q: 'Is training provided for shopfloor operators?', a: 'Yes. Every deployment includes structured operator training, management dashboard walkthroughs, and a hypercare period post go-live. We also offer ongoing training programmes.' },
   { q: 'What ROI can manufacturers expect?', a: 'Clients typically see 20-45% OEE improvement, 30-60% reduction in unplanned downtime, and 15-40% quality defect reduction within the first 6 months of deployment.' },
 ];
@@ -69,7 +69,7 @@ export default function SmartFactory() {
       <PageHero
         tag="Industry 4.0"
         title="Smart Factory Solutions"
-        subtitle="24 solutions across shopfloor operations, enterprise functions, and corporate governance, built to scale from pilot to multi-plant."
+        subtitle="24 solutions across shopfloor operations, enterprise functions, and corporate governance. Built to scale from pilot to multi-plant."
       />
 
       {/* Metrics */}

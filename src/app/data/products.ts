@@ -258,7 +258,7 @@ export const allProducts: Product[] = [
     tagline: 'Sustainability Metrics Dashboard',
     category: 'Factory 5.0',
     image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1600&h=700&fit=crop&auto=format',
-    intro: 'ESG 360 is a unified sustainability intelligence platform that captures, calculates, and reports on your environmental, social, and governance performance. From Scope 1/2/3 emissions and energy consumption to workforce diversity and compliance, all in one dashboard aligned to GRI, SASB, and BRSR frameworks.',
+    intro: 'ESG 360 is a unified sustainability intelligence platform that captures, calculates, and reports on your environmental, social, and governance performance. From Scope 1/2/3 emissions and energy consumption to workforce diversity and compliance. All in one dashboard aligned to GRI, SASB, and BRSR frameworks.',
     modules: [
       { name: 'Emissions Calculator', desc: 'Calculate Scope 1, 2, and 3 greenhouse gas emissions from fuel, electricity, travel, and supply chain data.' },
       { name: 'Energy & Resource Monitor', desc: 'Track electricity, water, gas, and raw material consumption with efficiency benchmarks.' },
@@ -304,7 +304,7 @@ export const allProducts: Product[] = [
     tagline: 'AI-Powered Safety Analytics',
     category: 'Factory 5.0',
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1600&h=700&fit=crop&auto=format',
-    intro: 'VisionSafe AI uses your existing CCTV infrastructure and custom-trained computer vision models to automatically detect PPE violations, unsafe behaviors, restricted zone intrusions, and hazardous conditions, in real time, around the clock, without human monitoring fatigue.',
+    intro: 'VisionSafe AI uses your existing CCTV infrastructure and custom-trained computer vision models to automatically detect PPE violations, unsafe behaviors, restricted zone intrusions, and hazardous conditions. Detecting in real time, around the clock, without human monitoring fatigue.',
     modules: [
       { name: 'PPE Detection Engine', desc: 'Detect helmet, vest, glove, goggle, and safety shoe compliance violations per camera zone in real time.' },
       { name: 'Restricted Zone Monitor', desc: 'Alert when personnel or vehicles enter defined restricted areas, danger zones, or exclusion boundaries.' },
@@ -350,10 +350,10 @@ export const allProducts: Product[] = [
     tagline: 'LLM-Driven Incident Capture',
     category: 'Factory 5.0',
     image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&h=700&fit=crop&auto=format',
-    intro: 'IncidentGPT uses large language models to transform how incidents are reported and analyzed. Workers describe incidents in plain language, in any language, and AI structures the report, suggests root causes, classifies severity, and routes to the right team. Faster reporting, richer data, better prevention.',
+    intro: 'IncidentGPT uses large language models to transform how incidents are reported and analyzed. Workers describe incidents in plain language (any language) and AI structures the report, suggests root causes, classifies severity, and routes to the right team. Faster reporting, richer data, better prevention.',
     modules: [
       { name: 'Natural Language Capture', desc: 'Workers describe incidents verbally or in text; AI parses and structures the report automatically.' },
-      { name: 'Multilingual Support', desc: 'Capture incidents in local languages, AI translates, structures, and standardizes for management review.' },
+      { name: 'Multilingual Support', desc: 'Capture incidents in local languages. AI translates, structures, and standardizes for management review.' },
       { name: 'AI Root Cause Suggester', desc: 'LLM analyzes incident description and suggests probable root causes based on pattern matching and knowledge base.' },
       { name: 'Severity Classifier', desc: 'Auto-classify incidents by severity (near-miss, first aid, recordable, LTI) with escalation routing.' },
       { name: 'Investigation Workflow', desc: 'Structured investigation assignments, evidence collection, root cause confirmation, and CAPA creation.' },
@@ -626,7 +626,7 @@ export const allProducts: Product[] = [
     tagline: 'GPS Field-Staff Tracking',
     category: 'Factory 5.0',
     image: 'https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=1600&h=700&fit=crop&auto=format',
-    intro: 'FieldPulse Live provides real-time GPS tracking and task management for field engineers, service technicians, and mobile workers. Dispatch jobs, monitor locations, track task progress, and analyze field team productivity, all from a unified operations dashboard.',
+    intro: 'FieldPulse Live provides real-time GPS tracking and task management for field engineers, service technicians, and mobile workers. Dispatch jobs, monitor locations, track task progress, and analyze field team productivity. All from a unified operations dashboard.',
     modules: [
       { name: 'Live Location Map', desc: 'Real-time GPS map showing all field staff locations with status (active, idle, traveling, at-site).' },
       { name: 'Job Dispatch Engine', desc: 'Assign jobs to nearest available technician with skill matching, priority, and customer SLA awareness.' },
@@ -724,7 +724,7 @@ export const allProducts: Product[] = [
       { name: 'RFID/BLE Part Tracking', desc: 'Automatic issue and return logging using RFID tags or BLE beacons on high-value parts.' },
       { name: 'Predictive Reorder Engine', desc: 'ML-based reorder calculation using failure patterns, maintenance schedules, and lead times.' },
       { name: 'Criticality Classification', desc: 'VED and ABC analysis with differentiated stocking policies for vital, essential, and desirable parts.' },
-      { name: 'CMMS Integration', desc: 'Work order-driven parts reservation and kitting, parts are staged automatically when a WO is created.' },
+      { name: 'CMMS Integration', desc: 'Work order-driven parts reservation and kitting. Parts are staged automatically when a WO is created.' },
       { name: 'Obsolescence Manager', desc: 'Track slow-moving stock, suggest inter-plant transfers, and trigger disposal workflows.' },
     ],
     features: [
@@ -764,7 +764,7 @@ export const allProducts: Product[] = [
     tagline: 'Healthcare Practice Management',
     category: 'Specialized',
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&h=700&fit=crop&auto=format',
-    intro: 'Clinic OS is a complete practice management platform for clinics, polyclinics, and specialty health centers. Manage appointments, patient records, prescriptions, billing, insurance, and telemedicine, all from one integrated system built for modern healthcare delivery.',
+    intro: 'Clinic OS is a complete practice management platform for clinics, polyclinics, and specialty health centers. Manage appointments, patient records, prescriptions, billing, insurance, and telemedicine. All from one integrated system built for modern healthcare delivery.',
     modules: [
       { name: 'Appointment Scheduler', desc: 'Online and walk-in appointment booking with doctor availability, specialty routing, and SMS reminders.' },
       { name: 'Electronic Patient Records', desc: 'Complete patient history, consultation notes, diagnoses, prescriptions, and test results in a secure EMR.' },
@@ -1087,7 +1087,7 @@ export const allProducts: Product[] = [
     tagline: 'Smart Turf Booking & Management Platform',
     category: 'Specialized',
     image: 'https://images.unsplash.com/photo-1551958219-acbc595d7c09?w=1600&h=700&fit=crop&auto=format',
-    intro: 'TurfTrack is a complete digital solution designed to simplify turf operations, bookings, slot management, pricing, offers, and customer engagement, all from one powerful platform. From real-time slot booking to admin-level analytics and revenue tracking, TurfTrack helps turf owners manage their business efficiently while delivering a smooth booking experience for players.',
+    intro: 'TurfTrack is a complete digital solution designed to simplify turf operations, bookings, slot management, pricing, offers, and customer engagement. All from one powerful platform. From real-time slot booking to admin-level analytics and revenue tracking, TurfTrack helps turf owners manage their business efficiently while delivering a smooth booking experience for players.',
     modules: [
       { name: 'Centralized Admin Dashboard', desc: 'Monitor bookings, turfs, offers, payments, and reports from one clean and intuitive dashboard built for turf owners and managers.' },
       { name: 'Booking Management', desc: 'View and manage all turf bookings with date-wise filtering, slot tracking, manual booking support, and export options.' },

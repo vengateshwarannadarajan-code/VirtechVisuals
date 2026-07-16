@@ -192,7 +192,7 @@ function WhyChooseUs() {
     {
       icon: <Globe className="w-5 h-5 text-[#d4af37]" />,
       title: 'Professional European Aesthetic',
-      desc: 'Every frame is crafted with a refined, editorial sensibility shaped by Paris, the global capital of fashion and visual culture.',
+      desc: 'Every frame is crafted with a refined, editorial sensibility shaped by Paris. The global capital of fashion and visual culture.',
     },
     {
       icon: <Clock className="w-5 h-5 text-[#d4af37]" />,
@@ -317,7 +317,7 @@ function ShootPackages() {
         >
           <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Photography & Content Shoots</span>
           <h2 className="font-display text-5xl">Shoot Packages</h2>
-          <p className="text-[#666] text-sm mt-3 max-w-xl">One-time and recurring content shoot packages, ideal for brands that need fresh photography and reels.</p>
+          <p className="text-[#666] text-sm mt-3 max-w-xl">One-time and recurring content shoot packages. Ideal for brands that need fresh photography and reels.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">

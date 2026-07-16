@@ -12,9 +12,9 @@ const services = [
   'Cybersecurity',
   'Talent Solutions',
   'Product Demo',
-  'Creative Studio, Photography',
-  'Creative Studio, Video',
-  'Creative Studio, Social Content',
+  'Creative Studio: Photography',
+  'Creative Studio: Video',
+  'Creative Studio: Social Content',
   'Other',
 ];
 
@@ -29,7 +29,7 @@ const contactInfo = [
     icon: <MessageCircle className="w-5 h-5 text-[#d4af37]" />,
     label: 'WhatsApp',
     value: '+33 7 80 84 34 87',
-    sub: 'Available Mon-Sat, 9am-7pm CET',
+    sub: 'Available Mon-Sat, 9am to 7pm CET',
     href: 'https://wa.me/33780843487',
   },
   {
@@ -70,7 +70,7 @@ export default function Contact() {
       <PageHero
         tag="Get In Touch"
         title="Let's Build Something Together"
-        subtitle="Whether you're exploring a solution, requesting a demo, or ready to start, our team is here to help."
+        subtitle="Whether you're exploring a solution, requesting a demo, or ready to start. Our team is here to help."
       />
 
       {/* Quick contact strip */}
