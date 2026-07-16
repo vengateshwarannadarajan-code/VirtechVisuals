@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { ArrowRight } from 'lucide-react';
+import { useI18n } from '../i18n/context';
 import { PageHero } from '../components/PageHero';
 import { Footer } from '../components/Footer';
 
@@ -99,11 +100,12 @@ const services = [
 ];
 
 export default function Services() {
+  const { t } = useI18n();
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
       <PageHero
         tag="What We Do"
-        title="Comprehensive Technology Services"
+        title={t('svc.title')}
         subtitle="From custom software to AI solutions, we deliver end-to-end services that help businesses innovate, automate, and scale with confidence."
         image="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&q=90&fit=crop&auto=format"
       />

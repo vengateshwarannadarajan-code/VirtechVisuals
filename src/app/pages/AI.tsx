@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { ArrowRight, Bot, Eye, TrendingUp, Brain, Search, GitBranch, Cpu, Cloud, Server } from 'lucide-react';
+import { useI18n } from '../i18n/context';
 import { PageHero } from '../components/PageHero';
 import { Footer } from '../components/Footer';
 
@@ -213,6 +214,7 @@ const deliverables = [
 const integrations = ['ERP', 'MES', 'WMS', 'CRM', 'SCADA', 'PLC', 'IoT Gateways', 'WhatsApp', 'Email', 'Teams', 'Mobile Apps', 'Web Dashboards'];
 
 export default function AI() {
+  const { t } = useI18n();
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
       <PageHero

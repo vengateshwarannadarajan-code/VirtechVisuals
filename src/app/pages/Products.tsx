@@ -2,10 +2,11 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { ArrowRight } from 'lucide-react';
+import { useI18n } from '../i18n/context';
 import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
 
-type Category = 'All' | 'Hardware' | 'Software' | 'Platform';
+type Category = t('prod.all') | 'Hardware' | 'Software' | 'Platform';
 
 const products = [
   {
@@ -280,11 +281,12 @@ const products = [
   },
 ];
 
-const categories: Category[] = ['All', 'Hardware', 'Software', 'Platform'];
+const categories: Category[] = [t('prod.all'), 'Hardware', 'Software', 'Platform'];
 
 export default function Products() {
-  const [active, setActive] = useState<Category>('All');
-  const filtered = active === 'All' ? products : products.filter((p) => p.category === active);
+  const { t } = useI18n();
+  const [active, setActive] = useState<Category>(t('prod.all'));
+  const filtered = active === t('prod.all') ? products : products.filter((p) => p.category === active);
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">

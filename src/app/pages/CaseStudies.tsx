@@ -1,10 +1,11 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useI18n } from '../i18n/context';
 import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
 
-type Industry = 'All' | 'Automotive' | 'Food & Beverage' | 'Pharma' | 'Electronics';
+type Industry = t('cases.all') | 'Automotive' | 'Food & Beverage' | 'Pharma' | 'Electronics';
 
 const cases = [
   {
@@ -49,13 +50,13 @@ const cases = [
   },
 ];
 
-const industries: Industry[] = ['All', 'Automotive', 'Food & Beverage', 'Pharma', 'Electronics'];
+const industries: Industry[] = [t('cases.all'), 'Automotive', 'Food & Beverage', 'Pharma', 'Electronics'];
 
 export default function CaseStudies() {
-  const [active, setActive] = useState<Industry>('All');
+  const [active, setActive] = useState<Industry>(t('cases.all'));
   const [expanded, setExpanded] = useState<number | null>(null);
 
-  const filtered = active === 'All' ? cases : cases.filter((c) => c.industry === active);
+  const filtered = active === t('cases.all') ? cases : cases.filter((c) => c.industry === active);
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">

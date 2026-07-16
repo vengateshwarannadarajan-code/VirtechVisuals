@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
+import { useI18n } from '../i18n/context';
 import {
   ArrowRight, Cpu, Camera, Brain, Layers, TrendingUp, Users,
   BarChart3, ShieldCheck, Wrench, Package, Eye, GitBranch,
@@ -46,10 +47,10 @@ const products = [
 ];
 
 const stats = [
-  { value: '24', label: 'Smart Factory Solutions' },
-  { value: '40%', label: 'Avg Efficiency Gain' },
-  { value: '18+', label: 'Industries Served' },
-  { value: '99.9%', label: 'Platform Uptime' },
+  { value: '24', label: '{t('home.stats.solutions')}' },
+  { value: '40%', label: '{t('home.stats.gain')}' },
+  { value: '18+', label: '{t('home.stats.industries')}' },
+  { value: '99.9%', label: '{t('home.stats.uptime')}' },
 ];
 
 const highlights = [
@@ -72,6 +73,7 @@ const highlights = [
 ];
 
 export default function Home() {
+  const { t } = useI18n();
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
 
@@ -100,10 +102,10 @@ export default function Home() {
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link to="/smart-factory" className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 flex items-center justify-center gap-2">
-              Explore Digi Sailor <ArrowRight className="w-4 h-4" />
+              {t('home.cta.factory')} <ArrowRight className="w-4 h-4" />
             </Link>
             <Link to="/creative-studio" className="px-8 py-4 border border-white/20 text-white rounded-lg hover:border-[#d4af37]/60 hover:text-[#d4af37] transition-all duration-300 flex items-center justify-center gap-2">
-              Explore Creative Studio <ArrowRight className="w-4 h-4" />
+              {t('home.cta.creative')} <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
           {/* Contact quick links */}
@@ -160,13 +162,13 @@ export default function Home() {
         ))}
       </section>
 
-      {/* Smart Factory Solutions */}
+      {/* {t('home.stats.solutions')} */}
       <section className="py-24 px-4 md:px-8 bg-[#111]">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
             <div>
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Smart Factory</span>
-              <h2 className="font-display text-4xl md:text-5xl">End-to-End Smart Factory Solutions</h2>
+              <h2 className="font-display text-4xl md:text-5xl">End-to-End {t('home.stats.solutions')}</h2>
               <p className="text-[#a0a0a0] mt-4 max-w-2xl text-sm leading-relaxed">24 solutions across shopfloor operations, enterprise functions, and corporate governance.</p>
             </div>
             <Link to="/smart-factory" className="inline-flex items-center gap-2 text-sm text-[#d4af37] border border-[#d4af37]/30 px-5 py-2.5 rounded-lg hover:bg-[#d4af37]/10 transition-colors whitespace-nowrap flex-shrink-0">
@@ -198,7 +200,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
             <div>
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Services</span>
-              <h2 className="font-display text-4xl md:text-5xl">Technology Services We Deliver</h2>
+              <h2 className="font-display text-4xl md:text-5xl">{t('home.svc.title')}</h2>
               <p className="text-[#a0a0a0] mt-4 max-w-2xl text-sm leading-relaxed">12 service lines covering every stage of your digital transformation.</p>
             </div>
             <Link to="/services" className="inline-flex items-center gap-2 text-sm text-[#d4af37] border border-[#d4af37]/30 px-5 py-2.5 rounded-lg hover:bg-[#d4af37]/10 transition-colors whitespace-nowrap flex-shrink-0">
@@ -230,7 +232,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
             <div>
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Products</span>
-              <h2 className="font-display text-4xl md:text-5xl">Ready-to-Deploy Products</h2>
+              <h2 className="font-display text-4xl md:text-5xl">{t('home.prod.title')}</h2>
               <p className="text-[#a0a0a0] mt-4 max-w-2xl text-sm leading-relaxed">Purpose-built software for visitor management, safety, asset tracking, predictive maintenance, and more.</p>
             </div>
             <Link to="/products" className="inline-flex items-center gap-2 text-sm text-[#d4af37] border border-[#d4af37]/30 px-5 py-2.5 rounded-lg hover:bg-[#d4af37]/10 transition-colors whitespace-nowrap flex-shrink-0">
@@ -264,11 +266,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
             <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Why Choose Us</span>
-            <h2 className="font-display text-4xl md:text-5xl max-w-2xl">Built for Industry. Proven in the Field.</h2>
+            <h2 className="font-display text-4xl md:text-5xl max-w-2xl">{t('home.why.title')}</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#2a2a2a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
             {[
-              { icon: <Cpu className="w-5 h-5 text-[#d4af37]" />, label: '24 Smart Factory Solutions', body: 'From OEE & quality to warehouse, safety, and digital twins, one platform covering shopfloor to boardroom.' },
+              { icon: <Cpu className="w-5 h-5 text-[#d4af37]" />, label: '24 {t('home.stats.solutions')}', body: 'From OEE & quality to warehouse, safety, and digital twins, one platform covering shopfloor to boardroom.' },
               { icon: <Layers className="w-5 h-5 text-[#d4af37]" />, label: '12 Technology Services', body: 'Custom software, cloud & DevOps, cybersecurity, IoT, talent solutions, and training. End-to-end delivery under one roof.' },
               { icon: <Brain className="w-5 h-5 text-[#d4af37]" />, label: 'Production-Grade AI', body: 'Computer vision, NLP, predictive analytics, generative AI, and edge AI. Deployed in real manufacturing environments.' },
               { icon: <Package className="w-5 h-5 text-[#d4af37]" />, label: 'Ready-to-Deploy Products', body: 'GateKeeper, VisionSafe AI, DigiTrack, PredictPulse, and PermitFlows. Purpose-built tools that go live in weeks, not months.' },
@@ -291,11 +293,11 @@ export default function Home() {
       <section className="py-20 px-4 md:px-8 bg-[#111]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="font-display text-4xl md:text-5xl mb-6">Ready to Get Started?</h2>
+            <h2 className="font-display text-4xl md:text-5xl mb-6">{t('home.cta.title')}</h2>
             <p className="text-[#a0a0a0] text-lg mb-10 max-w-2xl mx-auto">Whether it's Smart Factory, Creative Studio, or both. Let's talk about what we can build together.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#e5c24a] transition-colors flex items-center justify-center gap-2 font-medium">
-                Get In Touch <ArrowRight className="w-4 h-4" />
+                {t('home.cta.btn')} <ArrowRight className="w-4 h-4" />
               </Link>
               <a href="https://wa.me/33780843487" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-[#25D366]/40 text-[#25D366] rounded-lg hover:bg-[#25D366]/10 transition-colors flex items-center justify-center gap-2">
                 <MessageCircle className="w-4 h-4" /> WhatsApp Us

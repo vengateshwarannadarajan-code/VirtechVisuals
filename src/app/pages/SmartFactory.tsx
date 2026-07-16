@@ -9,6 +9,7 @@ import {
   FileText, HeadphonesIcon, FolderKanban,
 } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
+import { useI18n } from '../i18n/context';
 import { Footer } from '../components/Footer';
 
 const shopfloorSolutions = [
@@ -63,14 +64,15 @@ const faqs = [
 ];
 
 export default function SmartFactory() {
+  const { t } = useI18n();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white pt-16">
       <PageHero
-        tag="Industry 4.0"
-        title="Smart Factory Solutions"
-        subtitle="24 solutions across shopfloor operations, enterprise functions, and corporate governance. Built to scale from pilot to multi-plant."
+        {...{tag: t('sf.tag')}} tag={t('sf.tag')}
+        title={t('sf.title')}
+        subtitle={t('sf.sub')}
         image="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1920&q=90&fit=crop&auto=format"
       />
 
@@ -90,9 +92,9 @@ export default function SmartFactory() {
       <section className="py-20 px-4 md:px-8 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Shopfloor Operations</span>
-            <h2 className="font-display text-3xl md:text-4xl mb-3">Smart Factory Solutions</h2>
-            <p className="text-[#666] text-sm max-w-2xl">18 solutions for shopfloor operations, automation, and plant-level intelligence.</p>
+            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('sf.shopfloor.tag')}</span>
+            <h2 className="font-display text-3xl md:text-4xl mb-3">{t('sf.shopfloor.title')}</h2>
+            <p className="text-[#666] text-sm max-w-2xl">{t('sf.shopfloor.sub')}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -123,9 +125,9 @@ export default function SmartFactory() {
       <section className="py-20 px-4 md:px-8 bg-[#111]">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Multi-Plant & Corporate</span>
-            <h2 className="font-display text-3xl md:text-4xl mb-3">Enterprise & Corporate Solutions</h2>
-            <p className="text-[#666] text-sm max-w-2xl">6 solutions supporting multi-plant operations and corporate governance.</p>
+            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('sf.enterprise.tag')}</span>
+            <h2 className="font-display text-3xl md:text-4xl mb-3">{t('sf.enterprise.title')}</h2>
+            <p className="text-[#666] text-sm max-w-2xl">{t('sf.enterprise.sub')}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -156,8 +158,8 @@ export default function SmartFactory() {
       <section className="py-20 px-4 md:px-8 bg-[#1a1a1a]">
         <div className="max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 text-center">
-            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">FAQ</span>
-            <h2 className="font-display text-3xl md:text-4xl">Frequently Asked Questions</h2>
+            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('sf.faq.tag')}</span>
+            <h2 className="font-display text-3xl md:text-4xl">{t('sf.faq.title')}</h2>
           </motion.div>
 
           <div className="space-y-2">
@@ -198,7 +200,7 @@ export default function SmartFactory() {
       <section className="py-20 px-4 md:px-8 bg-[#111]">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="font-display text-3xl md:text-4xl mb-4">Ready to digitise your factory?</h2>
+            <h2 className="font-display text-3xl md:text-4xl mb-4">{t('sf.cta.title')}</h2>
             <p className="text-[#666] text-sm mb-8 max-w-xl mx-auto leading-relaxed">
               Schedule a free assessment with our Industry 4.0 specialists. A pilot line deployment typically goes live in 4-8 weeks.
             </p>

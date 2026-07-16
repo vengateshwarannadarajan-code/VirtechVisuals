@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { useI18n } from '../i18n/context';
 import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
 
@@ -50,6 +51,7 @@ const contactInfo = [
 ];
 
 export default function Contact() {
+  const { t } = useI18n();
   const [formData, setFormData] = useState({
     name: '', email: '', company: '', service: '', message: '',
   });
@@ -69,9 +71,9 @@ export default function Contact() {
     <div className="min-h-screen bg-[#1a1a1a] text-white pt-16">
 
       <PageHero
-        tag="Get In Touch"
-        title="Let's Build Something Together"
-        subtitle="Whether you're exploring a solution, requesting a demo, or ready to start. Our team is here to help."
+        tag={t('contact.tag')}
+        title={t('contact.title')}
+        subtitle={t('contact.sub')}
         image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&q=90&fit=crop&auto=format"
       />
 
@@ -162,7 +164,7 @@ export default function Contact() {
                 <div className="w-14 h-14 rounded-full bg-[#d4af37]/15 flex items-center justify-center mb-6">
                   <Send className="w-6 h-6 text-[#d4af37]" />
                 </div>
-                <h3 className="font-display text-2xl mb-3">Message Sent!</h3>
+                <h3 className="font-display text-2xl mb-3">{t('contact.sent.title')}</h3>
                 <p className="text-[#666] text-sm max-w-sm leading-relaxed mb-6">
                   Thank you for reaching out. Our team will get back to you within 24 hours.
                 </p>
@@ -180,13 +182,13 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="bg-[#111] border border-[#2a2a2a] rounded-2xl p-8 space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="name" className="block text-xs text-[#555] tracking-widest uppercase mb-2">Full Name *</label>
+                    <label htmlFor="name" className="block text-xs text-[#555] tracking-widest uppercase mb-2">{t('contact.name')} *</label>
                     <input
                       id="name"
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Your name"
+                      {...{placeholder: t('contact.placeholder.name')}}
                       className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg focus:border-[#d4af37]/60 outline-none transition-colors text-sm text-white placeholder-[#444]"
                       required
                     />
@@ -198,20 +200,20 @@ export default function Contact() {
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="you@company.com"
+                      {...{placeholder: t('contact.placeholder.email')}}
                       className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg focus:border-[#d4af37]/60 outline-none transition-colors text-sm text-white placeholder-[#444]"
                       required
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-xs text-[#555] tracking-widest uppercase mb-2">Company</label>
+                  <label htmlFor="company" className="block text-xs text-[#555] tracking-widest uppercase mb-2">{t('contact.company')}</label>
                   <input
                     id="company"
                     type="text"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    placeholder="Your company or business name"
+                    {...{placeholder: t('contact.placeholder.company')}}
                     className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg focus:border-[#d4af37]/60 outline-none transition-colors text-sm text-white placeholder-[#444]"
                   />
                 </div>
@@ -231,7 +233,7 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-xs text-[#555] tracking-widest uppercase mb-2">Message *</label>
+                  <label htmlFor="message" className="block text-xs text-[#555] tracking-widest uppercase mb-2">{t('contact.message')} *</label>
                   <textarea
                     id="message"
                     value={formData.message}
@@ -247,7 +249,7 @@ export default function Contact() {
                   disabled={sending}
                   className="w-full py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg font-display text-sm hover:bg-[#e5c24a] transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
                 >
-                  {sending ? 'Sending...' : <><Send className="w-4 h-4" /> Send Message</>}
+                  {sending ? t('contact.sending') : <><Send className="w-4 h-4" /> Send Message</>}
                 </button>
                 <p className="text-[#444] text-xs text-center">
                   We'll respond within 24 hours. Or reach us directly at{' '}

@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { Camera, Video, Instagram, ArrowDown, Mail, Phone, MapPin, Globe, Clock, Sparkles, TrendingUp, CheckCircle2, MessageCircle } from 'lucide-react';
+import { useI18n } from '../i18n/context';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { motion } from 'motion/react';
 
 export default function CreativeStudio() {
+  const { t } = useI18n();
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
       <Hero />
@@ -220,7 +222,7 @@ function WhyChooseUs() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Why Choose Us</span>
+          <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('cs.why')}</span>
           <h2 className="font-display text-5xl md:text-6xl">The Virtech Visuals Difference</h2>
         </motion.div>
 
@@ -633,8 +635,8 @@ function Footer() {
             <h4 className="text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2 text-[#a0a0a0]">
               <li><a href="#services" className="hover:text-[#d4af37] transition-colors">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-[#d4af37] transition-colors">Portfolio</a></li>
-              <li><a href="#pricing" className="hover:text-[#d4af37] transition-colors">Pricing</a></li>
+              <li><a href="#portfolio" className="hover:text-[#d4af37] transition-colors">{t('cs.portfolio')}</a></li>
+              <li><a href="#pricing" className="hover:text-[#d4af37] transition-colors">{t('cs.pricing')}</a></li>
               <li><a href="#contact" className="hover:text-[#d4af37] transition-colors">Contact</a></li>
             </ul>
           </div>
