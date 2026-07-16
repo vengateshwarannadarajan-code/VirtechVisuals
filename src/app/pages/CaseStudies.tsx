@@ -5,7 +5,7 @@ import { useI18n } from '../i18n/context';
 import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
 
-type Industry = t('cases.all') | 'Automotive' | 'Food & Beverage' | 'Pharma' | 'Electronics';
+type Category = string;
 
 const cases = [
   {
@@ -50,7 +50,7 @@ const cases = [
   },
 ];
 
-const industries: Industry[] = [t('cases.all'), 'Automotive', 'Food & Beverage', 'Pharma', 'Electronics'];
+const industries: Industry[] = ['All', 'Automotive', 'Food & Beverage', 'Pharma', 'Electronics'];
 
 export default function CaseStudies() {
   const [active, setActive] = useState<Industry>(t('cases.all'));

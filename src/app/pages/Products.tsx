@@ -6,7 +6,7 @@ import { useI18n } from '../i18n/context';
 import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
 
-type Category = t('prod.all') | 'Hardware' | 'Software' | 'Platform';
+type Category = string | 'Hardware' | 'Software' | 'Platform';
 
 const products = [
   {
@@ -281,7 +281,7 @@ const products = [
   },
 ];
 
-const categories: Category[] = [t('prod.all'), 'Hardware', 'Software', 'Platform'];
+const categories: Category[] = ['All', 'Hardware', 'Software', 'Platform'];
 
 export default function Products() {
   const { t } = useI18n();
