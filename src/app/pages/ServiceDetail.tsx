@@ -28,6 +28,12 @@ import {
   LifeBuoy, CloudCog, Eye, PackageCheck, Timer, RefreshCw,
   // VR AR
   Glasses, HandHelping, Boxes, MapPin, MonitorPlay, Radar,
+  // Industry icons for Real-World Impact
+  Stethoscope, Layers2, Car, CreditCard, Truck, ShoppingBag,
+  Pill, PackageOpen, HardHat, Pickaxe,
+  Fuel, Zap, Landmark, Film, Snowflake,
+  TowerControl, Coins, Store, Home as HomeIcon,
+  Scale, Microscope, Factory as FactoryIcon,
   // Benefits list
   CheckCircle2,
 } from 'lucide-react';
@@ -535,6 +541,47 @@ const serviceList = [
   { slug: 'vr-ar', title: 'VR/AR & Spatial Intelligence' },
 ];
 
+
+const industryIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  'Healthcare': Stethoscope,
+  'Manufacturing': HardHat,
+  'Fintech': CreditCard,
+  'Logistics': Truck,
+  'Retail': ShoppingBag,
+  'Automotive': Car,
+  'Pharma': Pill,
+  'FMCG': PackageOpen,
+  'Chemicals': FlaskConical,
+  'Steel & Metals': Layers2,
+  'Oil & Gas': Fuel,
+  'Energy': Zap,
+  'Banking': Landmark,
+  'Education': GraduationCap,
+  'Media': Film,
+  'Mining': Pickaxe,
+  'Cold Chain': Snowflake,
+  'Utilities': TowerControl,
+  'Telecom': Radio,
+  'Finance': Coins,
+  'SaaS': Cloud,
+  'B2B SaaS': Cloud,
+  'E-commerce': Store,
+  'Real Estate': HomeIcon,
+  'Government': Scale,
+  'IT Services': Code2,
+  'BFSI': Landmark,
+  'Aerospace': Gauge,
+  'Medical Devices': Microscope,
+  'Heavy Engineering': Wrench,
+  'Tool & Die': Wrench,
+  'Warehousing': Warehouse,
+};
+
+function IndustryIcon({ industry }: { industry: string }) {
+  const Icon = industryIconMap[industry] || Building2;
+  return <Icon className="w-5 h-5 text-[#d4af37]" />;
+}
+
 // Dynamic icon renderer for sub-service cards
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Globe, Smartphone, Building2, Plug, LayoutTemplate, Wrench,
@@ -671,9 +718,14 @@ export default function ServiceDetail() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
-              className="p-5 bg-[#1e1e1e] border border-[#2e2e2e] rounded-lg"
+              className="p-5 bg-[#1e1e1e] border border-[#2e2e2e] rounded-lg hover:border-[#d4af37]/30 transition-colors group"
             >
-              <div className="text-[#d4af37] text-xs tracking-widest uppercase mb-2">{uc.industry}</div>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-[#d4af37]/10 rounded-lg group-hover:bg-[#d4af37]/20 transition-colors flex-shrink-0">
+                  <IndustryIcon industry={uc.industry} />
+                </div>
+                <span className="text-[#d4af37] text-xs tracking-widest uppercase font-medium">{uc.industry}</span>
+              </div>
               <p className="text-[#a0a0a0] text-sm leading-relaxed">{uc.desc}</p>
             </motion.div>
           ))}
