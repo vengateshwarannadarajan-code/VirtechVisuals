@@ -1,167 +1,212 @@
-import { motion } from 'motion/react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router';
 import {
-  ArrowRight, BarChart3, ShieldCheck, Wrench, Package, Eye, GitBranch,
-  Wifi, Lock, Database, Brain, Box, CalendarDays, Activity, MapPin,
-  Truck, Bell, FileCheck, ShieldAlert, Zap, ClipboardList, Monitor,
-  Bot, Package2,
+  Plus, Minus, ArrowRight,
+  BarChart3, GitMerge, ShieldCheck, GitBranch, Wrench, Package, Truck,
+  MapPin, Eye, Bot, Box, Wifi, ClipboardList, Bell, ShieldAlert, Zap,
+  Lock, Database, LayoutGrid, Cpu, DollarSign, ShoppingCart, Users,
+  FileText, HeadphonesIcon, FolderKanban,
 } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
 
-const solutionGroups = [
-  {
-    label: 'Production Performance',
-    solutions: [
-      { icon: <BarChart3 className="w-6 h-6 text-[#d4af37]" />, title: 'OEE / OLE Monitoring', desc: 'Real-time overall equipment and labour effectiveness tracking with loss analysis across all lines.' },
-      { icon: <CalendarDays className="w-6 h-6 text-[#d4af37]" />, title: 'Production Scheduling', desc: 'Finite-capacity scheduling with what-if simulation and live plan-vs-actual dashboards.' },
-      { icon: <Activity className="w-6 h-6 text-[#d4af37]" />, title: 'Process Intelligence & SPC', desc: 'Statistical process control, recipe management, and process capability analytics.' },
-    ],
-  },
-  {
-    label: 'Quality & Traceability',
-    solutions: [
-      { icon: <ShieldCheck className="w-6 h-6 text-[#d4af37]" />, title: 'Quality Intelligence', desc: 'Inline digital QC, CAPA management, complaint tracking, and audit-ready records.' },
-      { icon: <GitBranch className="w-6 h-6 text-[#d4af37]" />, title: 'Traceability & Genealogy', desc: 'Batch and component tracking from raw material to finished goods with recall management.' },
-      { icon: <Eye className="w-6 h-6 text-[#d4af37]" />, title: 'Vision Intelligence', desc: 'Computer vision for 100% inline defect detection, PPE compliance, and label verification.' },
-    ],
-  },
-  {
-    label: 'Maintenance & Reliability',
-    solutions: [
-      { icon: <Wrench className="w-6 h-6 text-[#d4af37]" />, title: 'Predictive Maintenance', desc: 'ML on vibration, thermal, and acoustic data to predict failures weeks in advance.' },
-      { icon: <ClipboardList className="w-6 h-6 text-[#d4af37]" />, title: 'CMMS & Work Orders', desc: 'Structured PM schedules, work order management, and asset reliability KPIs.' },
-      { icon: <MapPin className="w-6 h-6 text-[#d4af37]" />, title: 'Asset Tracking (RTLS)', desc: 'Indoor positioning for tools and mobile assets using BLE, UWB, and LoRaWAN.' },
-    ],
-  },
-  {
-    label: 'Warehouse & Intralogistics',
-    solutions: [
-      { icon: <Package className="w-6 h-6 text-[#d4af37]" />, title: 'Warehouse Intelligence', desc: 'Smart slotting, pick optimisation, and real-time inventory accuracy across locations.' },
-      { icon: <Truck className="w-6 h-6 text-[#d4af37]" />, title: 'Intralogistics & Material Flow', desc: 'AGV/AMR orchestration, material scheduling, and shopfloor replenishment automation.' },
-      { icon: <Package2 className="w-6 h-6 text-[#d4af37]" />, title: 'Yard & Dock Management', desc: 'Inbound/outbound coordination, yard slot booking, and driver check-in workflows.' },
-    ],
-  },
-  {
-    label: 'Safety & Compliance',
-    solutions: [
-      { icon: <ShieldAlert className="w-6 h-6 text-[#d4af37]" />, title: 'EHS & Safety Intelligence', desc: 'Incident reporting, CAPA, BBS tracking, safety KPIs, and ISO 45001 readiness.' },
-      { icon: <FileCheck className="w-6 h-6 text-[#d4af37]" />, title: 'Permit-to-Work (PTW)', desc: 'Digital permit issuance with multi-level approvals and active-permit dashboards.' },
-      { icon: <Zap className="w-6 h-6 text-[#d4af37]" />, title: 'Energy & ESG Monitoring', desc: 'Machine-level energy monitoring, carbon tracking, and Scope 1/2/3 ESG reporting.' },
-    ],
-  },
-  {
-    label: 'Digital Twin & Automation',
-    solutions: [
-      { icon: <Box className="w-6 h-6 text-[#d4af37]" />, title: 'Digital Twins & Simulation', desc: '3D plant twins with live sensor overlay, remote diagnostics, and virtual commissioning.' },
-      { icon: <Bot className="w-6 h-6 text-[#d4af37]" />, title: 'Robotics & Physical AI', desc: 'Cobot integration, robotic process automation, and physical AI for autonomous operations.' },
-      { icon: <Monitor className="w-6 h-6 text-[#d4af37]" />, title: 'MES & Paperless Manufacturing', desc: 'Electronic batch records, e-travellers, and complete shopfloor digitisation.' },
-    ],
-  },
-  {
-    label: 'Connectivity & Intelligence',
-    solutions: [
-      { icon: <Wifi className="w-6 h-6 text-[#d4af37]" />, title: 'Industrial IoT & OT-IT Integration', desc: 'Edge gateways, OPC-UA/MQTT protocol bridging, and unified industrial data layer.' },
-      { icon: <Bell className="w-6 h-6 text-[#d4af37]" />, title: 'Control Tower & Alerting', desc: 'Real-time notifications, escalation workflows, and war room command dashboards.' },
-      { icon: <Lock className="w-6 h-6 text-[#d4af37]" />, title: 'OT / ICS Cybersecurity', desc: 'Zero trust architecture, OT network segmentation, and GDPR/PDPA compliance.' },
-    ],
-  },
-  {
-    label: 'Data & AI Platform',
-    solutions: [
-      { icon: <Database className="w-6 h-6 text-[#d4af37]" />, title: 'Data Lakehouse & MDM', desc: 'Unified industrial data platform with master data governance and quality management.' },
-      { icon: <Brain className="w-6 h-6 text-[#d4af37]" />, title: 'AI / ML Pipelines', desc: 'End-to-end MLOps: model versioning, drift monitoring, and automated retraining.' },
-    ],
-  },
+const shopfloorSolutions = [
+  { icon: <BarChart3 className="w-6 h-6 text-[#d4af37]" />, title: 'Production Performance & Planning', desc: 'Improve OEE/OLE and delivery with real-time control and smart scheduling.', slug: 'production-performance-planning' },
+  { icon: <GitMerge className="w-6 h-6 text-[#d4af37]" />, title: 'Process Intelligence & Optimization', desc: 'Detect deviations, eliminate bottlenecks, and drive continuous process improvement.', slug: 'process-intelligence-optimization' },
+  { icon: <ShieldCheck className="w-6 h-6 text-[#d4af37]" />, title: 'Quality Intelligence', desc: 'Digitize inspections, reduce defects, and make quality audit-ready.', slug: 'quality-intelligence' },
+  { icon: <GitBranch className="w-6 h-6 text-[#d4af37]" />, title: 'Traceability & Genealogy', desc: 'Track every batch, lot, and serial - forward and backward - with audit-ready evidence.', slug: 'traceability-genealogy' },
+  { icon: <Wrench className="w-6 h-6 text-[#d4af37]" />, title: 'Maintenance & Reliability Intelligence', desc: 'Cut breakdowns using structured PM, work orders, and reliability KPIs.', slug: 'maintenance-reliability-intelligence' },
+  { icon: <Package className="w-6 h-6 text-[#d4af37]" />, title: 'Warehouse Intelligence', desc: 'Increase inventory accuracy and dispatch speed with disciplined workflows.', slug: 'warehouse-intelligence' },
+  { icon: <Truck className="w-6 h-6 text-[#d4af37]" />, title: 'Intralogistics & Material Flow', desc: 'Optimize line feeding, staging, and WIP movement with full visibility.', slug: 'intralogistics-material-flow' },
+  { icon: <MapPin className="w-6 h-6 text-[#d4af37]" />, title: 'Spatial Intelligence & Asset Tracking', desc: 'Track assets and enforce location-based rules using BLE, UWB, GPS, and LoRaWAN.', slug: 'spatial-intelligence-asset-tracking' },
+  { icon: <Eye className="w-6 h-6 text-[#d4af37]" />, title: 'Vision Intelligence', desc: 'Use cameras and AI to strengthen quality, safety, and process discipline.', slug: 'vision-intelligence' },
+  { icon: <Bot className="w-6 h-6 text-[#d4af37]" />, title: 'Robotics & Physical AI', desc: 'Enable AMR/AGV/cobots with fleet orchestration, safety, and mission analytics.', slug: 'robotics-physical-ai' },
+  { icon: <Box className="w-6 h-6 text-[#d4af37]" />, title: 'Digital Twins & Simulation', desc: 'Simulate factory layouts, flows, and scenarios before making physical changes.', slug: 'digital-twins-simulation' },
+  { icon: <Wifi className="w-6 h-6 text-[#d4af37]" />, title: 'Industrial IoT & OT-IT Integration', desc: 'Connect PLCs, sensors, and enterprise systems into a unified data architecture.', slug: 'industrial-iot-ot-it-integration' },
+  { icon: <ClipboardList className="w-6 h-6 text-[#d4af37]" />, title: 'Manufacturing Execution & Workflow Automation', desc: 'Digitize SOPs, approvals, and action closure with role-based workflows.', slug: 'manufacturing-execution-workflow-automation' },
+  { icon: <Bell className="w-6 h-6 text-[#d4af37]" />, title: 'Smart Notifications & Control Tower Operations', desc: 'Ensure the right people act at the right time with structured escalation.', slug: 'smart-notifications-control-tower' },
+  { icon: <ShieldAlert className="w-6 h-6 text-[#d4af37]" />, title: 'Safety, EHS & Permit-to-Work', desc: 'Enforce zone safety, permits, incident reporting, and compliance logging.', slug: 'safety-ehs-permit-to-work' },
+  { icon: <Zap className="w-6 h-6 text-[#d4af37]" />, title: 'Energy, Utilities & ESG Intelligence', desc: 'Monitor consumption, detect anomalies, and track sustainability KPIs.', slug: 'energy-utilities-esg-intelligence' },
+  { icon: <Lock className="w-6 h-6 text-[#d4af37]" />, title: 'Cybersecurity & Data Privacy Compliance', desc: 'Protect IT/OT infrastructure and ensure GDPR, DPDP, HIPAA readiness.', slug: 'cybersecurity-data-privacy-compliance' },
+  { icon: <Database className="w-6 h-6 text-[#d4af37]" />, title: 'Data Platform, Governance & AI Enablement', desc: 'Build a unified data foundation with quality, governance, and AI lifecycle management.', slug: 'data-platform-governance-ai-enablement' },
+  { icon: <LayoutGrid className="w-6 h-6 text-[#d4af37]" />, title: 'Warehouse Management System (WMS)', desc: 'End-to-end warehouse operations with real-time inventory accuracy and optimized fulfillment.', slug: 'warehouse-management-system' },
+  { icon: <Cpu className="w-6 h-6 text-[#d4af37]" />, title: 'IoT-Based WMS for Spare Parts', desc: 'Smart spare parts inventory with IoT sensors, auto-replenishment, and predictive stock management.', slug: 'iot-wms-spare-parts' },
+  { icon: <BarChart3 className="w-6 h-6 text-[#d4af37]" />, title: 'Copper Refinery Operations Intelligence', desc: 'Tankhouse production planning, stripping and changeover decisions, crane scheduling, PLC-driven readings and SAP/ERP-integrated forecasting for electrolytic copper refineries.', slug: 'copper-refinery-operations-intelligence' },
 ];
 
-const stats = [
-  { value: '24', label: 'Solution Domains' },
-  { value: '40%', label: 'Avg OEE Improvement' },
-  { value: '61%', label: 'Downtime Reduction' },
-  { value: '99.7%', label: 'Defect Detection Rate' },
+const enterpriseSolutions = [
+  { icon: <DollarSign className="w-6 h-6 text-[#d4af37]" />, title: 'Finance & Cost Intelligence', desc: 'Track budget vs actual, cost centers, and the true cost of downtime and quality failures.', slug: 'finance-cost-intelligence' },
+  { icon: <ShoppingCart className="w-6 h-6 text-[#d4af37]" />, title: 'Procurement & Supplier Intelligence', desc: 'Streamline PR to PO workflows and manage supplier quality and risk.', slug: 'procurement-supplier-intelligence' },
+  { icon: <Users className="w-6 h-6 text-[#d4af37]" />, title: 'Workforce & HR Intelligence', desc: 'Manage attendance, skills, training, and workforce productivity.', slug: 'workforce-hr-intelligence' },
+  { icon: <FileText className="w-6 h-6 text-[#d4af37]" />, title: 'Legal, Contracts & Compliance Management', desc: 'Manage contracts, renewals, NDAs, and compliance calendars digitally.', slug: 'legal-contracts-compliance-management' },
+  { icon: <HeadphonesIcon className="w-6 h-6 text-[#d4af37]" />, title: 'Customer, Order & Service Intelligence', desc: 'Track order status, OTD, complaints, warranty, and service SLAs.', slug: 'customer-order-service-intelligence' },
+  { icon: <FolderKanban className="w-6 h-6 text-[#d4af37]" />, title: 'Project & Portfolio Intelligence', desc: 'Manage programs, milestones, risks, and multi-site rollout tracking.', slug: 'project-portfolio-intelligence' },
+];
+
+const metrics = [
+  { value: '24', label: 'Solutions across shopfloor & enterprise' },
+  { value: '18+', label: 'Industries served' },
+  { value: '4–8 wk', label: 'Pilot deployment timeline' },
+  { value: '99.9%', label: 'System uptime SLA' },
+];
+
+const faqs = [
+  { q: 'What is a Smart Factory solution?', a: 'A Smart Factory solution connects machines, people, and processes through digital technologies like IIoT, AI, and real-time analytics to improve manufacturing efficiency, quality, and safety.' },
+  { q: 'How many solutions does Virtech Visuals offer?', a: 'We offer 24 solutions — 18 covering shopfloor operations and 6 covering enterprise and corporate functions — all built to scale from a single pilot line to multi-plant deployment.' },
+  { q: 'Can solutions be deployed independently?', a: 'Yes. Every solution is modular and can be deployed standalone or integrated with others. You can start with one area — like OEE monitoring or quality inspection — and expand from there.' },
+  { q: 'How long does implementation typically take?', a: 'A pilot line deployment typically goes live in 4–8 weeks. Full multi-plant rollouts are phased over 3–12 months depending on scope and complexity.' },
+  { q: 'Do you integrate with existing ERP and MES systems?', a: 'Yes. We integrate with SAP, Oracle, Microsoft Dynamics, Infor, and all major MES platforms through standard APIs, OPC-UA, and custom connectors.' },
+  { q: 'What industries do your solutions support?', a: 'Our solutions are deployed across automotive, pharma, food & beverage, chemicals, oil & gas, metals & mining, electronics, and FMCG — among 18+ industries.' },
+  { q: 'Is training provided for shopfloor operators?', a: 'Yes. Every deployment includes structured operator training, management dashboard walkthroughs, and a hypercare period post go-live. We also offer ongoing training programmes.' },
+  { q: 'What ROI can manufacturers expect?', a: 'Clients typically see 20–45% OEE improvement, 30–60% reduction in unplanned downtime, and 15–40% quality defect reduction within the first 6 months of deployment.' },
 ];
 
 export default function SmartFactory() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white">
+    <div className="min-h-screen bg-[#1a1a1a] text-white pt-16">
       <PageHero
         tag="Industry 4.0"
-        title="End-to-End Smart Factory"
-        subtitle="24 solution domains covering shopfloor operations, enterprise functions, and corporate governance — from pilot to multi-plant scale."
-        image="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920"
+        title="Smart Factory Solutions"
+        subtitle="24 solutions across shopfloor operations, enterprise functions, and corporate governance — built to scale from pilot to multi-plant."
       />
 
-      {/* Stats */}
-      <section className="border-y border-[#2a2a2a] py-12 px-4 md:px-8">
+      {/* Metrics */}
+      <section className="border-y border-[#2a2a2a] py-12 px-4 md:px-8 bg-[#111]">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((s, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="text-center"
-            >
-              <div className="font-display text-4xl md:text-5xl text-[#d4af37] mb-2">{s.value}</div>
-              <div className="text-[#a0a0a0] text-sm">{s.label}</div>
+          {metrics.map((m, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
+              <div className="font-display text-3xl md:text-4xl text-[#d4af37] mb-1">{m.value}</div>
+              <div className="text-[#666] text-xs leading-snug">{m.label}</div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* Solutions grouped */}
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto space-y-20">
-        {solutionGroups.map((group, gi) => (
-          <div key={gi}>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-8"
-            >
-              <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-2 block">{group.label}</span>
-              <div className="h-px w-full bg-[#2a2a2a]" />
-            </motion.div>
+      {/* Shopfloor Solutions */}
+      <section className="py-20 px-4 md:px-8 bg-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Shopfloor Operations</span>
+            <h2 className="font-display text-3xl md:text-4xl mb-3">Smart Factory Solutions</h2>
+            <p className="text-[#666] text-sm max-w-2xl">18 solutions for shopfloor operations, automation, and plant-level intelligence.</p>
+          </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {group.solutions.map((sol, si) => (
-                <motion.div
-                  key={si}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: si * 0.07 }}
-                  className="group flex flex-col gap-4 p-7 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 hover:bg-[#1e1e1e] transition-all duration-300 h-full"
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {shopfloorSolutions.map((s, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (i % 6) * 0.06 }}>
+                <Link
+                  to={`/smart-factory/${s.slug}`}
+                  className="group flex items-start gap-4 p-6 bg-[#111] border border-[#2a2a2a] rounded-xl hover:border-[#d4af37]/40 hover:bg-[#151515] transition-all duration-300 h-full"
                 >
-                  <div className="p-2.5 bg-[#d4af37]/10 rounded-lg w-fit group-hover:bg-[#d4af37]/20 transition-colors">
-                    {sol.icon}
+                  <div className="p-2 bg-[#d4af37]/10 rounded-lg flex-shrink-0 group-hover:bg-[#d4af37]/20 transition-colors mt-0.5">
+                    {s.icon}
                   </div>
-                  <div>
-                    <h3 className="font-display text-base mb-2 group-hover:text-[#d4af37] transition-colors">{sol.title}</h3>
-                    <p className="text-[#777] text-xs leading-relaxed">{sol.desc}</p>
+                  <div className="flex-1">
+                    <h3 className="font-display text-sm mb-1.5 group-hover:text-[#d4af37] transition-colors leading-snug">{s.title}</h3>
+                    <p className="text-[#555] text-xs leading-relaxed mb-3">{s.desc}</p>
+                    <span className="inline-flex items-center gap-1 text-xs text-[#444] group-hover:text-[#d4af37] transition-colors">
+                      Explore <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </span>
                   </div>
-                  <div className="mt-auto flex items-center gap-1 text-xs text-[#555] group-hover:text-[#d4af37] transition-colors">
-                    Explore <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                </Link>
+              </motion.div>
+            ))}
           </div>
-        ))}
+        </div>
+      </section>
+
+      {/* Enterprise Solutions */}
+      <section className="py-20 px-4 md:px-8 bg-[#111]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Multi-Plant & Corporate</span>
+            <h2 className="font-display text-3xl md:text-4xl mb-3">Enterprise & Corporate Solutions</h2>
+            <p className="text-[#666] text-sm max-w-2xl">6 solutions supporting multi-plant operations and corporate governance.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {enterpriseSolutions.map((s, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
+                <Link
+                  to={`/smart-factory/${s.slug}`}
+                  className="group flex items-start gap-4 p-6 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl hover:border-[#d4af37]/40 hover:bg-[#1e1e1e] transition-all duration-300 h-full"
+                >
+                  <div className="p-2 bg-[#d4af37]/10 rounded-lg flex-shrink-0 group-hover:bg-[#d4af37]/20 transition-colors mt-0.5">
+                    {s.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-display text-sm mb-1.5 group-hover:text-[#d4af37] transition-colors leading-snug">{s.title}</h3>
+                    <p className="text-[#555] text-xs leading-relaxed mb-3">{s.desc}</p>
+                    <span className="inline-flex items-center gap-1 text-xs text-[#444] group-hover:text-[#d4af37] transition-colors">
+                      Explore <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-4 md:px-8 bg-[#1a1a1a]">
+        <div className="max-w-3xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 text-center">
+            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">FAQ</span>
+            <h2 className="font-display text-3xl md:text-4xl">Frequently Asked Questions</h2>
+          </motion.div>
+
+          <div className="space-y-2">
+            {faqs.map((faq, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                className="border border-[#2a2a2a] rounded-xl overflow-hidden"
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex items-center justify-between gap-4 p-5 text-left bg-[#111] hover:bg-[#151515] transition-colors"
+                >
+                  <span className="font-display text-sm text-white">{faq.q}</span>
+                  {openFaq === i
+                    ? <Minus className="w-4 h-4 text-[#d4af37] flex-shrink-0" />
+                    : <Plus className="w-4 h-4 text-[#555] flex-shrink-0" />
+                  }
+                </button>
+                <AnimatePresence>
+                  {openFaq === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="px-5 pb-5 text-[#666] text-sm leading-relaxed bg-[#111]">{faq.a}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#111] py-20 px-4 md:px-8">
+      <section className="py-20 px-4 md:px-8 bg-[#111]">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-4xl mb-6">Ready to digitise your factory?</h2>
-          <p className="text-[#a0a0a0] mb-10">Our Smart Factory team will assess your current state, identify quick wins, and build a roadmap to full digitisation.</p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300"
-          >
-            Request a Factory Assessment <ArrowRight className="w-4 h-4" />
-          </Link>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="font-display text-3xl md:text-4xl mb-4">Ready to digitise your factory?</h2>
+            <p className="text-[#666] text-sm mb-8 max-w-xl mx-auto leading-relaxed">
+              Schedule a free assessment with our Industry 4.0 specialists. A pilot line deployment typically goes live in 4–8 weeks.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#e5c24a] transition-colors font-display text-sm"
+            >
+              Book Free Assessment <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>
