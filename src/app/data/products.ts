@@ -73,7 +73,7 @@ export const allProducts: Product[] = [
     name: 'PermitFlows',
     tagline: 'Digital Permit-to-Work',
     category: 'Factory 5.0',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1609188076864-c35269136c09?w=1600&h=700&fit=crop&auto=format',
     intro: 'PermitFlows digitalizes the full permit-to-work lifecycle — from permit request and risk assessment to multi-level approvals, active monitoring, and closure. Eliminate paper permits, prevent simultaneous conflicting work, and maintain a complete audit trail for every high-risk activity.',
     modules: [
       { name: 'Permit Request Portal', desc: 'Workers submit permit requests with work description, location, hazards identified, and precautions required.' },
@@ -165,7 +165,7 @@ export const allProducts: Product[] = [
     name: 'SafeSphere EHS',
     tagline: 'Health & Safety Compliance',
     category: 'Factory 5.0',
-    image: 'https://images.unsplash.com/photo-1609188076864-c35269136c09?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&h=700&fit=crop&auto=format',
     intro: 'SafeSphere EHS is a comprehensive environment, health, and safety compliance hub that digitizes safety operations across your organization. From zone-based safety rules and permit management to incident reporting, contractor compliance, and safety analytics — everything is in one platform.',
     modules: [
       { name: 'EHS Policy Manager', desc: 'Publish, version, and track acknowledgment of safety policies across the organization.' },
@@ -1040,7 +1040,7 @@ export const allProducts: Product[] = [
     name: 'CopperTrack',
     tagline: 'Copper Refinery Production Planning Software',
     category: 'Specialized',
-    image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&h=700&fit=crop&auto=format',
     intro: 'CopperTrack is an enterprise-grade copper tankhouse operations and production planning platform built specifically for electrolytic copper refineries. Replace Excel-based daily planning, manual PLC readings, and tribal-knowledge decisions with a structured, SAP/ERP-integrated platform.',
     modules: [
       { name: 'Tankhouse Decision Engine', desc: 'Automated stripping, continuation, and full anode changeover decision logic per bank based on anode weight, kAM, and purity.' },

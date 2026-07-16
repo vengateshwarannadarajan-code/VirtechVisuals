@@ -32,7 +32,7 @@ export const solutions: Solution[] = [
     slug: 'production-performance-planning',
     title: 'Production Performance & Planning',
     tagline: 'Improve OEE/OLE and delivery with real-time control and smart scheduling.',
-    image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&h=700&fit=crop&auto=format',
     intro: 'Gain real-time visibility into production output, losses, and schedule adherence. From OEE/OLE monitoring and micro-stoppage tracking to finite capacity scheduling and plan-vs-actual analysis, this solution ensures every shift delivers measurable improvement.',
     problem: 'Production data lives in spreadsheets, OEE is a whiteboard number, and planners juggle orders with tribal knowledge. Without granular loss capture and intelligent scheduling, 15-30% of capacity stays untapped, changeover waste increases, and delivery commitments are missed.',
     modules: [
@@ -68,7 +68,7 @@ export const solutions: Solution[] = [
     slug: 'process-intelligence-optimization',
     title: 'Process Intelligence & Optimization',
     tagline: 'Detect deviations, eliminate bottlenecks, and drive continuous process improvement.',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1600&h=700&fit=crop&auto=format',
     intro: 'Go beyond basic monitoring to understand why production deviates. Analyze cycle/takt time variations, identify bottlenecks with data, detect parameter drift before quality is impacted, and drive SPC-style continuous improvement across every process step.',
     problem: 'Process deviations are detected only after quality failures. Cycle time variations, parameter drifts, and bottlenecks remain hidden in raw data that nobody analyzes. Without structured process intelligence, improvement is reactive and unsustainable.',
     modules: [
@@ -520,7 +520,7 @@ export const solutions: Solution[] = [
     slug: 'safety-ehs-permit-to-work',
     title: 'Safety, EHS & Permit-to-Work',
     tagline: 'Enforce zone safety, permits, incident reporting, and compliance logging.',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1609188076864-c35269136c09?w=1600&h=700&fit=crop&auto=format',
     intro: 'Digitize safety operations including zone-based safety rules, permit-to-work workflows, incident and near-miss reporting, contractor safety management, compliance logging, and safety performance analytics.',
     problem: 'Safety incidents are under-reported, permits are managed on paper, contractor compliance is unverifiable, and safety analytics are limited to monthly presentations. Without digital EHS, risk accumulates invisibly.',
     modules: [

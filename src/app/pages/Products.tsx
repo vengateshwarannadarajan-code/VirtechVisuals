@@ -22,7 +22,7 @@ const products = [
     tagline: 'Digital Permit-to-Work',
     desc: 'Digital permit-to-work issuance and tracking with multi-level approvals, risk assessments, and complete audit trails.',
     specs: ['Hot work, confined space, electrical permits', 'Multi-level approvals', 'Active permit dashboard'],
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600',
+    image: 'https://images.unsplash.com/photo-1609188076864-c35269136c09?w=600',
     slug: 'permitflows',
   },
   {
@@ -40,7 +40,7 @@ const products = [
     tagline: 'Health & Safety Compliance',
     desc: 'Environment, health and safety compliance hub covering incident reporting, CAPA, training, and safety analytics.',
     specs: ['Incident & near-miss reporting', 'CAPA management', 'Safety KPI dashboards'],
-    image: 'https://images.unsplash.com/photo-1609188076864-c35269136c09?w=600',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600',
     slug: 'safesphere-ehs',
   },
   {
@@ -157,7 +157,7 @@ const products = [
     tagline: 'Copper Refinery Production Planning',
     desc: 'Enterprise-grade copper tankhouse operations and production planning platform for electrolytic copper refineries.',
     specs: ['Tankhouse decision engine', 'PLC current readings', 'SAP/ERP integration'],
-    image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=600',
+    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600',
     slug: 'coppertrack',
   },
   {
@@ -229,7 +229,7 @@ const products = [
     tagline: 'Industrial Edge Gateway',
     desc: 'Ruggedised edge computing gateway for real-time data aggregation from PLCs, SCADA systems, and sensors. IP67 rated, -40°C to 85°C operating range.',
     specs: ['ARM Cortex-A72 quad-core', '8GB RAM / 64GB eMMC', 'OPC-UA, MQTT, Modbus'],
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600',
     slug: null,
   },
   {
@@ -247,7 +247,7 @@ const products = [
     tagline: 'Unified IIoT Platform',
     desc: 'Enterprise-grade cloud platform connecting your entire operational estate - from shop floor to supply chain - in one secure environment.',
     specs: ['Multi-site management', 'ISO 27001 certified', 'REST API & webhooks'],
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600',
     slug: null,
   },
   {
@@ -256,7 +256,7 @@ const products = [
     tagline: 'Wireless Sensor Array',
     desc: 'Self-organising mesh network of industrial sensors for vibration, temperature, humidity, and power monitoring - deploy in hours, not weeks.',
     specs: ['5-year battery life', 'LoRaWAN / Zigbee', '±0.1°C accuracy'],
-    image: 'https://images.unsplash.com/photo-1601132359864-c974e79890ac?w=600',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600',
     slug: null,
   },
   {
