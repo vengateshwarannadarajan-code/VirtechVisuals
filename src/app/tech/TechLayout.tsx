@@ -84,7 +84,7 @@ export default function TechLayout() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <img src="/logo.png" alt="Virtech Visuals" className="h-8 w-auto" />
-            <span className="text-[#a0b0cc] text-sm">Tech Solutions — Paris, France</span>
+            <span className="text-[#a0b0cc] text-sm">Tech Solutions, Paris, France</span>
           </div>
           <p className="text-[#a0b0cc] text-sm">© 2026 Virtech Visuals. All rights reserved.</p>
           <a href="mailto:business@virtechvisuals.com" className="text-[#f0c030] text-sm hover:text-white transition-colors">

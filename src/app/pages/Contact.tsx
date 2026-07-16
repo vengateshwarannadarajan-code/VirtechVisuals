@@ -12,9 +12,9 @@ const services = [
   'Cybersecurity',
   'Talent Solutions',
   'Product Demo',
-  'Creative Studio — Photography',
-  'Creative Studio — Video',
-  'Creative Studio — Social Content',
+  'Creative Studio, Photography',
+  'Creative Studio, Video',
+  'Creative Studio, Social Content',
   'Other',
 ];
 
@@ -29,7 +29,7 @@ const contactInfo = [
     icon: <MessageCircle className="w-5 h-5 text-[#d4af37]" />,
     label: 'WhatsApp',
     value: '+33 7 80 84 34 87',
-    sub: 'Available Mon–Sat, 9am–7pm CET',
+    sub: 'Available Mon-Sat, 9am-7pm CET',
     href: 'https://wa.me/33780843487',
   },
   {
@@ -70,7 +70,7 @@ export default function Contact() {
       <PageHero
         tag="Get In Touch"
         title="Let's Build Something Together"
-        subtitle="Whether you're exploring a solution, requesting a demo, or ready to start — our team is here to help."
+        subtitle="Whether you're exploring a solution, requesting a demo, or ready to start, our team is here to help."
       />
 
       {/* Quick contact strip */}
@@ -97,7 +97,7 @@ export default function Contact() {
       <section className="py-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-14">
 
-          {/* Left — contact info */}
+          {/* Left - contact info */}
           <div className="lg:col-span-2 space-y-4">
             {contactInfo.map((item, i) => (
               <motion.div
@@ -148,7 +148,7 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* Right — form */}
+          {/* Right - form */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}

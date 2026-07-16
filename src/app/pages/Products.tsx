@@ -290,7 +290,7 @@ export default function Products() {
       <PageHero
         tag="Product Portfolio"
         title="Built for Industry"
-        subtitle="From ruggedised edge hardware to AI-powered software platforms — everything you need to digitalise operations end to end."
+        subtitle="From ruggedised edge hardware to AI-powered software platforms, everything you need to digitalise operations end to end."
         image="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920"
       />
 

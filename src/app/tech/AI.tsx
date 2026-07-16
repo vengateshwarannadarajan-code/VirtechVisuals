@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 
 const aiCapabilities = [
-  { title: 'Computer Vision', desc: 'Defect detection, PPE compliance, visual quality inspection, object tracking — powered by deep learning.' },
+  { title: 'Computer Vision', desc: 'Defect detection, PPE compliance, visual quality inspection, object tracking, powered by deep learning.' },
   { title: 'Generative AI & LLMs', desc: 'Custom LLM deployments, RAG pipelines, enterprise chatbots, document intelligence.' },
   { title: 'Predictive Analytics', desc: 'Predict equipment failures, demand fluctuations, and quality issues before they happen.' },
   { title: 'Natural Language Processing', desc: 'Text classification, sentiment analysis, information extraction from unstructured data.' },
@@ -9,7 +9,7 @@ const aiCapabilities = [
   { title: 'MLOps & Model Management', desc: 'End-to-end ML pipelines, model versioning, monitoring, and automated retraining.' },
   { title: 'Agentic AI', desc: 'Autonomous AI agents that plan, reason, and execute multi-step tasks in industrial environments.' },
   { title: 'AI-Powered Safety', desc: 'VisionSafe AI monitors worksites 24/7 for safety violations, near-misses, and PPE compliance.' },
-  { title: 'IncidentGPT', desc: 'AI-driven incident investigation — root cause analysis, report generation, corrective actions.' },
+  { title: 'IncidentGPT', desc: 'AI-driven incident investigation, root cause analysis, report generation, corrective actions.' },
 ];
 
 export default function AI() {
@@ -20,7 +20,7 @@ export default function AI() {
           <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">Artificial Intelligence</p>
           <h1 className="font-display text-5xl md:text-6xl mb-6">AI Solutions</h1>
           <p className="text-[#a0b0cc] text-lg max-w-2xl mx-auto">
-            Production-grade AI for manufacturing and enterprise — from computer vision and LLMs to edge inference and agentic systems. Built for the real world, not just demos.
+            Production-grade AI for manufacturing and enterprise, from computer vision and LLMs to edge inference and agentic systems. Built for the real world, not just demos.
           </p>
         </motion.div>
       </section>

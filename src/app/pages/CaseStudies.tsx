@@ -40,7 +40,7 @@ const cases = [
     industry: 'Electronics' as Industry,
     client: 'PCB Manufacturer',
     title: 'SMT Line Yield Optimisation with AI',
-    challenge: 'Solder paste defects on SMT lines were causing 4.8% first-pass yield failure — well above industry benchmark of 1.2%.',
+    challenge: 'Solder paste defects on SMT lines were causing 4.8% first-pass yield failure, well above industry benchmark of 1.2%.',
     solution: 'AI process control agent continuously adjusts printer parameters based on paste inspection data. Closed-loop optimisation without operator intervention.',
     results: ['First-pass yield failures reduced to 1.1%', '58% reduction in rework cost', '€1.9M annual scrap reduction', 'Model retrained weekly on fresh data'],
     duration: '3 months',

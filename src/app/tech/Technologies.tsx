@@ -35,7 +35,7 @@ export default function Technologies() {
           <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">Our Stack</p>
           <h1 className="font-display text-5xl md:text-6xl mb-6">Technologies</h1>
           <p className="text-[#a0b0cc] text-lg max-w-2xl mx-auto">
-            Cutting-edge technologies across industrial automation, AI, cloud, data, security, and immersive computing — all under one roof.
+            Cutting-edge technologies across industrial automation, AI, cloud, data, security, and immersive computing, all under one roof.
           </p>
         </motion.div>
       </section>

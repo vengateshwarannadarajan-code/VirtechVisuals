@@ -26,12 +26,12 @@ export default function TechHome() {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center max-w-4xl"
         >
-          <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">Virtech Visuals — Tech Solutions</p>
+          <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">Virtech Visuals, Tech Solutions</p>
           <h1 className="font-display text-5xl md:text-7xl mb-6 leading-tight">
             Smart Factory &<br />Industrial Innovation
           </h1>
           <p className="text-[#a0b0cc] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-            Delivering cutting-edge industrial automation and smart factory solutions from Paris, France — powered by our expert team in India.
+            Delivering cutting-edge industrial automation and smart factory solutions from Paris, France, powered by our expert team in India.
           </p>
           <a href="mailto:business@virtechvisuals.com" className="inline-flex items-center gap-2 px-8 py-4 bg-[#f0c030] text-[#0a0f1e] font-semibold rounded-lg hover:bg-white transition-all duration-300">
             Get In Touch <ArrowRight className="w-4 h-4" />
@@ -84,7 +84,7 @@ export default function TechHome() {
           <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">Our Model</p>
           <h2 className="font-display text-3xl md:text-4xl mb-6">Paris Front. India Power.</h2>
           <p className="text-[#a0b0cc] text-lg">
-            We deliver European-standard industrial solutions from our base in Paris, France — backed by a world-class engineering and support team in India. The best of both worlds for your business.
+            We deliver European-standard industrial solutions from our base in Paris, France, backed by a world-class engineering and support team in India. The best of both worlds for your business.
           </p>
         </div>
       </section>

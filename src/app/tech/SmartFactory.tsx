@@ -29,7 +29,7 @@ export default function SmartFactory() {
           <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">Industry 4.0</p>
           <h1 className="font-display text-5xl md:text-6xl mb-6">Smart Factory</h1>
           <p className="text-[#a0b0cc] text-lg max-w-2xl mx-auto">
-            End-to-end shopfloor digitisation — PLC & SCADA programming, IIoT, MES/MOM integration, digital twins, and full Industry 4.0 implementations. Delivered from Paris, powered from India.
+            End-to-end shopfloor digitisation, PLC & SCADA programming, IIoT, MES/MOM integration, digital twins, and full Industry 4.0 implementations. Delivered from Paris, powered from India.
           </p>
         </motion.div>
       </section>

@@ -36,7 +36,7 @@ export default function Products() {
           <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">22 Products</p>
           <h1 className="font-display text-5xl md:text-6xl mb-6">Products</h1>
           <p className="text-[#a0b0cc] text-lg max-w-2xl mx-auto">
-            A complete portfolio of ready-to-deploy industrial and enterprise software products — available to European clients through Virtech Visuals.
+            A complete portfolio of ready-to-deploy industrial and enterprise software products, available to European clients through Virtech Visuals.
           </p>
         </motion.div>
       </section>

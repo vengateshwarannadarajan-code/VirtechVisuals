@@ -55,7 +55,7 @@ const highlights = [
   {
     tag: 'Industrial Tech',
     title: 'Digi Sailor',
-    desc: 'We help manufacturers and industrial operators digitalise their operations — from IIoT connectivity and AI-powered analytics to full Smart Factory deployments. End-to-end, SLA-backed.',
+    desc: 'We help manufacturers and industrial operators digitalise their operations, from IIoT connectivity and AI-powered analytics to full Smart Factory deployments. End-to-end, SLA-backed.',
     cta: 'Explore Smart Factory',
     to: '/smart-factory',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900',
@@ -63,7 +63,7 @@ const highlights = [
   {
     tag: 'Creative Services',
     title: 'Creative Studio',
-    desc: 'Premium photography, videography, and social content for brands that want to stand out. Fashion, product, food, and beauty — shot in our Paris studio or on location globally.',
+    desc: 'Premium photography, videography, and social content for brands that want to stand out. Fashion, product, food, and beauty, shot in our Paris studio or on location globally.',
     cta: 'Explore Creative Studio',
     to: '/creative-studio',
     image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900',
@@ -95,7 +95,7 @@ export default function Home() {
             Virtech Visuals
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="text-lg md:text-xl text-[#a0a0a0] mb-12 max-w-2xl mx-auto leading-relaxed">
-            We build intelligent industrial systems and craft compelling visual content — two studios, one standard of excellence.
+            We build intelligent industrial systems and craft compelling visual content, two studios, one standard of excellence.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link to="/smart-factory" className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 flex items-center justify-center gap-2">
@@ -267,12 +267,12 @@ export default function Home() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#2a2a2a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
             {[
-              { icon: <Cpu className="w-5 h-5 text-[#d4af37]" />, label: '24 Smart Factory Solutions', body: 'From OEE & quality to warehouse, safety, and digital twins — one platform covering shopfloor to boardroom.' },
-              { icon: <Layers className="w-5 h-5 text-[#d4af37]" />, label: '12 Technology Services', body: 'Custom software, cloud & DevOps, cybersecurity, IoT, talent solutions, and training — end-to-end delivery under one roof.' },
-              { icon: <Brain className="w-5 h-5 text-[#d4af37]" />, label: 'Production-Grade AI', body: 'Computer vision, NLP, predictive analytics, generative AI, and edge AI — deployed in real manufacturing environments.' },
-              { icon: <Package className="w-5 h-5 text-[#d4af37]" />, label: 'Ready-to-Deploy Products', body: 'GateKeeper, VisionSafe AI, DigiTrack, PredictPulse, PermitFlows — purpose-built tools that go live in weeks, not months.' },
+              { icon: <Cpu className="w-5 h-5 text-[#d4af37]" />, label: '24 Smart Factory Solutions', body: 'From OEE & quality to warehouse, safety, and digital twins, one platform covering shopfloor to boardroom.' },
+              { icon: <Layers className="w-5 h-5 text-[#d4af37]" />, label: '12 Technology Services', body: 'Custom software, cloud & DevOps, cybersecurity, IoT, talent solutions, and training, end-to-end delivery under one roof.' },
+              { icon: <Brain className="w-5 h-5 text-[#d4af37]" />, label: 'Production-Grade AI', body: 'Computer vision, NLP, predictive analytics, generative AI, and edge AI, deployed in real manufacturing environments.' },
+              { icon: <Package className="w-5 h-5 text-[#d4af37]" />, label: 'Ready-to-Deploy Products', body: 'GateKeeper, VisionSafe AI, DigiTrack, PredictPulse, PermitFlows, purpose-built tools that go live in weeks, not months.' },
               { icon: <Cloud className="w-5 h-5 text-[#d4af37]" />, label: 'Multi-Platform Expertise', body: 'Official partners with Google Cloud, AWS, Microsoft Azure, IBM, and NVIDIA. Deep SAP, Oracle, and Salesforce expertise.' },
-              { icon: <TrendingUp className="w-5 h-5 text-[#d4af37]" />, label: 'Outcome-Driven Results', body: 'Measurable gains in throughput, quality, uptime, cost, and compliance — backed by ISO 27001, ISO 9001 & SOC 2 certifications.' },
+              { icon: <TrendingUp className="w-5 h-5 text-[#d4af37]" />, label: 'Outcome-Driven Results', body: 'Measurable gains in throughput, quality, uptime, cost, and compliance, backed by ISO 27001, ISO 9001 & SOC 2 certifications.' },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }} className="bg-[#1a1a1a] p-8 flex flex-col gap-4 hover:bg-[#1f1f1f] transition-colors duration-300 group">
                 <div className="flex items-center gap-3">
@@ -291,7 +291,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-display text-4xl md:text-5xl mb-6">Ready to Get Started?</h2>
-            <p className="text-[#a0a0a0] text-lg mb-10 max-w-2xl mx-auto">Whether it's Smart Factory, Creative Studio, or both — let's talk about what we can build together.</p>
+            <p className="text-[#a0a0a0] text-lg mb-10 max-w-2xl mx-auto">Whether it's Smart Factory, Creative Studio, or both, let's talk about what we can build together.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#e5c24a] transition-colors flex items-center justify-center gap-2 font-medium">
                 Get In Touch <ArrowRight className="w-4 h-4" />
@@ -335,7 +335,7 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-14">
             <div className="col-span-2 md:col-span-1">
-              <p className="text-[#444] text-xs leading-relaxed mb-6">End-to-end Smart Factory solutions and creative services — from shopfloor to social media.</p>
+              <p className="text-[#444] text-xs leading-relaxed mb-6">End-to-end Smart Factory solutions and creative services, from shopfloor to social media.</p>
               <div className="flex flex-wrap gap-2">
                 {['ISO 27001', 'ISO 9001', 'SOC 2'].map(cert => (
                   <span key={cert} className="text-[9px] tracking-widest text-[#444] border border-[#222] px-2 py-1 rounded">{cert}</span>

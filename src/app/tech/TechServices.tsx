@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 const services = [
   { title: 'Custom Software Development', desc: 'Full-stack web & mobile apps, enterprise portals, cloud-native architecture, API integrations, legacy modernisation.' },
   { title: 'Industrial Automation & Smart Factory', desc: 'End-to-end shopfloor digitisation: PLC & SCADA programming, IIoT, MES/MOM integration, digital twins, Industry 4.0.' },
-  { title: 'Artificial Intelligence', desc: 'Computer vision, NLP, predictive analytics, generative AI & LLMs, edge AI, MLOps, agentic AI — production-grade.' },
+  { title: 'Artificial Intelligence', desc: 'Computer vision, NLP, predictive analytics, generative AI & LLMs, edge AI, MLOps, agentic AI, production-grade.' },
   { title: 'IoT & Edge Computing', desc: 'Connect machines, sensors, and systems for real-time industrial intelligence. Edge gateways, MQTT/OPC-UA, condition monitoring.' },
   { title: 'Cloud & DevOps Services', desc: 'Cloud architecture, migration, Kubernetes, CI/CD, infrastructure as code, multi-cloud management (AWS, Azure, GCP).' },
   { title: 'Data Engineering & Analytics', desc: 'Modern data platforms, ETL/ELT pipelines, data lakes, warehousing, BI dashboards, real-time analytics.' },
@@ -24,7 +24,7 @@ export default function TechServices() {
           <p className="text-[#f0c030] text-sm tracking-widest uppercase mb-4">13 Service Lines</p>
           <h1 className="font-display text-5xl md:text-6xl mb-6">Services</h1>
           <p className="text-[#a0b0cc] text-lg max-w-2xl mx-auto">
-            Full-spectrum technology services from software development to industrial automation — delivered to European businesses from our Paris base, supported by 250+ engineers in India.
+            Full-spectrum technology services from software development to industrial automation, delivered to European businesses from our Paris base, supported by 250+ engineers in India.
           </p>
         </motion.div>
       </section>
