@@ -1,242 +1,648 @@
-import { Camera, Video, Instagram } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router';
+import { Camera, Video, Instagram, ArrowDown, Mail, Phone, MapPin } from 'lucide-react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { motion } from 'motion/react';
-import { Link } from 'react-router';
-import { PageHero } from '../components/PageHero';
-
-const services = [
-  {
-    icon: <Camera className="w-10 h-10 text-[#d4af37]" />,
-    title: 'Photography',
-    items: [
-      'Brand & Commercial Photography',
-      'Nail & fashion photography',
-      'Beauty & salon photography',
-      'Product photography',
-      'Food & tiffin service photography',
-    ],
-  },
-  {
-    icon: <Video className="w-10 h-10 text-[#d4af37]" />,
-    title: 'Videography',
-    items: [
-      'Instagram Reel videos',
-      'Short promotional videos',
-      'Process & behind-the-scenes',
-      'Product showcase videos',
-    ],
-  },
-  {
-    icon: <Instagram className="w-10 h-10 text-[#d4af37]" />,
-    title: 'Social Media',
-    items: [
-      'Visual content planning',
-      'Consistent visual style',
-      'Posting support (feed & reels)',
-      'Profile presentation improvement',
-    ],
-  },
-];
-
-const images = [
-  { url: 'https://images.unsplash.com/photo-1633381521050-26bb467d9d5a?w=600', name: 'Fashion Editorial', category: 'Fashion' },
-  { url: 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600', name: 'Beauty Products', category: 'Product' },
-  { url: 'https://images.unsplash.com/photo-1606143412458-acc5f86de897?w=600', name: 'Portrait Session', category: 'Fashion' },
-  { url: 'https://images.unsplash.com/photo-1617650555983-eaf0230972c2?w=600', name: 'Food Styling', category: 'Food' },
-  { url: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600', name: 'Makeup Artistry', category: 'Beauty' },
-  { url: 'https://images.unsplash.com/photo-1612928414075-bc722ade44f1?w=600', name: 'Studio Portrait', category: 'Fashion' },
-  { url: 'https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600', name: 'Skincare Line', category: 'Product' },
-  { url: 'https://images.unsplash.com/photo-1636665516471-e94690edf10f?w=600', name: 'Culinary Art', category: 'Food' },
-];
-
-const pricing = [
-  {
-    name: 'Starter',
-    price: '€299',
-    popular: false,
-    features: ['1 photoshoot session (2 hours)', '15 edited photos', 'Basic retouching'],
-  },
-  {
-    name: 'Growth',
-    price: '€599',
-    popular: true,
-    features: ['1 photoshoot + 2 reel videos', '30 edited photos + 2 reels', 'Advanced retouching', 'Social media captions'],
-  },
-  {
-    name: 'Premium',
-    price: '€999',
-    popular: false,
-    features: ['2 photoshoots + 5 reel videos', '50 edited photos + 5 reels', 'Premium retouching', '1 month posting support'],
-  },
-];
 
 export default function CreativeStudio() {
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
-      <PageHero
-        tag="Creative Studio — Paris"
-        title="Photography, Video & Social Content"
-        subtitle="Premium visual content for brands that want to stand out — fashion, product, food, and beauty shot in our Paris studio or on location globally."
-        image="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1920"
-      />
+      <Hero />
+      <Services />
+      <Portfolio />
+      <WhyChooseUs />
+      <ShootPackages />
+      <Pricing />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
 
-      {/* Services */}
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-        <motion.h2
+function Hero() {
+  return (
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1920"
+          alt="Fashion Photography"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 text-center px-4"
+      >
+        <h1 className="font-display text-6xl md:text-8xl mb-6">Virtech Visuals</h1>
+        <p className="text-xl md:text-2xl text-[#f5f5f5] mb-12 tracking-wide">
+          Photography • Video • Social Content Support
+        </p>
+        <button className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300">
+          View Our Work
+        </button>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+      >
+        <ArrowDown className="w-6 h-6 animate-bounce text-[#d4af37]" />
+      </motion.div>
+    </section>
+  );
+}
+
+function Services() {
+  const services = [
+    {
+      icon: <Camera className="w-12 h-12 text-[#d4af37]" />,
+      title: "Photography Services",
+      items: [
+        "Brand & Commercial Photography",
+        "Nail fashion photography",
+        "Beauty & salon photography",
+        "Product photography",
+        "Food & tiffin service photography"
+      ]
+    },
+    {
+      icon: <Video className="w-12 h-12 text-[#d4af37]" />,
+      title: "Videography Services",
+      items: [
+        "Instagram Reel videos",
+        "Short promotional videos",
+        "Process scenes videos",
+        "Product showcase videos"
+      ]
+    },
+    {
+      icon: <Instagram className="w-12 h-12 text-[#d4af37]" />,
+      title: "Social Media Support",
+      items: [
+        "Visual content planning",
+        "Consistent visual style",
+        "Posting support (feed & reels)",
+        "Profile presentation improvement"
+      ]
+    }
+  ];
+
+  return (
+    <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="font-display text-5xl text-center mb-16"
+      >
+        What We Do
+      </motion.h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.2 }}
+            className="text-center space-y-6"
+          >
+            <div className="flex justify-center mb-6">
+              {service.icon}
+            </div>
+            <h3 className="font-display text-2xl mb-4">{service.title}</h3>
+            <ul className="space-y-3 text-[#a0a0a0]">
+              {service.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Portfolio() {
+  const images = [
+    { url: "https://images.unsplash.com/photo-1633381521050-26bb467d9d5a?w=600", name: "Fashion Editorial", category: "Fashion" },
+    { url: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600", name: "Beauty Products", category: "Product" },
+    { url: "https://images.unsplash.com/photo-1606143412458-acc5f86de897?w=600", name: "Portrait Session", category: "Fashion" },
+    { url: "https://images.unsplash.com/photo-1617650555983-eaf0230972c2?w=600", name: "Food Styling", category: "Food" },
+    { url: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600", name: "Makeup Artistry", category: "Beauty" },
+    { url: "https://images.unsplash.com/photo-1612928414075-bc722ade44f1?w=600", name: "Studio Portrait", category: "Fashion" },
+    { url: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600", name: "Skincare Line", category: "Product" },
+    { url: "https://images.unsplash.com/photo-1636665516471-e94690edf10f?w=600", name: "Culinary Art", category: "Food" },
+  ];
+
+  return (
+    <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="font-display text-5xl text-center mb-16"
+      >
+        Portfolio
+      </motion.h2>
+
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <Masonry gutter="1.5rem">
+          {images.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="relative group cursor-pointer overflow-hidden rounded-lg"
+            >
+              <img
+                src={image.url}
+                alt={image.name}
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col">
+                <h4 className="font-display text-xl mb-2">{image.name}</h4>
+                <p className="text-[#d4af37] text-sm">{image.category}</p>
+              </div>
+            </motion.div>
+          ))}
+        </Masonry>
+      </ResponsiveMasonry>
+    </section>
+  );
+}
+
+function WhyChooseUs() {
+  const stats = [
+    { number: '500+', label: 'Brands Served' },
+    { number: '10K+', label: 'Content Pieces' },
+    { number: 'Paris', label: 'Based Excellence' },
+  ];
+
+  const benefits = [
+    { title: 'Professional European Aesthetic', desc: 'Every frame is crafted with a refined, editorial sensibility shaped by Paris — the global capital of fashion and visual culture.' },
+    { title: 'Fast Turnaround (48–72 Hours)', desc: 'Receive polished, ready-to-post content within 48–72 hours of your shoot. No waiting weeks for deliverables.' },
+    { title: 'Instagram-Optimized Content', desc: 'Every photo and reel is composed, cropped, and color-graded specifically for maximum impact on Instagram feeds and stories.' },
+    { title: 'Affordable Pricing for Startups', desc: 'Premium quality without the agency price tag. Flexible packages designed for growing brands and independent businesses.' },
+  ];
+
+  return (
+    <section className="py-24 px-4 md:px-8 bg-[#111]">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl text-center mb-16"
+          className="mb-16"
         >
-          What We Do
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {services.map((s, i) => (
+          <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Why Choose Us</span>
+          <h2 className="font-display text-5xl md:text-6xl">The Virtech Visuals Difference</h2>
+        </motion.div>
+
+        {/* Stats strip */}
+        <div className="grid grid-cols-3 gap-px bg-[#2a2a2a] rounded-2xl overflow-hidden border border-[#2a2a2a] mb-16">
+          {stats.map((stat, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-              className="text-center p-8 bg-[#222] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 transition-colors"
+              transition={{ delay: i * 0.1 }}
+              className="bg-[#1a1a1a] px-8 py-10 text-center"
             >
-              <div className="flex justify-center mb-6">{s.icon}</div>
-              <h3 className="font-display text-2xl mb-4">{s.title}</h3>
-              <ul className="space-y-3 text-[#a0a0a0] text-sm">
-                {s.items.map((item, ii) => (
-                  <li key={ii}>{item}</li>
-                ))}
-              </ul>
+              <div className="font-display text-5xl md:text-6xl text-[#d4af37] mb-2">{stat.number}</div>
+              <div className="text-[#666] text-sm tracking-wide">{stat.label}</div>
             </motion.div>
           ))}
         </div>
-      </section>
 
-      {/* Portfolio */}
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-        <motion.h2
+        {/* Benefits grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {benefits.map((benefit, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="flex gap-5 p-7 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl hover:border-[#d4af37]/30 transition-colors duration-300 group"
+            >
+              <div className="w-8 h-8 rounded-full bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-[#d4af37]/20 transition-colors">
+                <div className="w-2 h-2 rounded-full bg-[#d4af37]" />
+              </div>
+              <div>
+                <h3 className="font-display text-base mb-2 group-hover:text-[#d4af37] transition-colors">{benefit.title}</h3>
+                <p className="text-[#666] text-sm leading-relaxed">{benefit.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ShootPackages() {
+  const packages = [
+    {
+      name: 'Starter',
+      badge: null,
+      highlight: false,
+      features: [
+        { text: '1 Photoshoot Session (2 hours)', bold: true },
+        { text: '15 Edited Photos', bold: false },
+        { text: 'Basic Retouching', bold: false },
+      ],
+    },
+    {
+      name: 'Growth',
+      badge: 'Popular',
+      highlight: true,
+      features: [
+        { text: '1 Photoshoot + 2 Reel Videos', bold: true },
+        { text: '30 Edited Photos + 2 Reels', bold: false },
+        { text: 'Advanced Retouching', bold: false },
+        { text: 'Social Media Captions', bold: false },
+        { text: 'Limited Brochure', bold: false },
+      ],
+    },
+    {
+      name: 'Premium',
+      badge: null,
+      highlight: false,
+      features: [
+        { text: '2 Photoshoots + 5 Reel Videos', bold: true },
+        { text: '50 Edited Photos + 5–7 Reels', bold: false },
+        { text: 'Premium Retouching', bold: false },
+        { text: '1 Month Posting Support', bold: false },
+        { text: 'Brochure', bold: false },
+        { text: 'Social Media Handling', bold: false },
+      ],
+    },
+  ];
+
+  return (
+    <section className="py-24 px-4 md:px-8 bg-[#111]">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl text-center mb-16"
+          className="mb-14"
         >
-          Portfolio
-        </motion.h2>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-          <Masonry gutter="1.5rem">
-            {images.map((image, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="relative group cursor-pointer overflow-hidden rounded-xl"
-              >
-                <img
-                  src={image.url}
-                  alt={image.name}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col">
-                  <h4 className="font-display text-xl mb-2">{image.name}</h4>
-                  <p className="text-[#d4af37] text-sm">{image.category}</p>
-                </div>
-              </motion.div>
-            ))}
-          </Masonry>
-        </ResponsiveMasonry>
-      </section>
+          <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Photography & Content Shoots</span>
+          <h2 className="font-display text-5xl">Shoot Packages</h2>
+          <p className="text-[#666] text-sm mt-3 max-w-xl">One-time and recurring content shoot packages — ideal for brands that need fresh photography and reels.</p>
+        </motion.div>
 
-      {/* Pricing */}
-      <section className="py-24 px-4 md:px-8 bg-[#111]">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-display text-4xl md:text-5xl text-center mb-16"
-          >
-            Pricing
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className={`relative p-8 rounded-xl border ${
-                  plan.popular ? 'border-[#d4af37] bg-[#1f1f1f]' : 'border-[#2e2e2e] bg-[#1a1a1a]'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#d4af37] text-[#1a1a1a] px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="font-display text-2xl mb-4">{plan.name}</h3>
-                <div className="font-display text-5xl text-[#d4af37] mb-8">{plan.price}</div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((f, fi) => (
-                    <li key={fi} className="flex items-start gap-3 text-[#a0a0a0] text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37] mt-1.5 flex-shrink-0" />
-                      {f}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          {packages.map((pkg, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.12 }}
+              className={`relative flex flex-col rounded-2xl overflow-hidden border ${
+                pkg.highlight ? 'border-[#d4af37]' : 'border-[#2e2e2e]'
+              } bg-[#1a1a1a]`}
+            >
+              {pkg.badge && (
+                <div className="text-center py-2 text-xs tracking-widest uppercase font-display bg-[#d4af37] text-[#1a1a1a]">
+                  {pkg.badge}
+                </div>
+              )}
+
+              <div className="p-8 flex flex-col flex-1">
+                <h3 className="font-display text-3xl mb-6">{pkg.name}</h3>
+                <div className="border-t border-[#2a2a2a] mb-6" />
+
+                <ul className="space-y-3.5 mb-8 flex-1">
+                  {pkg.features.map((feat, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37] mt-[7px] flex-shrink-0" />
+                      <span className={`text-sm leading-snug ${feat.bold ? 'text-white font-display' : 'text-[#888]'}`}>
+                        {feat.text}
+                      </span>
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
-                  className={`block text-center py-3 rounded-lg transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-[#d4af37] text-[#1a1a1a] hover:bg-[#f5f5f5]'
-                      : 'bg-[#2e2e2e] text-white hover:bg-[#3a3a3a]'
-                  }`}
-                >
+
+                <Link to="/contact" className={`w-full py-3.5 rounded-xl text-sm font-display tracking-wide transition-all duration-300 flex items-center justify-center ${
+                  pkg.highlight
+                    ? 'bg-[#d4af37] text-[#1a1a1a] hover:bg-[#e5c24a]'
+                    : 'bg-[#222] text-white border border-[#444] hover:bg-[#2a2a2a]'
+                }`}>
                   Get Started
                 </Link>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      {/* Benefits */}
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+function Pricing() {
+  const plans = [
+    {
+      name: 'Standard',
+      badge: null,
+      includes: null,
+      color: 'border-[#2e2e2e]',
+      btnStyle: 'bg-[#222] text-white hover:bg-[#333] border border-[#444]',
+      features: [
+        { text: '4 Posts + 4 Reels + Story', bold: true },
+        { text: 'Facebook, Instagram, Google Business Management', bold: false },
+        { text: 'Review, Reply & Reports', bold: false },
+        { text: 'Social Media Marketing (Audience Based)', bold: false },
+        { text: 'Monthly Calendar (Day By Day Plan)', bold: false },
+        { text: 'Any 3 Social Media (Business/Product Based)', bold: false },
+        { text: 'Social Media Account Setup & Business Profile Management', bold: false },
+        { text: 'Monthly Report & Monthly Review', bold: false },
+        { text: 'Brand Awareness (Business Marketing)', bold: false },
+      ],
+    },
+    {
+      name: 'Professional',
+      badge: 'Most Popular',
+      includes: 'INCLUDES STANDARD, PLUS',
+      color: 'border-[#d4af37]',
+      btnStyle: 'bg-[#d4af37] text-[#1a1a1a] hover:bg-[#e5c24a]',
+      features: [
+        { text: '6 Posts + 6 Reels + Story + 8 Shorts', bold: true },
+        { text: 'Facebook, Instagram, YouTube', bold: false },
+        { text: 'Co-branding Promotion (Location Based)', bold: false },
+        { text: 'Google Ads (Audience Based)', bold: false },
+        { text: 'Customized Promotion Designs (Day By Day Plan)', bold: false },
+        { text: 'Brand Guideline (Business Based)', bold: false },
+        { text: 'Customer Review Reply (Day By Day Plan)', bold: false },
+        { text: 'Products Listing (GMB, WhatsApp, Facebook)', bold: false },
+        { text: 'Campaign Monitoring & Evaluation (Ads Report)', bold: false },
+        { text: 'Paid Promotion (Facebook, Instagram)', bold: false },
+        { text: 'Monthly Report & Monthly Review', bold: false },
+      ],
+    },
+    {
+      name: 'Advanced',
+      badge: 'Premier',
+      includes: 'INCLUDES ALL PROFESSIONAL FEATURES, PLUS',
+      color: 'border-[#888]',
+      btnStyle: 'bg-[#1a1a1a] text-[#d4af37] border border-[#d4af37]/60 hover:bg-[#d4af37]/10',
+      features: [
+        { text: '10 Posts + 10 Reels + Story + 10 Shorts', bold: true },
+        { text: 'Facebook, Instagram, LinkedIn, YouTube', bold: false },
+        { text: 'SEO (Search Engine Optimization)', bold: false },
+        { text: 'Paid Promotion (Facebook, Instagram, YouTube)', bold: false },
+        { text: '24/7 Prioritized Customer Support', bold: false },
+        { text: 'Premier Consulting Services', bold: false },
+        { text: 'Monthly Report & Monthly Review', bold: false },
+      ],
+    },
+  ];
+
+  return (
+    <section className="py-24 px-4 md:px-8 bg-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-14"
+        >
+          <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Plans</span>
+          <h2 className="font-display text-5xl">Choose Your Plan</h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          {plans.map((plan, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.12 }}
+              className={`relative flex flex-col rounded-2xl border ${plan.color} bg-[#111] overflow-hidden`}
+            >
+              {/* Badge */}
+              {plan.badge && (
+                <div className={`text-center py-2 text-xs tracking-widest uppercase font-display ${
+                  plan.badge === 'Most Popular'
+                    ? 'bg-[#d4af37] text-[#1a1a1a]'
+                    : 'bg-[#222] text-[#888]'
+                }`}>
+                  {plan.badge}
+                </div>
+              )}
+
+              <div className="p-8 flex flex-col flex-1">
+                {/* Plan name */}
+                <h3 className="font-display text-3xl mb-1">{plan.name}</h3>
+
+                {/* Includes label */}
+                {plan.includes && (
+                  <p className="text-[10px] text-[#d4af37] tracking-widest uppercase mb-6 leading-relaxed">
+                    {plan.includes}
+                  </p>
+                )}
+                {!plan.includes && <div className="mb-6" />}
+
+                {/* Divider */}
+                <div className="border-t border-[#2a2a2a] mb-6" />
+
+                {/* Features */}
+                <ul className="space-y-3.5 mb-8 flex-1">
+                  {plan.features.map((feat, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37] mt-[7px] flex-shrink-0" />
+                      <span className={`text-sm leading-snug ${feat.bold ? 'text-white font-display' : 'text-[#888]'}`}>
+                        {feat.text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link to="/contact" className={`w-full py-3.5 rounded-xl text-sm font-display tracking-wide transition-all duration-300 flex items-center justify-center ${plan.btnStyle}`}>
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    service: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
+
+  return (
+    <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="font-display text-5xl text-center mb-16"
+      >
+        Get In Touch
+      </motion.h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <motion.form
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          onSubmit={handleSubmit}
+          className="space-y-6"
+        >
           <div>
-            <h2 className="font-display text-4xl mb-10">Why Choose Our Studio</h2>
-            <ul className="space-y-5">
-              {[
-                'Elegant Parisian aesthetic tailored to your brand',
-                'Fast 48–72 hour turnaround on all deliverables',
-                'Content shot and optimised for Instagram & Reels',
-                'Flexible packages for startups and growing brands',
-                'Dedicated support from shoot to final delivery',
-              ].map((b, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-[#d4af37] mt-2 flex-shrink-0" />
-                  <p className="text-[#a0a0a0]">{b}</p>
-                </li>
-              ))}
+            <label className="block mb-2 text-[#f5f5f5]">Name</label>
+            <input
+              type="text"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#d4af37] outline-none transition-colors"
+              required
+            />
+          </div>
+          <div>
+            <label className="block mb-2 text-[#f5f5f5]">Email</label>
+            <input
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#d4af37] outline-none transition-colors"
+              required
+            />
+          </div>
+          <div>
+            <label className="block mb-2 text-[#f5f5f5]">Service Interest</label>
+            <select
+              value={formData.service}
+              onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#d4af37] outline-none transition-colors"
+              required
+            >
+              <option value="">Select a service</option>
+              <option value="photography">Photography</option>
+              <option value="videography">Videography</option>
+              <option value="social-media">Social Media Support</option>
+              <option value="all">All Services</option>
+            </select>
+          </div>
+          <div>
+            <label className="block mb-2 text-[#f5f5f5]">Message</label>
+            <textarea
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              rows={4}
+              className="w-full px-4 py-3 bg-[#222] border border-[#333] rounded-lg focus:border-[#d4af37] outline-none transition-colors resize-none"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full py-3 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300"
+          >
+            Send Message
+          </button>
+        </motion.form>
+
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          <div className="flex items-start gap-4">
+            <Mail className="w-6 h-6 text-[#d4af37] mt-1" />
+            <div>
+              <h4 className="text-lg mb-1">Email</h4>
+              <p className="text-[#a0a0a0]">business@virtechvisuals.com</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <Phone className="w-6 h-6 text-[#d4af37] mt-1" />
+            <div>
+              <h4 className="text-lg mb-1">WhatsApp</h4>
+              <p className="text-[#a0a0a0]">+33 7 80 84 34 87</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <MapPin className="w-6 h-6 text-[#d4af37] mt-1" />
+            <div>
+              <h4 className="text-lg mb-1">Location</h4>
+              <p className="text-[#a0a0a0]">Based in Paris, France</p>
+              <p className="text-[#a0a0a0]">Serving clients globally</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="bg-[#0f0f0f] py-12 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+          <div>
+            <h3 className="font-display text-2xl mb-4">Virtech Visuals</h3>
+            <p className="text-[#a0a0a0]">Photography • Video • Social Content Support</p>
+          </div>
+
+          <div>
+            <h4 className="text-lg mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-[#a0a0a0]">
+              <li><a href="#services" className="hover:text-[#d4af37] transition-colors">Services</a></li>
+              <li><a href="#portfolio" className="hover:text-[#d4af37] transition-colors">Portfolio</a></li>
+              <li><a href="#pricing" className="hover:text-[#d4af37] transition-colors">Pricing</a></li>
+              <li><a href="#contact" className="hover:text-[#d4af37] transition-colors">Contact</a></li>
             </ul>
           </div>
-          <div className="grid grid-cols-2 gap-6">
-            {[
-              { n: '48h', l: 'Turnaround Time' },
-              { n: '3-in-1', l: 'Photo, Video & Social' },
-              { n: 'Paris', l: 'Based, Global Reach' },
-              { n: '100%', l: 'Brand Focused' },
-            ].map((s, i) => (
-              <div key={i} className="p-6 bg-[#222] border border-[#2e2e2e] rounded-xl text-center">
-                <div className="font-display text-3xl text-[#d4af37] mb-2">{s.n}</div>
-                <div className="text-[#a0a0a0] text-sm">{s.l}</div>
-              </div>
-            ))}
+
+          <div>
+            <h4 className="text-lg mb-4">Follow Us</h4>
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
+                <Camera className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
+                <Video className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+
+        <div className="border-t border-[#333] pt-8 text-center text-[#a0a0a0]">
+          <p>&copy; 2026 Virtech Visuals. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   );
 }
