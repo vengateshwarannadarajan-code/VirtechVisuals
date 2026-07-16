@@ -193,23 +193,23 @@ function WhyChooseUs() {
   const benefits = [
     {
       icon: <Globe className="w-5 h-5 text-[#d4af37]" />,
-      title: 'Professional European Aesthetic',
-      desc: 'Every frame is crafted with a refined, editorial sensibility shaped by Paris. The global capital of fashion and visual culture.',
+      titleKey: 'cs.why1.title',
+      descKey: 'cs.why1.desc',
     },
     {
       icon: <Clock className="w-5 h-5 text-[#d4af37]" />,
-      title: 'Fast Turnaround (48-72 Hours)',
-      desc: 'Receive polished, ready-to-post content within 48-72 hours of your shoot. No waiting weeks for deliverables.',
+      titleKey: 'cs.why2.title',
+      descKey: 'cs.why2.desc',
     },
     {
       icon: <Sparkles className="w-5 h-5 text-[#d4af37]" />,
-      title: 'Instagram-Optimized Content',
-      desc: 'Every photo and reel is composed, cropped, and color-graded specifically for maximum impact on Instagram feeds and stories.',
+      titleKey: 'cs.why3.title',
+      descKey: 'cs.why3.desc',
     },
     {
       icon: <TrendingUp className="w-5 h-5 text-[#d4af37]" />,
-      title: 'Affordable Pricing for Startups',
-      desc: 'Premium quality without the agency price tag. Flexible packages designed for growing brands and independent businesses.',
+      titleKey: 'cs.why4.title',
+      descKey: 'cs.why4.desc',
     },
   ];
 
@@ -258,8 +258,8 @@ function WhyChooseUs() {
                 {benefit.icon}
               </div>
               <div>
-                <h3 className="font-display text-base mb-2 group-hover:text-[#d4af37] transition-colors">{benefit.title}</h3>
-                <p className="text-[#666] text-sm leading-relaxed">{benefit.desc}</p>
+                <h3 className="font-display text-base mb-2 group-hover:text-[#d4af37] transition-colors">{t(benefit.titleKey)}</h3>
+                <p className="text-[#666] text-sm leading-relaxed">{t(benefit.descKey)}</p>
               </div>
             </motion.div>
           ))}
@@ -272,7 +272,7 @@ function WhyChooseUs() {
 function ShootPackages() {
   const packages = [
     {
-      name: 'Starter',
+      name: t('cs.starter'),
       badge: null,
       highlight: false,
       features: [
@@ -282,7 +282,7 @@ function ShootPackages() {
       ],
     },
     {
-      name: 'Growth',
+      name: t('cs.growth'),
       badge: 'Popular',
       highlight: true,
       features: [
@@ -294,7 +294,7 @@ function ShootPackages() {
       ],
     },
     {
-      name: 'Premium',
+      name: t('cs.premium'),
       badge: null,
       highlight: false,
       features: [

@@ -8,9 +8,9 @@ import { Footer } from '../components/Footer';
 const capabilities = [
   {
     icon: <Bot className="w-7 h-7 text-[#d4af37]" />,
-    title: 'GenAI Assistants',
+    titleKey: 'ai.cap1.title',
     sub: 'Chatbots + Agents',
-    desc: 'AI that understands your internal knowledge and helps users take action. Internal bots that answer questions, generate reports, and trigger workflows, securely and role-based.',
+    descKey: 'ai.cap1.desc',
     builds: [
       'Document Q&A bots (RAG): SOPs, manuals, tenders, policies, maintenance guides',
       'Department assistants: HR, Finance, IT helpdesk, Ops, Purchase, Safety',
@@ -27,9 +27,9 @@ const capabilities = [
   },
   {
     icon: <Brain className="w-7 h-7 text-[#d4af37]" />,
-    title: 'Agentic AI Development',
+    titleKey: 'ai.cap2.title',
     sub: 'Autonomous Agents & Multi-Agent Systems',
-    desc: 'AI that does not just respond, it acts, decides, and orchestrates workflows autonomously. Build autonomous AI agents that reason, plan, and execute multi-step tasks across your enterprise systems.',
+    descKey: 'ai.cap2.desc',
     builds: [
       'Multi-agent orchestration: coordinated agents for procurement, scheduling, quality, and logistics',
       'Tool-using agents: agents that call APIs, query databases, trigger workflows, and update records',
@@ -46,9 +46,9 @@ const capabilities = [
   },
   {
     icon: <Eye className="w-7 h-7 text-[#d4af37]" />,
-    title: 'Computer Vision',
+    titleKey: 'ai.cap3.title',
     sub: 'CCTV / Mobile / Industrial Camera',
-    desc: 'AI that sees and detects issues automatically. Camera-based AI for PPE compliance, defects, counting, and OCR, with cloud or edge deployment.',
+    descKey: 'ai.cap3.desc',
     builds: [
       'PPE compliance (helmet/vest/mask), restricted-zone alerts',
       'Defect detection (surface defects, missing parts, wrong assembly)',
@@ -61,9 +61,9 @@ const capabilities = [
   },
   {
     icon: <TrendingUp className="w-7 h-7 text-[#d4af37]" />,
-    title: 'Predictive Analytics & ML',
+    titleKey: 'ai.cap4.title',
     sub: 'Forecasting, Anomaly, Optimization',
-    desc: 'AI that predicts problems early and improves planning. Forecast issues before they happen, including downtime, demand, inventory, SLA risks, and energy anomalies.',
+    descKey: 'ai.cap4.desc',
     builds: [
       'Predictive maintenance (failure risk, remaining useful life estimation)',
       'Anomaly detection (energy spikes, abnormal cycle time, machine drift)',
@@ -76,9 +76,9 @@ const capabilities = [
   },
   {
     icon: <Cpu className="w-7 h-7 text-[#d4af37]" />,
-    title: 'Industrial AI',
+    titleKey: 'ai.cap5.title',
     sub: 'MES / WMS / Production Intelligence',
-    desc: 'AI inside real operations systems, not standalone. AI integrated with MES/WMS/ERP for smart alerts, escalation, and production insights.',
+    descKey: 'ai.cap5.desc',
     builds: [
       'Downtime classification + root cause insights',
       'OEE/OLE analytics with reason codes and shift comparisons',
@@ -90,9 +90,9 @@ const capabilities = [
   },
   {
     icon: <Search className="w-7 h-7 text-[#d4af37]" />,
-    title: 'NLP, Search & Knowledge Engineering',
+    titleKey: 'ai.cap6.title',
     sub: 'Extract Meaning at Scale',
-    desc: 'AI for extracting meaning from text at scale. Enterprise semantic search, auto-classification, contract extraction, and automated report writing.',
+    descKey: 'ai.cap6.desc',
     builds: [
       'Enterprise semantic search (documents, PDFs, tickets, emails)',
       'Auto-classification of complaints and tickets',
@@ -104,9 +104,9 @@ const capabilities = [
   },
   {
     icon: <GitBranch className="w-7 h-7 text-[#d4af37]" />,
-    title: 'MLOps & Governance',
+    titleKey: 'ai.cap7.title',
     sub: 'Data Engineering + Model Ops',
-    desc: 'AI works only if data is ready and models are monitored. Deploy AI models with monitoring, audit logs, access control, and retraining.',
+    descKey: 'ai.cap7.desc',
     builds: [
       'Data pipelines (APIs, ETL, connectors, IoT streams)',
       'Data quality rules + master data alignment',
@@ -196,9 +196,9 @@ const workflows = [
 ];
 
 const engagementModels = [
-  { duration: '2 to 4 weeks', phase: 'POC', desc: 'Validate feasibility + ROI' },
-  { duration: '6 to 10 weeks', phase: 'Pilot', desc: 'Live in one line/plant/department' },
-  { duration: 'Quarterly', phase: 'Scale', desc: 'Multi-site rollout with governance & MLOps' },
+  { duration: '2 to 4 weeks', phaseKey: 'ai.phase1', descKey: 'ai.phase1.desc' },
+  { duration: '6 to 10 weeks', phaseKey: 'ai.phase2', descKey: 'ai.phase2.desc' },
+  { duration: 'Quarterly', phaseKey: 'ai.phase3', descKey: 'ai.phase3.desc' },
   { duration: 'Ongoing', phase: 'Managed AI Ops', desc: 'Continuous improvements + monitoring + new use cases' },
 ];
 
@@ -263,11 +263,11 @@ export default function AI() {
               <div className="flex items-start gap-4 mb-5">
                 <div className="p-3 bg-[#d4af37]/10 rounded-lg flex-shrink-0">{cap.icon}</div>
                 <div>
-                  <h3 className="font-display text-xl mb-0.5">{cap.title}</h3>
+                  <h3 className="font-display text-xl mb-0.5">{t(cap.titleKey)}</h3>
                   <p className="text-[#555] text-xs">{cap.sub}</p>
                 </div>
               </div>
-              <p className="text-[#a0a0a0] text-sm leading-relaxed mb-5">{cap.desc}</p>
+              <p className="text-[#a0a0a0] text-sm leading-relaxed mb-5">{t(cap.descKey)}</p>
               {cap.builds.length > 0 && (
                 <div className="mb-5">
                   <p className="text-[#555] text-xs tracking-widest uppercase mb-3">We Build</p>

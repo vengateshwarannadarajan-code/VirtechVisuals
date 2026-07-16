@@ -13,54 +13,54 @@ import { useI18n } from '../i18n/context';
 import { Footer } from '../components/Footer';
 
 const shopfloorSolutions = [
-  { icon: <BarChart3 className="w-6 h-6 text-[#d4af37]" />, title: 'Production Performance & Planning', desc: 'Improve OEE/OLE and delivery with real-time control and smart scheduling.', slug: 'production-performance-planning' },
-  { icon: <GitMerge className="w-6 h-6 text-[#d4af37]" />, title: 'Process Intelligence & Optimization', desc: 'Detect deviations, eliminate bottlenecks, and drive continuous process improvement.', slug: 'process-intelligence-optimization' },
-  { icon: <ShieldCheck className="w-6 h-6 text-[#d4af37]" />, title: 'Quality Intelligence', desc: 'Digitize inspections, reduce defects, and make quality audit-ready.', slug: 'quality-intelligence' },
-  { icon: <GitBranch className="w-6 h-6 text-[#d4af37]" />, title: 'Traceability & Genealogy', desc: 'Track every batch, lot, and serial - forward and backward - with audit-ready evidence.', slug: 'traceability-genealogy' },
-  { icon: <Wrench className="w-6 h-6 text-[#d4af37]" />, title: 'Maintenance & Reliability Intelligence', desc: 'Cut breakdowns using structured PM, work orders, and reliability KPIs.', slug: 'maintenance-reliability-intelligence' },
-  { icon: <Package className="w-6 h-6 text-[#d4af37]" />, title: 'Warehouse Intelligence', desc: 'Increase inventory accuracy and dispatch speed with disciplined workflows.', slug: 'warehouse-intelligence' },
-  { icon: <Truck className="w-6 h-6 text-[#d4af37]" />, title: 'Intralogistics & Material Flow', desc: 'Optimize line feeding, staging, and WIP movement with full visibility.', slug: 'intralogistics-material-flow' },
-  { icon: <MapPin className="w-6 h-6 text-[#d4af37]" />, title: 'Spatial Intelligence & Asset Tracking', desc: 'Track assets and enforce location-based rules using BLE, UWB, GPS, and LoRaWAN.', slug: 'spatial-intelligence-asset-tracking' },
-  { icon: <Eye className="w-6 h-6 text-[#d4af37]" />, title: 'Vision Intelligence', desc: 'Use cameras and AI to strengthen quality, safety, and process discipline.', slug: 'vision-intelligence' },
-  { icon: <Bot className="w-6 h-6 text-[#d4af37]" />, title: 'Robotics & Physical AI', desc: 'Enable AMR/AGV/cobots with fleet orchestration, safety, and mission analytics.', slug: 'robotics-physical-ai' },
-  { icon: <Box className="w-6 h-6 text-[#d4af37]" />, title: 'Digital Twins & Simulation', desc: 'Simulate factory layouts, flows, and scenarios before making physical changes.', slug: 'digital-twins-simulation' },
-  { icon: <Wifi className="w-6 h-6 text-[#d4af37]" />, title: 'Industrial IoT & OT-IT Integration', desc: 'Connect PLCs, sensors, and enterprise systems into a unified data architecture.', slug: 'industrial-iot-ot-it-integration' },
-  { icon: <ClipboardList className="w-6 h-6 text-[#d4af37]" />, title: 'Manufacturing Execution & Workflow Automation', desc: 'Digitize SOPs, approvals, and action closure with role-based workflows.', slug: 'manufacturing-execution-workflow-automation' },
-  { icon: <Bell className="w-6 h-6 text-[#d4af37]" />, title: 'Smart Notifications & Control Tower Operations', desc: 'Ensure the right people act at the right time with structured escalation.', slug: 'smart-notifications-control-tower' },
-  { icon: <ShieldAlert className="w-6 h-6 text-[#d4af37]" />, title: 'Safety, EHS & Permit-to-Work', desc: 'Enforce zone safety, permits, incident reporting, and compliance logging.', slug: 'safety-ehs-permit-to-work' },
-  { icon: <Zap className="w-6 h-6 text-[#d4af37]" />, title: 'Energy, Utilities & ESG Intelligence', desc: 'Monitor consumption, detect anomalies, and track sustainability KPIs.', slug: 'energy-utilities-esg-intelligence' },
-  { icon: <Lock className="w-6 h-6 text-[#d4af37]" />, title: 'Cybersecurity & Data Privacy Compliance', desc: 'Protect IT/OT infrastructure and ensure GDPR, DPDP, HIPAA readiness.', slug: 'cybersecurity-data-privacy-compliance' },
-  { icon: <Database className="w-6 h-6 text-[#d4af37]" />, title: 'Data Platform, Governance & AI Enablement', desc: 'Build a unified data foundation with quality, governance, and AI lifecycle management.', slug: 'data-platform-governance-ai-enablement' },
-  { icon: <LayoutGrid className="w-6 h-6 text-[#d4af37]" />, title: 'Warehouse Management System (WMS)', desc: 'End-to-end warehouse operations with real-time inventory accuracy and optimized fulfillment.', slug: 'warehouse-management-system' },
-  { icon: <Cpu className="w-6 h-6 text-[#d4af37]" />, title: 'IoT-Based WMS for Spare Parts', desc: 'Smart spare parts inventory with IoT sensors, auto-replenishment, and predictive stock management.', slug: 'iot-wms-spare-parts' },
-  { icon: <BarChart3 className="w-6 h-6 text-[#d4af37]" />, title: 'Copper Refinery Operations Intelligence', desc: 'Tankhouse production planning, stripping and changeover decisions, crane scheduling, PLC-driven readings and SAP/ERP-integrated forecasting for electrolytic copper refineries.', slug: 'copper-refinery-operations-intelligence' },
+  { icon: <BarChart3 className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s1.title', descKey: 'sf.s1.desc', slug: 'production-performance-planning' },
+  { icon: <GitMerge className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s2.title', descKey: 'sf.s2.desc', slug: 'process-intelligence-optimization' },
+  { icon: <ShieldCheck className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s3.title', descKey: 'sf.s3.desc', slug: 'quality-intelligence' },
+  { icon: <GitBranch className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s4.title', descKey: 'sf.s4.desc', slug: 'traceability-genealogy' },
+  { icon: <Wrench className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s5.title', descKey: 'sf.s5.desc', slug: 'maintenance-reliability-intelligence' },
+  { icon: <Package className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s6.title', descKey: 'sf.s6.desc', slug: 'warehouse-intelligence' },
+  { icon: <Truck className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s7.title', descKey: 'sf.s7.desc', slug: 'intralogistics-material-flow' },
+  { icon: <MapPin className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s8.title', descKey: 'sf.s8.desc', slug: 'spatial-intelligence-asset-tracking' },
+  { icon: <Eye className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s9.title', descKey: 'sf.s9.desc', slug: 'vision-intelligence' },
+  { icon: <Bot className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s10.title', descKey: 'sf.s10.desc', slug: 'robotics-physical-ai' },
+  { icon: <Box className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s11.title', descKey: 'sf.s11.desc', slug: 'digital-twins-simulation' },
+  { icon: <Wifi className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s12.title', descKey: 'sf.s12.desc', slug: 'industrial-iot-ot-it-integration' },
+  { icon: <ClipboardList className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s13.title', descKey: 'sf.s13.desc', slug: 'manufacturing-execution-workflow-automation' },
+  { icon: <Bell className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s14.title', descKey: 'sf.s14.desc', slug: 'smart-notifications-control-tower' },
+  { icon: <ShieldAlert className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s15.title', descKey: 'sf.s15.desc', slug: 'safety-ehs-permit-to-work' },
+  { icon: <Zap className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s16.title', descKey: 'sf.s16.desc', slug: 'energy-utilities-esg-intelligence' },
+  { icon: <Lock className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s17.title', descKey: 'sf.s17.desc', slug: 'cybersecurity-data-privacy-compliance' },
+  { icon: <Database className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s18.title', descKey: 'sf.s18.desc', slug: 'data-platform-governance-ai-enablement' },
+  { icon: <LayoutGrid className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s19.title', descKey: 'sf.s19.desc', slug: 'warehouse-management-system' },
+  { icon: <Cpu className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s20.title', descKey: 'sf.s20.desc', slug: 'iot-wms-spare-parts' },
+  { icon: <BarChart3 className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.s21.title', descKey: 'sf.s21.desc', slug: 'copper-refinery-operations-intelligence' },
 ];
 
 const enterpriseSolutions = [
-  { icon: <DollarSign className="w-6 h-6 text-[#d4af37]" />, title: 'Finance & Cost Intelligence', desc: 'Track budget vs actual, cost centers, and the true cost of downtime and quality failures.', slug: 'finance-cost-intelligence' },
-  { icon: <ShoppingCart className="w-6 h-6 text-[#d4af37]" />, title: 'Procurement & Supplier Intelligence', desc: 'Streamline PR to PO workflows and manage supplier quality and risk.', slug: 'procurement-supplier-intelligence' },
-  { icon: <Users className="w-6 h-6 text-[#d4af37]" />, title: 'Workforce & HR Intelligence', desc: 'Manage attendance, skills, training, and workforce productivity.', slug: 'workforce-hr-intelligence' },
-  { icon: <FileText className="w-6 h-6 text-[#d4af37]" />, title: 'Legal, Contracts & Compliance Management', desc: 'Manage contracts, renewals, NDAs, and compliance calendars digitally.', slug: 'legal-contracts-compliance-management' },
-  { icon: <HeadphonesIcon className="w-6 h-6 text-[#d4af37]" />, title: 'Customer, Order & Service Intelligence', desc: 'Track order status, OTD, complaints, warranty, and service SLAs.', slug: 'customer-order-service-intelligence' },
-  { icon: <FolderKanban className="w-6 h-6 text-[#d4af37]" />, title: 'Project & Portfolio Intelligence', desc: 'Manage programs, milestones, risks, and multi-site rollout tracking.', slug: 'project-portfolio-intelligence' },
+  { icon: <DollarSign className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.e1.title', descKey: 'sf.e1.desc', slug: 'finance-cost-intelligence' },
+  { icon: <ShoppingCart className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.e2.title', descKey: 'sf.e2.desc', slug: 'procurement-supplier-intelligence' },
+  { icon: <Users className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.e3.title', descKey: 'sf.e3.desc', slug: 'workforce-hr-intelligence' },
+  { icon: <FileText className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.e4.title', descKey: 'sf.e4.desc', slug: 'legal-contracts-compliance-management' },
+  { icon: <HeadphonesIcon className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.e5.title', descKey: 'sf.e5.desc', slug: 'customer-order-service-intelligence' },
+  { icon: <FolderKanban className="w-6 h-6 text-[#d4af37]" />, titleKey: 'sf.e6.title', descKey: 'sf.e6.desc', slug: 'project-portfolio-intelligence' },
 ];
 
 const metrics = [
-  { value: '24', label: 'Solutions across shopfloor & enterprise' },
-  { value: '18+', label: 'Industries served' },
-  { value: '4-8 wk', label: 'Pilot deployment timeline' },
-  { value: '99.9%', label: 'System uptime SLA' },
+  { value: '24', labelKey: 'sf.stat1' },
+  { value: '18+', labelKey: 'sf.stat2' },
+  { value: '4-8 wk', labelKey: 'sf.stat3' },
+  { value: '99.9%', labelKey: 'sf.stat4' },
 ];
 
 const faqs = [
-  { q: 'What is a Smart Factory solution?', a: 'A Smart Factory solution connects machines, people, and processes through digital technologies like IIoT, AI, and real-time analytics to improve manufacturing efficiency, quality, and safety.' },
-  { q: 'How many solutions does Virtech Visuals offer?', a: 'We offer 24 solutions: 18 covering shopfloor operations and 6 covering enterprise and corporate functions. All built to scale from a single pilot line to multi-plant deployment.' },
-  { q: 'Can solutions be deployed independently?', a: 'Yes. Every solution is modular and can be deployed standalone or integrated with others. You can start with one area like OEE monitoring or quality inspection and expand from there.' },
-  { q: 'How long does implementation typically take?', a: 'A pilot line deployment typically goes live in 4-8 weeks. Full multi-plant rollouts are phased over 3-12 months depending on scope and complexity.' },
-  { q: 'Do you integrate with existing ERP and MES systems?', a: 'Yes. We integrate with SAP, Oracle, Microsoft Dynamics, Infor, and all major MES platforms through standard APIs, OPC-UA, and custom connectors.' },
-  { q: 'What industries do your solutions support?', a: 'Our solutions are deployed across automotive, pharma, food & beverage, chemicals, oil & gas, metals & mining, electronics, and FMCG among 18+ industries.' },
-  { q: 'Is training provided for shopfloor operators?', a: 'Yes. Every deployment includes structured operator training, management dashboard walkthroughs, and a hypercare period post go-live. We also offer ongoing training programmes.' },
-  { q: 'What ROI can manufacturers expect?', a: 'Clients typically see 20-45% OEE improvement, 30-60% reduction in unplanned downtime, and 15-40% quality defect reduction within the first 6 months of deployment.' },
+  { qKey: 'sf.faq1.q', aKey: 'sf.faq1.a' },
+  { qKey: 'sf.faq2.q', a: 'We offer 24 solutions: 18 covering shopfloor operations and 6 covering enterprise and corporate functions. All built to scale from a single pilot line to multi-plant deployment.' },
+  { qKey: 'sf.faq3.q', aKey: 'sf.faq3.a' },
+  { qKey: 'sf.faq4.q', aKey: 'sf.faq4.a' },
+  { qKey: 'sf.faq5.q', aKey: 'sf.faq5.a' },
+  { qKey: 'sf.faq6.q', aKey: 'sf.faq6.a' },
+  { qKey: 'sf.faq7.q', aKey: 'sf.faq7.a' },
+  { qKey: 'sf.faq8.q', aKey: 'sf.faq8.a' },
 ];
 
 export default function SmartFactory() {
@@ -82,7 +82,7 @@ export default function SmartFactory() {
           {metrics.map((m, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
               <div className="font-display text-3xl md:text-4xl text-[#d4af37] mb-1">{m.value}</div>
-              <div className="text-[#666] text-xs leading-snug">{m.label}</div>
+              <div className="text-[#666] text-xs leading-snug">{t(m.labelKey)}</div>
             </motion.div>
           ))}
         </div>
@@ -108,8 +108,8 @@ export default function SmartFactory() {
                     {s.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display text-sm mb-1.5 group-hover:text-[#d4af37] transition-colors leading-snug">{s.title}</h3>
-                    <p className="text-[#555] text-xs leading-relaxed mb-3">{s.desc}</p>
+                    <h3 className="font-display text-sm mb-1.5 group-hover:text-[#d4af37] transition-colors leading-snug">{t(s.titleKey)}</h3>
+                    <p className="text-[#555] text-xs leading-relaxed mb-3">{t(s.descKey)}</p>
                     <span className="inline-flex items-center gap-1 text-xs text-[#444] group-hover:text-[#d4af37] transition-colors">
                       Explore <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
@@ -141,8 +141,8 @@ export default function SmartFactory() {
                     {s.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display text-sm mb-1.5 group-hover:text-[#d4af37] transition-colors leading-snug">{s.title}</h3>
-                    <p className="text-[#555] text-xs leading-relaxed mb-3">{s.desc}</p>
+                    <h3 className="font-display text-sm mb-1.5 group-hover:text-[#d4af37] transition-colors leading-snug">{t(s.titleKey)}</h3>
+                    <p className="text-[#555] text-xs leading-relaxed mb-3">{t(s.descKey)}</p>
                     <span className="inline-flex items-center gap-1 text-xs text-[#444] group-hover:text-[#d4af37] transition-colors">
                       Explore <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
@@ -171,7 +171,7 @@ export default function SmartFactory() {
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full flex items-center justify-between gap-4 p-5 text-left bg-[#111] hover:bg-[#151515] transition-colors"
                 >
-                  <span className="font-display text-sm text-white">{faq.q}</span>
+                  <span className="font-display text-sm text-white">{t(faq.qKey)}</span>
                   {openFaq === i
                     ? <Minus className="w-4 h-4 text-[#d4af37] flex-shrink-0" />
                     : <Plus className="w-4 h-4 text-[#555] flex-shrink-0" />
@@ -186,7 +186,7 @@ export default function SmartFactory() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <p className="px-5 pb-5 text-[#666] text-sm leading-relaxed bg-[#111]">{faq.a}</p>
+                      <p className="px-5 pb-5 text-[#666] text-sm leading-relaxed bg-[#111]">{t(faq.aKey)}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
