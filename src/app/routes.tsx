@@ -1,5 +1,6 @@
 import { createBrowserRouter, Outlet } from 'react-router';
 import { Navbar } from './components/Navbar';
+import { ScrollToTop } from './components/ScrollToTop';
 import Home from './pages/Home';
 import SmartFactory from './pages/SmartFactory';
 import Products from './pages/Products';
@@ -17,6 +18,7 @@ import Contact from './pages/Contact';
 function Root() {
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
+      <ScrollToTop />
       <Navbar />
       <Outlet />
     </div>
