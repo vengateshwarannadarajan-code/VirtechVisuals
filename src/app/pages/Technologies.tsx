@@ -142,7 +142,7 @@ export default function Technologies() {
         tag="Technology Stack"
         title="Technologies We Work With"
         subtitle="From enterprise platforms to edge AI, we bring deep expertise across a comprehensive technology ecosystem to power your digital transformation."
-        image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920"
+        image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=90&fit=crop&auto=format"
       />
 
       {/* ERP Enterprise Platforms */}

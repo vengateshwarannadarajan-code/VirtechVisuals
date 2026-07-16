@@ -72,6 +72,7 @@ export default function Contact() {
         tag="Get In Touch"
         title="Let's Build Something Together"
         subtitle="Whether you're exploring a solution, requesting a demo, or ready to start. Our team is here to help."
+        image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&q=90&fit=crop&auto=format"
       />
 
       {/* Quick contact strip */}

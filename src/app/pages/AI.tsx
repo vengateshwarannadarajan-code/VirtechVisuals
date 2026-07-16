@@ -219,7 +219,7 @@ export default function AI() {
         tag="AI at Digisailor"
         title="Build Practical AI That Delivers Results"
         subtitle="We help organizations adopt AI that is usable, measurable, secure, and integrated with existing systems like ERP, MES, WMS, CRM, WhatsApp, and Email. From GenAI assistants to predictive maintenance and computer vision, our focus is business outcomes, not just demos."
-        image="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1920"
+        image="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1920&q=90&fit=crop&auto=format"
       />
 
       {/* Outcomes */}

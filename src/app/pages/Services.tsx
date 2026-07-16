@@ -105,7 +105,7 @@ export default function Services() {
         tag="What We Do"
         title="Comprehensive Technology Services"
         subtitle="From custom software to AI solutions, we deliver end-to-end services that help businesses innovate, automate, and scale with confidence."
-        image="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920"
+        image="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&q=90&fit=crop&auto=format"
       />
 
       <section className="max-w-7xl mx-auto px-4 md:px-8 pb-24">

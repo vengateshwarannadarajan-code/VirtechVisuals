@@ -71,6 +71,7 @@ export default function SmartFactory() {
         tag="Industry 4.0"
         title="Smart Factory Solutions"
         subtitle="24 solutions across shopfloor operations, enterprise functions, and corporate governance. Built to scale from pilot to multi-plant."
+        image="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1920&q=90&fit=crop&auto=format"
       />
 
       {/* Metrics */}

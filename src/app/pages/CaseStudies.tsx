@@ -63,7 +63,7 @@ export default function CaseStudies() {
         tag="Client Results"
         title="Real Outcomes, Real Numbers"
         subtitle="Every case study below is a real deployment with measurable results. No synthetic benchmarks, no vendor demos."
-        image="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920"
+        image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=90&fit=crop&auto=format"
       />
 
       {/* Filter */}
