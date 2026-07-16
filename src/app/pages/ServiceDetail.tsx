@@ -1,6 +1,36 @@
 import { motion } from 'motion/react';
 import { Link, useParams, Navigate } from 'react-router';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
+import {
+  ArrowRight, ArrowLeft,
+  // Custom Software
+  Globe, Smartphone, Building2, Plug, LayoutTemplate, Wrench,
+  // Industrial Automation
+  BarChart3, CalendarClock, ShieldCheck, Warehouse, Navigation, Layers,
+  // Artificial Intelligence
+  ScanEye, TrendingUp, MessageSquareDot, AlertTriangle, Lightbulb, Puzzle,
+  // IoT & Edge
+  Cpu, Server, Radio, MonitorSmartphone, Brain, Gauge,
+  // Cloud & DevOps
+  Cloud, MoveRight, GitMerge, Container, Activity, DollarSign,
+  // Data Engineering
+  Workflow, Database, PieChart, ClipboardCheck, GitFork, LineChart,
+  // Cybersecurity
+  ShieldAlert, Search, Lock, Bell, GraduationCap, Map,
+  // CAD CAM
+  Box, CpuIcon, ScanLine, Scan, Compass, FileText,
+  // Talent Solutions
+  UserCheck, Users, Star, Receipt, Building, BarChart2,
+  // Training
+  Code2, Presentation, Factory, FlaskConical, ShieldX, Trophy,
+  // Digital Marketing
+  SearchCode, Share2, BookOpen, Megaphone, Palette, MousePointerClick,
+  // Managed Services
+  LifeBuoy, CloudCog, Eye, PackageCheck, Timer, RefreshCw,
+  // VR AR
+  Glasses, HandHelping, Boxes, MapPin, MonitorPlay, Radar,
+  // Benefits list
+  CheckCircle2,
+} from 'lucide-react';
 import { Footer } from '../components/Footer';
 
 interface ServiceData {
@@ -10,6 +40,7 @@ interface ServiceData {
   image: string;
   challenge: string;
   frameworkSteps: { title: string; desc: string }[];
+  subServiceIcons?: string[];
   subServices: { title: string; desc: string }[];
   useCases: { industry: string; desc: string }[];
   techStack: string[];
@@ -21,6 +52,7 @@ interface ServiceData {
 const servicesData: Record<string, ServiceData> = {
   'custom-software': {
     slug: 'custom-software',
+    subServiceIcons: ['Globe', 'Smartphone', 'Building2', 'Plug', 'LayoutTemplate', 'Wrench'],
     title: 'Custom Software Development',
     subtitle: 'We design and develop custom software applications that solve real business problems. From enterprise platforms to mobile apps and cloud-native solutions, our team delivers scalable, secure, and high-performance software tailored to your workflows and goals.',
     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920',
@@ -56,6 +88,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'industrial-automation': {
     slug: 'industrial-automation',
+    subServiceIcons: ['BarChart3', 'CalendarClock', 'ShieldCheck', 'Warehouse', 'Navigation', 'Layers'],
     title: 'Industrial Automation & Smart Factory',
     subtitle: 'We help manufacturers transform their shopfloors with smart factory solutions, from production intelligence and quality digitization to warehouse automation and digital twins. Our solutions connect machines, people, and processes for real-time visibility and control.',
     image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920',
@@ -91,6 +124,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'artificial-intelligence': {
     slug: 'artificial-intelligence',
+    subServiceIcons: ['ScanEye', 'TrendingUp', 'MessageSquareDot', 'AlertTriangle', 'Lightbulb', 'Puzzle'],
     title: 'Artificial Intelligence',
     subtitle: 'We build and deploy AI-powered solutions that transform how businesses operate. From computer vision and NLP to predictive analytics and generative AI, our team delivers production-ready AI that integrates with your existing systems and delivers measurable ROI.',
     image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1920',
@@ -126,6 +160,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'iot-edge-computing': {
     slug: 'iot-edge-computing',
+    subServiceIcons: ['Cpu', 'Server', 'Radio', 'MonitorSmartphone', 'Brain', 'Gauge'],
     title: 'IoT & Edge Computing',
     subtitle: 'We design and deploy IoT and edge computing solutions that connect your physical operations to digital systems. From PLC/SCADA data acquisition to edge AI deployment, we enable real-time monitoring, control, and intelligence at the source.',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920',
@@ -161,6 +196,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'cloud-devops': {
     slug: 'cloud-devops',
+    subServiceIcons: ['Cloud', 'MoveRight', 'GitMerge', 'Container', 'Activity', 'DollarSign'],
     title: 'Cloud & DevOps Services',
     subtitle: 'We help organizations design cloud-native architectures, migrate workloads, and implement DevOps practices that accelerate delivery while maintaining security and cost efficiency. Our certified engineers work across AWS, Azure, and GCP.',
     image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920',
@@ -196,6 +232,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'data-engineering': {
     slug: 'data-engineering',
+    subServiceIcons: ['Workflow', 'Database', 'PieChart', 'ClipboardCheck', 'GitFork', 'LineChart'],
     title: 'Data Engineering & Analytics',
     subtitle: 'We build modern data platforms that unify, transform, and visualize your data. From ETL pipelines and data warehouses to BI dashboards and data governance, we help organizations make faster, smarter decisions backed by trusted data.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920',
@@ -231,6 +268,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'cybersecurity': {
     slug: 'cybersecurity',
+    subServiceIcons: ['ShieldAlert', 'Search', 'Lock', 'Bell', 'GraduationCap', 'Map'],
     title: 'Cybersecurity',
     subtitle: 'We provide comprehensive cybersecurity services, from vulnerability assessments and penetration testing to managed security monitoring and global privacy compliance. Our security experts help organizations identify risks, strengthen defenses, and meet regulatory requirements across GDPR, DPDP, HIPAA, and more.',
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920',
@@ -266,6 +304,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'cad-cam': {
     slug: 'cad-cam',
+    subServiceIcons: ['Box', 'ScanLine', 'Scan', 'Compass', 'FileText', 'ClipboardCheck'],
     title: 'CAD CAM Services',
     subtitle: 'We deliver comprehensive CAD/CAM services that bridge design and manufacturing. From 3D modeling and CNC programming to simulation and toolpath optimization, our team leverages industry-leading software to reduce cycle times, minimize material waste, and accelerate your product-to-production pipeline.',
     image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=1920',
@@ -301,6 +340,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'talent-solutions': {
     slug: 'talent-solutions',
+    subServiceIcons: ['UserCheck', 'Users', 'Star', 'Receipt', 'Building', 'BarChart2'],
     title: 'Talent Solutions',
     subtitle: 'We provide comprehensive talent solutions spanning permanent recruitment, contract staffing, payroll outsourcing, HR compliance, and managed workforce services. From sourcing and screening to onboarding, payroll processing, and workforce analytics, we handle the entire employee lifecycle so you can focus on your business.',
     image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920',
@@ -336,6 +376,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'training': {
     slug: 'training',
+    subServiceIcons: ['Code2', 'Presentation', 'Factory', 'FlaskConical', 'ShieldX', 'Trophy'],
     title: 'Training',
     subtitle: 'We design and deliver corporate training programs that bridge skill gaps and accelerate professional development. From technology bootcamps to leadership workshops, our training solutions are customized to your industry, roles, and organizational goals.',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920',
@@ -371,6 +412,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'digital-marketing': {
     slug: 'digital-marketing',
+    subServiceIcons: ['SearchCode', 'Share2', 'BookOpen', 'Megaphone', 'Palette', 'MousePointerClick'],
     title: 'Digital Marketing',
     subtitle: 'We help businesses build brand visibility, generate qualified leads, and drive revenue through strategic digital marketing. Our full-service approach covers everything from SEO and content to paid media and social engagement, all backed by analytics and performance tracking.',
     image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1920',
@@ -406,6 +448,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'managed-services': {
     slug: 'managed-services',
+    subServiceIcons: ['LifeBuoy', 'CloudCog', 'Eye', 'PackageCheck', 'Timer', 'RefreshCw'],
     title: 'Managed Services & Support',
     subtitle: 'We provide end-to-end managed services and support, from application maintenance and cloud operations to incident handling and continuous improvement. Our dedicated support teams ensure your systems are always available, secure, and optimized.',
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920',
@@ -441,6 +484,7 @@ const servicesData: Record<string, ServiceData> = {
 
   'vr-ar': {
     slug: 'vr-ar',
+    subServiceIcons: ['Glasses', 'HandHelping', 'Boxes', 'MapPin', 'MonitorPlay', 'Radar'],
     title: 'VR/AR & Spatial Intelligence',
     subtitle: 'We design and develop VR, AR, and mixed reality solutions that transform how teams visualize, interact, and collaborate. From immersive training and remote assistance to spatial digital twins and indoor intelligence, our XR practice bridges the physical and digital worlds.',
     image: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=1920',
@@ -490,6 +534,35 @@ const serviceList = [
   { slug: 'managed-services', title: 'Managed Services & Support' },
   { slug: 'vr-ar', title: 'VR/AR & Spatial Intelligence' },
 ];
+
+// Dynamic icon renderer for sub-service cards
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Globe, Smartphone, Building2, Plug, LayoutTemplate, Wrench,
+  BarChart3, CalendarClock, ShieldCheck, Warehouse, Navigation, Layers,
+  ScanEye, TrendingUp, MessageSquareDot, AlertTriangle, Lightbulb, Puzzle,
+  Cpu, Server, Radio, MonitorSmartphone, Brain, Gauge,
+  Cloud, MoveRight, GitMerge, Container, Activity, DollarSign,
+  Workflow, Database, PieChart, ClipboardCheck, GitFork, LineChart,
+  ShieldAlert, Search, Lock, Bell, GraduationCap, Map,
+  Box, ScanLine, Scan, Compass, FileText,
+  UserCheck, Users, Star, Receipt, Building, BarChart2,
+  Code2, Presentation, Factory, FlaskConical, ShieldX, Trophy,
+  SearchCode, Share2, BookOpen, Megaphone, Palette, MousePointerClick,
+  LifeBuoy, CloudCog, Eye, PackageCheck, Timer, RefreshCw,
+  Glasses, HandHelping, Boxes, MapPin, MonitorPlay, Radar,
+};
+
+function SubServiceIcon({ name }: { name?: string }) {
+  const Icon = name ? iconMap[name] : null;
+  return (
+    <div className="p-2.5 bg-[#d4af37]/10 rounded-lg w-fit mb-4 group-hover:bg-[#d4af37]/20 transition-colors">
+      {Icon
+        ? <Icon className="w-5 h-5 text-[#d4af37]" />
+        : <div className="w-5 h-5 rounded-full bg-[#d4af37]" />
+      }
+    </div>
+  );
+}
 
 export default function ServiceDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -573,10 +646,10 @@ export default function ServiceDetail() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="p-6 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/30 transition-colors"
+                className="p-6 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/30 transition-colors group"
               >
-                <div className="w-2 h-2 rounded-full bg-[#d4af37] mb-4" />
-                <h3 className="font-medium mb-2 text-sm">{sub.title}</h3>
+                <SubServiceIcon name={service.subServiceIcons?.[i]} />
+                <h3 className="font-medium mb-2 text-sm group-hover:text-[#d4af37] transition-colors">{sub.title}</h3>
                 <p className="text-[#777] text-xs leading-relaxed">{sub.desc}</p>
               </motion.div>
             ))}
@@ -625,7 +698,7 @@ export default function ServiceDetail() {
             <ul className="space-y-3">
               {service.benefits.map((b, i) => (
                 <li key={i} className="flex items-center gap-3 text-sm text-[#a0a0a0]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37] flex-shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#d4af37] flex-shrink-0" />
                   {b}
                 </li>
               ))}
