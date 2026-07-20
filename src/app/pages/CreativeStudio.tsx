@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 import { Camera, Video, Instagram, ArrowDown, Mail, Phone, MapPin, Globe, Clock, Sparkles, TrendingUp, CheckCircle2, MessageCircle } from 'lucide-react';
 import { useI18n } from '../i18n/context';
-import emailjs from '@emailjs/browser';
 import { Footer } from '../components/Footer';
+import { ContactForm } from '../components/ContactForm';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { motion } from 'motion/react';
 
@@ -509,43 +509,6 @@ function Pricing() {
 
 function Contact() {
   const { t } = useI18n();
-  const [formData, setFormData] = useState({
-    name: '', email: '', service: '', message: '',
-  });
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState('');
-
-  // EmailJS config — Creative Studio
-  const SERVICE_ID  = 'service_y0js2ee';
-  const TEMPLATE_ID = 'template_hbkn9mn';
-  const PUBLIC_KEY  = 'GERgwtvqYSgQuCMf3';
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSending(true);
-    setError('');
-    try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name:    formData.name,
-          from_email:   formData.email,
-          service_type: formData.service,
-          message:      formData.message,
-          to_email:     'business@virtechvisuals.com',
-        },
-        PUBLIC_KEY
-      );
-      setSent(true);
-    } catch (err) {
-      setError('Something went wrong. Please email us directly at business@virtechvisuals.com');
-    } finally {
-      setSending(false);
-    }
-  };
-
   return (
     <section id="contact" className="py-24 px-4 md:px-8 bg-[#111]">
       <div className="max-w-7xl mx-auto">
@@ -559,181 +522,11 @@ function Contact() {
           <h2 className="font-display text-5xl md:text-6xl">{t('contact.title')}</h2>
           <p className="text-[#a0a0a0] mt-4 max-w-xl mx-auto">{t('contact.sub')}</p>
         </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-14">
-
-          {/* Contact info */}
-          <div className="lg:col-span-2 space-y-4">
-            {[
-              {
-                icon: <Mail className="w-5 h-5 text-[#d4af37]" />,
-                label: 'Email',
-                value: 'business@virtechvisuals.com',
-                href: 'mailto:business@virtechvisuals.com',
-              },
-              {
-                icon: <Phone className="w-5 h-5 text-[#d4af37]" />,
-                label: 'WhatsApp',
-                value: '+33 7 80 84 34 87',
-                href: 'https://wa.me/33780843487',
-              },
-              {
-                icon: <MapPin className="w-5 h-5 text-[#d4af37]" />,
-                label: 'Location',
-                value: 'Paris, France',
-                sub: 'Serving clients globally',
-                href: null,
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-              >
-                {item.href ? (
-                  <a
-                    href={item.href}
-                    target={item.href.startsWith('http') ? '_blank' : undefined}
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-4 p-5 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl hover:border-[#d4af37]/40 transition-colors group"
-                  >
-                    <div className="p-2.5 bg-[#d4af37]/10 rounded-lg flex-shrink-0 group-hover:bg-[#d4af37]/20 transition-colors">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <div className="text-[10px] text-[#555] tracking-widest uppercase mb-1">{item.label}</div>
-                      <div className="text-sm text-white group-hover:text-[#d4af37] transition-colors">{item.value}</div>
-                      {item.sub && <div className="text-xs text-[#555] mt-0.5">{item.sub}</div>}
-                    </div>
-                  </a>
-                ) : (
-                  <div className="flex items-start gap-4 p-5 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl">
-                    <div className="p-2.5 bg-[#d4af37]/10 rounded-lg flex-shrink-0">{item.icon}</div>
-                    <div>
-                      <div className="text-[10px] text-[#555] tracking-widest uppercase mb-1">{item.label}</div>
-                      <div className="text-sm text-white">{item.value}</div>
-                      {item.sub && <div className="text-xs text-[#555] mt-0.5">{item.sub}</div>}
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-            ))}
-
-            {/* WhatsApp CTA */}
-            <a
-              href="https://wa.me/33780843487"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Chat on WhatsApp"
-              className="flex items-center justify-center gap-3 w-full py-4 bg-[#25D366]/10 border border-[#25D366]/30 rounded-xl text-[#25D366] hover:bg-[#25D366]/20 transition-colors text-sm font-medium"
-            >
-              <Phone className="w-5 h-5" />
-              {t('contact.wa')}
-            </a>
-          </div>
-
-          {/* Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="lg:col-span-3"
-          >
-            {sent ? (
-              <div className="flex flex-col items-center justify-center text-center py-20 bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl px-8">
-                <div className="w-14 h-14 rounded-full bg-[#d4af37]/15 flex items-center justify-center mb-6">
-                  <Mail className="w-6 h-6 text-[#d4af37]" />
-                </div>
-                <h3 className="font-display text-2xl mb-3">{t('contact.sent.title')}</h3>
-                <p className="text-[#666] text-sm max-w-sm mb-6">{t('contact.sent.sub')}</p>
-                <a
-                  href="https://wa.me/33780843487"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-[#25D366]/10 border border-[#25D366]/30 rounded-lg text-[#25D366] text-sm hover:bg-[#25D366]/20 transition-colors"
-                >
-                  <Phone className="w-4 h-4" /> {t('contact.wa')}
-                </a>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-8 space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="cs-name" className="block text-xs text-[#555] tracking-widest uppercase mb-2">{t('contact.name')} *</label>
-                    <input
-                      id="cs-name"
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder={t('contact.placeholder.name')}
-                      className="w-full px-4 py-3 bg-[#111] border border-[#2a2a2a] rounded-lg focus:border-[#d4af37]/60 outline-none transition-colors text-sm text-white placeholder-[#444]"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="cs-email" className="block text-xs text-[#555] tracking-widest uppercase mb-2">{t('contact.email')} *</label>
-                    <input
-                      id="cs-email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder={t('contact.placeholder.email')}
-                      className="w-full px-4 py-3 bg-[#111] border border-[#2a2a2a] rounded-lg focus:border-[#d4af37]/60 outline-none transition-colors text-sm text-white placeholder-[#444]"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="cs-service" className="block text-xs text-[#555] tracking-widest uppercase mb-2">{t('contact.interest')} *</label>
-                  <select
-                    id="cs-service"
-                    value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#111] border border-[#2a2a2a] rounded-lg focus:border-[#d4af37]/60 outline-none transition-colors text-sm text-white"
-                    required
-                  >
-                    <option value="">Select a service</option>
-                    <option value="Photography">Photography</option>
-                    <option value="Videography">Videography</option>
-                    <option value="Social Media Support">Social Media Support</option>
-                    <option value="Brand Package">Brand Package</option>
-                    <option value="All Services">All Services</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="cs-message" className="block text-xs text-[#555] tracking-widest uppercase mb-2">{t('contact.message')} *</label>
-                  <textarea
-                    id="cs-message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={5}
-                    placeholder={t('contact.placeholder.message')}
-                    className="w-full px-4 py-3 bg-[#111] border border-[#2a2a2a] rounded-lg focus:border-[#d4af37]/60 outline-none transition-colors text-sm text-white placeholder-[#444] resize-none"
-                    required
-                  />
-                </div>
-                {error && (
-                  <p className="text-red-400 text-xs">{error}</p>
-                )}
-                <button
-                  type="submit"
-                  disabled={sending}
-                  className="w-full py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg font-display text-sm hover:bg-[#e5c24a] transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
-                >
-                  {sending ? t('contact.sending') : t('contact.send')}
-                </button>
-                <p className="text-[#444] text-xs text-center">
-                  {t('contact.response')}{' '}
-                  <a href="mailto:business@virtechvisuals.com" className="text-[#d4af37] hover:underline">
-                    business@virtechvisuals.com
-                  </a>
-                </p>
-              </form>
-            )}
-          </motion.div>
-        </div>
+        <ContactForm
+          defaultService="Creative Studio — Photography"
+          showSidebar={true}
+          dark={true}
+        />
       </div>
     </section>
   );
