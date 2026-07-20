@@ -714,7 +714,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'svc.s1.desc': "Applications web, mobiles, logiciels d'entreprise, APIs et produits SaaS.",
     'svc.s1.h1': 'Applications Web', 'svc.s1.h2': 'Développement Mobile', 'svc.s1.h3': 'API et Microservices', 'svc.s1.h4': 'Produits SaaS',
     'svc.s2.title': 'Automatisation Industrielle',
-    'svc.s2.desc': 'Programmation PLC, systèmes SCADA et solutions d'automatisation industrielle complètes.',
+    'svc.s2.desc': 'Programmation PLC, systèmes SCADA et solutions d\'automatisation industrielle complètes.',
     'svc.s2.h1': 'Programmation PLC et SCADA', 'svc.s2.h2': 'Intégration MES', 'svc.s2.h3': 'Surveillance OEE', 'svc.s2.h4': 'Automatisation des Processus',
     'svc.s3.title': 'Intelligence Artificielle',
     'svc.s3.desc': "Vision par ordinateur, analytique prédictive, NLP et intégration IA pour l'entreprise.",
