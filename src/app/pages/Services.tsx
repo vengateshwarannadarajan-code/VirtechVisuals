@@ -8,9 +8,9 @@ import { Footer } from '../components/Footer';
 const services = [
   {
     slug: 'custom-software',
-    titleKey: 'svc.s1.title',
+    title: 'svc.s1.title',
     desc: 'Tailored digital solutions built for your unique business needs',
-    highlights: ['Web Application Development', t('svc.s1.h2'), 'Enterprise Software Solutions', 'API Development & Integrations'],
+    highlights: ['Web Application Development', 'Mobile App Development', 'Enterprise Software Solutions', 'API Development & Integrations'],
     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800',
   },
   {
@@ -22,14 +22,14 @@ const services = [
   },
   {
     slug: 'artificial-intelligence',
-    titleKey: 'svc.s3.title',
+    title: 'svc.s3.title',
     desc: 'Intelligent solutions that automate, predict, and optimize operations',
     highlights: ['Computer Vision', 'Predictive Analytics', 'NLP / Chatbots', 'Anomaly Detection'],
     image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800',
   },
   {
     slug: 'iot-edge-computing',
-    titleKey: 'svc.s4.title',
+    title: 'svc.s4.title',
     desc: 'Connect machines, sensors, and systems for real-time industrial intelligence',
     highlights: ['PLC/SCADA Data Acquisition', 'Edge Gateways & Real-time Data', 'BLE / LoRaWAN / MQTT Integration', 'Edge AI Deployment'],
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
@@ -50,21 +50,21 @@ const services = [
   },
   {
     slug: 'cybersecurity',
-    titleKey: 'svc.s6.title',
+    title: 'svc.s6.title',
     desc: 'End-to-end cybersecurity services protecting your digital assets and ensuring compliance',
     highlights: ['VAPT', 'Security Audits & Hardening', 'OT/ICS Security', 'Privacy Compliance'],
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800',
   },
   {
     slug: 'cad-cam',
-    titleKey: 'svc.s8.title',
+    title: 'svc.s8.title',
     desc: 'Advanced CAD/CAM solutions powering precision manufacturing',
     highlights: ['3D CAD Modeling & Detailing', 'CNC Programming & Toolpath Optimization', 'CAM Simulation & Verification', 'Reverse Engineering'],
     image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800',
   },
   {
     slug: 'talent-solutions',
-    titleKey: 'svc.s9.title',
+    title: 'svc.s9.title',
     desc: 'End-to-end staffing, recruitment, payroll, and workforce management solutions',
     highlights: ['Permanent Recruitment', 'Contract Staffing', 'Executive Search', 'Payroll Outsourcing'],
     image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800',
@@ -78,7 +78,7 @@ const services = [
   },
   {
     slug: 'digital-marketing',
-    titleKey: 'svc.s11.title',
+    title: 'svc.s11.title',
     desc: 'Data-driven marketing strategies that deliver measurable growth',
     highlights: ['SEO & Search Marketing', 'Social Media Marketing', 'Content Marketing', 'Performance Marketing (Ads)'],
     image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800',
