@@ -22,6 +22,7 @@ export default function CreativeStudio() {
 }
 
 function Hero() {
+  const { t } = useI18n();
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -184,6 +185,7 @@ function Portfolio() {
 }
 
 function WhyChooseUs() {
+  const { t } = useI18n();
   const stats = [
     { number: 'Paris', label: 'Based Excellence' },
     { number: '48-72h', label: 'Turnaround Time' },
@@ -270,6 +272,7 @@ function WhyChooseUs() {
 }
 
 function ShootPackages() {
+  const { t } = useI18n();
   const packages = [
     {
       name: t('cs.starter'),
@@ -283,7 +286,7 @@ function ShootPackages() {
     },
     {
       name: t('cs.growth'),
-      badge: 'Popular',
+      badge: t('cs.popular'),
       highlight: true,
       features: [
         { text: '1 Photoshoot + 2 Reel Videos', bold: true },
@@ -622,6 +625,7 @@ function Contact() {
 }
 
 function Footer() {
+  const { t } = useI18n();
   return (
     <footer className="bg-[#0f0f0f] py-12 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">

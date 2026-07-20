@@ -53,10 +53,11 @@ const cases = [
 const industries: Industry[] = ['All', 'Automotive', 'Food & Beverage', 'Pharma', 'Electronics'];
 
 export default function CaseStudies() {
-  const [active, setActive] = useState<Industry>(t('cases.all'));
+  const { t } = useI18n();
+  const [active, setActive] = useState<string>('All');
   const [expanded, setExpanded] = useState<number | null>(null);
 
-  const filtered = active === t('cases.all') ? cases : cases.filter((c) => c.industry === active);
+  const filtered = active === 'All' ? cases : cases.filter((c) => c.industry === active);
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
