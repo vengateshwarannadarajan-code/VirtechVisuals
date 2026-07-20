@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 import { Camera, Video, Instagram, ArrowDown, Mail, Phone, MapPin, Globe, Clock, Sparkles, TrendingUp, CheckCircle2, MessageCircle } from 'lucide-react';
 import { useI18n } from '../i18n/context';
+import { Footer } from '../components/Footer';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { motion } from 'motion/react';
 
@@ -624,47 +625,3 @@ function Contact() {
   );
 }
 
-function Footer() {
-  const { t } = useI18n();
-  return (
-    <footer className="bg-[#0f0f0f] py-12 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
-          <div>
-            <h3 className="font-display text-2xl mb-4">Virtech Visuals</h3>
-            <p className="text-[#a0a0a0]">Photography • Video • Social Content Support</p>
-          </div>
-
-          <div>
-            <h4 className="text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-[#a0a0a0]">
-              <li><a href="#services" className="hover:text-[#d4af37] transition-colors">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-[#d4af37] transition-colors">{t('cs.portfolio')}</a></li>
-              <li><a href="#pricing" className="hover:text-[#d4af37] transition-colors">{t('cs.pricing')}</a></li>
-              <li><a href="#contact" className="hover:text-[#d4af37] transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg mb-4">Follow Us</h4>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
-                <Camera className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-[#d4af37] transition-colors">
-                <Video className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-[#333] pt-8 text-center text-[#a0a0a0]">
-          <p>&copy; 2026 Virtech Visuals. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
