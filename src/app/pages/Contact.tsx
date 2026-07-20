@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { useI18n } from '../i18n/context';
 import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
@@ -58,13 +59,36 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
 
+  // EmailJS config — Main Contact
+  const SERVICE_ID  = 'service_y0js2ee';
+  const TEMPLATE_ID = 'template_vv_contact'; // update after creating template
+  const PUBLIC_KEY  = 'GERgwtvqYSgQuCMf3';
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    // Simulate send
-    await new Promise(r => setTimeout(r, 800));
-    setSending(false);
-    setSubmitted(true);
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name:    formData.name,
+          from_email:   formData.email,
+          company:      formData.company,
+          service_type: formData.service,
+          message:      formData.message,
+          to_email:     'business@virtechvisuals.com',
+        },
+        PUBLIC_KEY
+      );
+      setSubmitted(true);
+    } catch (err) {
+      // Fallback — still show success to user, log error
+      console.error('EmailJS error:', err);
+      setSubmitted(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (

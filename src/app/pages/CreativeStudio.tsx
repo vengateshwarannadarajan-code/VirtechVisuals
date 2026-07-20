@@ -519,7 +519,7 @@ function Contact() {
   // EmailJS config — Creative Studio
   const SERVICE_ID  = 'service_y0js2ee';
   const TEMPLATE_ID = 'template_hbkn9mn';
-  const PUBLIC_KEY  = 'YOUR_EMAILJS_PUBLIC_KEY';
+  const PUBLIC_KEY  = 'GERgwtvqYSgQuCMf3';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
