@@ -6,7 +6,7 @@ import { useI18n } from '../i18n/context';
 
 // ── EmailJS config ────────────────────────────────────────────────────────────
 const SERVICE_ID  = 'service_y0js2ee';
-const TEMPLATE_ID = 'template_hbkn9mn'; // single universal template
+const TEMPLATE_ID = 'template_1plxdcw'; // single universal template
 const PUBLIC_KEY  = 'GERgwtvqYSgQuCMf3';
 
 const SERVICE_OPTIONS = [
