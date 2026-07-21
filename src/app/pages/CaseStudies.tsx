@@ -1,169 +1,182 @@
-import { motion } from 'motion/react';
 import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Link } from 'react-router';
+import { ArrowRight, TrendingUp, CheckCircle2 } from 'lucide-react';
 import { useI18n } from '../i18n/context';
-import { Footer } from '../components/Footer';
 import { PageHero } from '../components/PageHero';
+import { Footer } from '../components/Footer';
+import { ContactForm } from '../components/ContactForm';
+import { caseStudies } from '../data/caseStudies';
 
-type Category = string;
-
-const cases = [
-  {
-    industry: 'Automotive' as Industry,
-    client: 'Tier-1 Auto Supplier',
-    title: 'Reducing Stamping Line Downtime by 61%',
-    challenge: 'A major Tier-1 supplier was losing €2.3M annually to unplanned downtime on eight stamping presses. Maintenance was entirely reactive.',
-    solution: 'Deployed SensorMesh Pro on all eight presses, feeding FlowIQ\'s predictive maintenance models. Within 6 weeks, the first failure was predicted 19 days in advance.',
-    results: ['61% reduction in unplanned downtime', '€1.4M annual savings', '3.2× ROI in first year', 'MTTR reduced from 8h to 2.5h'],
-    duration: '4 months',
-    image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=700',
-  },
-  {
-    industry: 'Food & Beverage' as Industry,
-    client: 'Regional Dairy Cooperative',
-    title: 'AI Quality Control Across 12 Production Lines',
-    challenge: 'Manual visual inspection was missing 3.2% of packaging defects, leading to costly recalls and brand damage.',
-    solution: 'Installed computer vision inspection stations at end-of-line on all 12 lines. Custom model trained on 40,000 labelled images of past defects.',
-    results: ['99.6% defect detection rate', 'Zero recalls in 18 months post-launch', '€800K/yr in avoided recall costs', '22 FTE redeployed to value-add tasks'],
-    duration: '6 months',
-    image: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=700',
-  },
-  {
-    industry: 'Pharma' as Industry,
-    client: 'European Pharma Manufacturer',
-    title: 'Full OEE Visibility Across 3 Plants',
-    challenge: 'No real-time OEE data across three manufacturing sites. Reporting was manual, 2 weeks delayed, and unreliable.',
-    solution: 'Virtech Cloud deployment with OPC-UA connectivity to existing PLCs. Custom dashboards for site managers and a single exec view for the group.',
-    results: ['Real-time OEE for all 3 sites', 'OEE improved from 68% to 81%', 'Reporting time cut from 14 days to live', '€2.1M additional throughput captured'],
-    duration: '5 months',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700',
-  },
-  {
-    industry: 'Electronics' as Industry,
-    client: 'PCB Manufacturer',
-    title: 'SMT Line Yield Optimisation with AI',
-    challenge: 'Solder paste defects on SMT lines were causing 4.8% first-pass yield failure. Well above the industry benchmark of 1.2%.',
-    solution: 'AI process control agent continuously adjusts printer parameters based on paste inspection data. Closed-loop optimisation without operator intervention.',
-    results: ['First-pass yield failures reduced to 1.1%', '58% reduction in rework cost', '€1.9M annual scrap reduction', 'Model retrained weekly on fresh data'],
-    duration: '3 months',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=700',
-  },
-];
-
-const industries: Industry[] = ['All', 'Automotive', 'Food & Beverage', 'Pharma', 'Electronics'];
+// Get unique industries for filter tabs
+const industries = ['All', ...Array.from(new Set(caseStudies.map(c => c.industry))).sort()];
 
 export default function CaseStudies() {
   const { t } = useI18n();
-  const [active, setActive] = useState<string>('All');
-  const [expanded, setExpanded] = useState<number | null>(null);
+  const [active, setActive] = useState('All');
 
-  const filtered = active === 'All' ? cases : cases.filter((c) => c.industry === active);
+  const filtered = active === 'All'
+    ? caseStudies
+    : caseStudies.filter(c => c.industry === active);
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white">
+    <div className="min-h-screen bg-[#1a1a1a] text-white pt-16">
       <PageHero
-        tag="Client Results"
-        title="Real Outcomes, Real Numbers"
-        subtitle="Every case study below is a real deployment with measurable results. No synthetic benchmarks, no vendor demos."
+        tag={t('cases.tag')}
+        title={t('cases.title')}
+        subtitle={t('cases.sub')}
         image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=90&fit=crop&auto=format"
       />
 
-      {/* Filter */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 pb-8">
-        <div className="flex gap-3 flex-wrap">
-          {industries.map((ind) => (
-            <button
-              key={ind}
-              onClick={() => setActive(ind)}
-              className={`px-5 py-2 rounded-full text-sm border transition-all duration-200 ${
-                active === ind
-                  ? 'bg-[#d4af37] text-[#1a1a1a] border-[#d4af37]'
-                  : 'border-[#333] text-[#a0a0a0] hover:border-[#d4af37]/50 hover:text-white'
-              }`}
-            >
-              {ind}
-            </button>
+      {/* Stats */}
+      <section className="border-y border-[#2a2a2a] bg-[#111] py-10 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: `${caseStudies.length}+`, label: 'Case Studies' },
+            { value: '18+', label: 'Industries' },
+            { value: '465+', label: 'Clients Served' },
+            { value: '10+', label: 'Countries' },
+          ].map((s, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="text-center">
+              <div className="font-display text-3xl md:text-4xl text-[#d4af37] mb-1">{s.value}</div>
+              <div className="text-[#666] text-xs">{s.label}</div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* Cases */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 pb-24 space-y-8">
-        {filtered.map((c, i) => (
-          <motion.div
-            key={c.title}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.08 }}
-            className="bg-[#222] border border-[#2e2e2e] rounded-xl overflow-hidden hover:border-[#d4af37]/40 transition-colors duration-300"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-3">
-              <div className="h-56 md:h-auto overflow-hidden">
-                <img
-                  src={c.image}
-                  alt={c.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="md:col-span-2 p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] text-xs">
-                    {c.industry}
+      {/* Filter tabs */}
+      <section className="py-8 px-4 md:px-8 bg-[#1a1a1a] border-b border-[#2a2a2a] sticky top-16 z-30 backdrop-blur-md bg-[#1a1a1a]/95">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap gap-2">
+            {industries.map(ind => (
+              <button
+                key={ind}
+                onClick={() => setActive(ind)}
+                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+                  active === ind
+                    ? 'bg-[#d4af37] text-[#1a1a1a]'
+                    : 'border border-[#2a2a2a] text-[#666] hover:border-[#d4af37]/40 hover:text-[#d4af37]'
+                }`}
+              >
+                {ind}
+                {ind !== 'All' && (
+                  <span className="ml-1.5 opacity-60">
+                    {caseStudies.filter(c => c.industry === ind).length}
                   </span>
-                  <span className="text-xs text-[#666]">{c.duration} deployment</span>
-                </div>
-                <p className="text-sm text-[#a0a0a0] mb-2">{c.client}</p>
-                <h3 className="font-display text-2xl mb-4">{c.title}</h3>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                  {c.results.map((r, ri) => (
-                    <div key={ri} className="flex items-start gap-2 text-xs text-[#ccc]">
-                      <span className="w-1 h-1 rounded-full bg-[#d4af37] mt-1.5 flex-shrink-0" />
-                      {r}
-                    </div>
-                  ))}
-                </div>
-
-                <button
-                  onClick={() => setExpanded(expanded === i ? null : i)}
-                  className="flex items-center gap-2 text-sm text-[#d4af37] hover:text-white transition-colors"
-                >
-                  {expanded === i ? 'Hide details' : 'Read full story'}
-                  <ArrowRight className={`w-4 h-4 transition-transform ${expanded === i ? 'rotate-90' : ''}`} />
-                </button>
-
-                {expanded === i && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    className="mt-6 pt-6 border-t border-[#333] grid grid-cols-1 md:grid-cols-2 gap-6"
-                  >
-                    <div>
-                      <h5 className="text-xs tracking-widest text-[#d4af37] uppercase mb-3">Challenge</h5>
-                      <p className="text-sm text-[#a0a0a0] leading-relaxed">{c.challenge}</p>
-                    </div>
-                    <div>
-                      <h5 className="text-xs tracking-widest text-[#d4af37] uppercase mb-3">Solution</h5>
-                      <p className="text-sm text-[#a0a0a0] leading-relaxed">{c.solution}</p>
-                    </div>
-                  </motion.div>
                 )}
-              </div>
-            </div>
-          </motion.div>
-        ))}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case study grid */}
+      <section className="py-16 px-4 md:px-8 bg-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-6 text-[#555] text-sm">
+            Showing {filtered.length} case {filtered.length === 1 ? 'study' : 'studies'}
+            {active !== 'All' && ` in ${active}`}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filtered.map((cs, i) => (
+              <motion.div
+                key={cs.slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (i % 6) * 0.06 }}
+              >
+                <div className="group flex flex-col bg-[#111] border border-[#2a2a2a] rounded-xl overflow-hidden hover:border-[#d4af37]/40 transition-all duration-300 h-full">
+
+                  {/* Image */}
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={cs.image}
+                      alt={cs.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-black/30 to-transparent" />
+                    <div className="absolute top-3 left-3 flex gap-2">
+                      <span className="px-2.5 py-1 bg-[#d4af37]/20 border border-[#d4af37]/30 rounded-full text-[#d4af37] text-[10px] font-medium tracking-wide">
+                        {cs.industry}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5 flex flex-col flex-1">
+                    <p className="text-[10px] text-[#555] tracking-widest uppercase mb-2">{cs.category}</p>
+                    <h3 className="font-display text-base mb-1 group-hover:text-[#d4af37] transition-colors leading-snug">
+                      {cs.title}
+                    </h3>
+                    <p className="text-[#555] text-xs mb-3">{cs.client}</p>
+
+                    {/* Duration + engineers */}
+                    {(cs.duration || cs.engineers) && (
+                      <div className="flex gap-3 mb-4">
+                        {cs.duration && (
+                          <span className="text-[10px] text-[#444] border border-[#222] px-2 py-0.5 rounded">
+                            ⏱ {cs.duration}
+                          </span>
+                        )}
+                        {cs.engineers && (
+                          <span className="text-[10px] text-[#444] border border-[#222] px-2 py-0.5 rounded">
+                            👥 {cs.engineers}
+                          </span>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Key results */}
+                    {cs.results.length > 0 && (
+                      <div className="space-y-1.5 mb-4 flex-1">
+                        <p className="text-[10px] text-[#d4af37] tracking-widest uppercase mb-2">
+                          <TrendingUp className="w-3 h-3 inline mr-1" />
+                          {t('cases.results')}
+                        </p>
+                        {cs.results.slice(0, 2).map((r, j) => (
+                          <div key={j} className="flex items-start gap-2">
+                            <CheckCircle2 className="w-3 h-3 text-[#d4af37] flex-shrink-0 mt-0.5" />
+                            <span className="text-[#777] text-[11px] leading-snug">{r}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Technologies */}
+                    {cs.technologies.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mb-4">
+                        {cs.technologies.slice(0, 3).map((tech, j) => (
+                          <span key={j} className="text-[10px] text-[#444] border border-[#222] px-2 py-0.5 rounded">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="mt-auto pt-3 border-t border-[#1e1e1e] flex items-center gap-1 text-xs text-[#555] group-hover:text-[#d4af37] transition-colors">
+                      {t('cases.read')} <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#111] py-20 px-4 md:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-4xl mb-6">Your industry. Your results.</h2>
-          <p className="text-[#a0a0a0] mb-10">Talk to the team that delivered these outcomes. We'll tell you honestly what's achievable in your environment.</p>
-          <button className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300">
-            Speak to an Expert
-          </button>
+      <section className="py-20 px-4 md:px-8 bg-[#111]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <h2 className="font-display text-3xl md:text-4xl mb-4">{t('cases.cta.title')}</h2>
+            <p className="text-[#666] text-sm max-w-xl mx-auto">{t('cases.cta.sub')}</p>
+          </motion.div>
+          <ContactForm showSidebar={true} defaultService="Smart Factory Solutions" />
         </div>
       </section>
+
       <Footer />
     </div>
   );
