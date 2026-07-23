@@ -44,13 +44,6 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-[40px] mb-14">
           <div className="col-span-2 md:col-span-1" style={{minWidth: 0}}>
             <p className="text-[#555] text-xs leading-relaxed mb-5">{t('footer.desc')}</p>
-            <div className="flex flex-wrap gap-2">
-              {['ISO 27001', 'ISO 9001', 'SOC 2'].map(cert => (
-                <span key={cert} className="text-[9px] tracking-widest text-[#555] border border-[#2a2a2a] px-2.5 py-1 rounded">
-                  {cert}
-                </span>
-              ))}
-            </div>
           </div>
 
           <div>
