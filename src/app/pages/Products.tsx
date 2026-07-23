@@ -24,7 +24,7 @@ const products = [
     tagline: 'Digital Permit-to-Work',
     desc: 'Digital permit-to-work issuance and tracking with multi-level approvals, risk assessments, and complete audit trails.',
     specs: ['Hot work, confined space, electrical permits', 'Multi-level approvals', 'Active permit dashboard'],
-    image: 'https://images.unsplash.com/photo-1609188076864-c35269136c09?w=600',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600',
     slug: 'permitflows',
   },
   {
@@ -168,7 +168,7 @@ const products = [
     tagline: 'Smart Turf Booking & Management Platform',
     desc: 'Complete digital platform for turf bookings, slot management, pricing, offers, payments, and customer engagement.',
     specs: ['Real-time slot booking', 'Smart pricing engine', 'Revenue analytics'],
-    image: 'https://images.unsplash.com/photo-1551958219-acbc595d7c09?w=600',
+    image: 'https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=600',
     slug: 'turftrack',
   },
   {
