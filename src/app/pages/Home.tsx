@@ -125,7 +125,7 @@ export default function Home() {
 
       {/* Stats */}
       <section className="border-y border-[#2a2a2a] py-12 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-[32px]">
           {statsData.map((s, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
               <div className="font-display text-4xl md:text-5xl text-[#d4af37] mb-2">{s.value}</div>
@@ -142,9 +142,9 @@ export default function Home() {
         </motion.h2>
         {highlights.map((h, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}
-            className={`grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-[#2e2e2e] hover:border-[#d4af37]/40 transition-colors duration-300 group ${i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}
+            className={`grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-[#2e2e2e] hover:border-[#d4af37]/40 transition-colors duration-300 group ${i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}
           >
-            <div className="relative h-72 md:h-auto overflow-hidden">
+            <div className="relative h-[320px] md:h-full min-h-[320px] overflow-hidden">
               <img src={h.image} alt={t(h.titleKey)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-black/30" />
             </div>
@@ -173,7 +173,7 @@ export default function Home() {
               {t('home.sf.cta')} <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]">
             {solutions.map((s, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}>
                 <Link to={s.to} className="group flex flex-col gap-4 p-7 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 hover:bg-[#1e1e1e] transition-all duration-300 h-full">
@@ -205,7 +205,7 @@ export default function Home() {
               {t('home.svc.cta')} <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]">
             {services.map((s, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}>
                 <Link to={s.to} className="group flex items-start gap-5 p-7 bg-[#222] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 hover:bg-[#252525] transition-all duration-300">
@@ -237,7 +237,7 @@ export default function Home() {
               {t('home.prod.cta')} <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]">
             {products.map((p, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}>
                 <Link to={p.to} className="group flex flex-col gap-5 p-7 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 hover:bg-[#1e1e1e] transition-all duration-300 h-full">
@@ -266,7 +266,7 @@ export default function Home() {
             <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('home.why.tag')}</span>
             <h2 className="font-display text-4xl md:text-5xl max-w-2xl">{t('home.why.title')}</h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#2a2a2a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#2a2a2a] border border-[#2a2a2a] rounded-2xl overflow-hidden divide-x-0 divide-y divide-[#2a2a2a] md:divide-y-0">
             {whyItems.map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }} className="bg-[#1a1a1a] p-8 flex flex-col gap-4 hover:bg-[#1f1f1f] transition-colors duration-300 group">
                 <div className="flex items-center gap-3">
