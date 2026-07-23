@@ -246,43 +246,6 @@ export default function ProductDetail() {
         </div>
       </section>
 
-      {/* Related Case Studies */}
-      <section className="py-16 px-4 md:px-8 bg-[#1a1a1a] border-t border-[#222]">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-10"
-          >
-            <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Related Case Studies</span>
-            <h2 className="font-display text-3xl">Real outcomes from real deployments</h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {product.relatedCaseStudies.map((cs, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <Link
-                  to="/case-studies"
-                  className="group block p-5 bg-[#111] border border-[#2a2a2a] rounded-xl hover:border-[#d4af37]/40 transition-all duration-300"
-                >
-                  <span className="text-[10px] text-[#555] tracking-widest uppercase border border-[#2a2a2a] px-2.5 py-1 rounded-full inline-block mb-3 group-hover:border-[#d4af37]/30 group-hover:text-[#888] transition-colors">
-                    {cs.industry}
-                  </span>
-                  <p className="font-display text-sm leading-snug group-hover:text-[#d4af37] transition-colors">{cs.title}</p>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 px-4 md:px-8 bg-[#111] border-t border-[#222]">
         <div className="max-w-3xl mx-auto text-center">
