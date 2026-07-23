@@ -41,12 +41,12 @@ export function Footer() {
         </div>
 
         {/* Main grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-14">
-          <div className="col-span-2 md:col-span-1">
-            <p className="text-[#444] text-xs leading-relaxed mb-6">{t('footer.desc')}</p>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-[40px] mb-14">
+          <div className="col-span-2 md:col-span-1" style={{minWidth: 0}}>
+            <p className="text-[#555] text-xs leading-relaxed mb-5">{t('footer.desc')}</p>
             <div className="flex flex-wrap gap-2">
               {['ISO 27001', 'ISO 9001', 'SOC 2'].map(cert => (
-                <span key={cert} className="text-[9px] tracking-widest text-[#444] border border-[#222] px-2 py-1 rounded">
+                <span key={cert} className="text-[9px] tracking-widest text-[#555] border border-[#2a2a2a] px-2.5 py-1 rounded">
                   {cert}
                 </span>
               ))}
@@ -55,7 +55,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-xs text-[#d4af37] tracking-widest uppercase mb-5">{t('footer.solutions')}</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-[12px]">
               {[
                 { label: 'Production Performance', to: '/smart-factory/production-performance-planning' },
                 { label: 'Quality Intelligence',   to: '/smart-factory/quality-intelligence' },
@@ -73,7 +73,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-xs text-[#d4af37] tracking-widest uppercase mb-5">{t('footer.services')}</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-[12px]">
               {[
                 { label: 'Custom Software Dev',    slug: 'custom-software' },
                 { label: 'Artificial Intelligence', slug: 'artificial-intelligence' },
@@ -91,7 +91,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-xs text-[#d4af37] tracking-widest uppercase mb-5">{t('footer.products')}</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-[12px]">
               {[
                 { label: 'GateKeeper',    slug: 'gatekeeper' },
                 { label: 'IncidentGPT',  slug: 'incidentgpt' },
