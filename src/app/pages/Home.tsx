@@ -89,7 +89,7 @@ export default function Home() {
           </div>
           <div className="absolute inset-0 bg-black/65" />
         </div>
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-16">
+        <div className="relative z-10 text-center px-8 w-full max-w-4xl mx-auto pt-16">
           <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="inline-block px-4 py-1.5 rounded-full border border-[#d4af37]/40 text-[#d4af37] text-xs tracking-widest uppercase mb-8">
             {t('home.badge')}
           </motion.span>
@@ -99,11 +99,11 @@ export default function Home() {
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="text-lg md:text-xl text-[#c0c0c0] mb-12 max-w-2xl mx-auto leading-relaxed">
             {t('home.sub')}
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-col sm:flex-row gap-[16px] justify-center mb-6 w-full px-4">
-            <Link to="/smart-factory" className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 flex items-center justify-center gap-2 sm:min-w-[220px]">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-col sm:flex-row gap-[16px] justify-center items-center mb-6">
+            <Link to="/smart-factory" className="w-full sm:w-auto px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 flex items-center justify-center gap-2">
               {t('home.cta.factory')} <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link to="/creative-studio" className="px-8 py-4 border border-white/20 text-white rounded-lg hover:border-[#d4af37]/60 hover:text-[#d4af37] transition-all duration-300 flex items-center justify-center gap-2 sm:min-w-[220px]">
+            <Link to="/creative-studio" className="w-full sm:w-auto px-8 py-4 border border-white/20 text-white rounded-lg hover:border-[#d4af37]/60 hover:text-[#d4af37] transition-all duration-300 flex items-center justify-center gap-2">
               {t('home.cta.creative')} <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
