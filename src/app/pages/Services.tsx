@@ -95,7 +95,7 @@ const services = [
     title: 'VR/AR & Spatial Intelligence',
     desc: 'Immersive experiences and spatial computing for industry and enterprise',
     highlights: ['Immersive VR Training & Simulation', 'AR Remote Assistance & Guided Work', '3D Visualization & Digital Twins', 'Indoor Positioning & Spatial Mapping'],
-    image: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=800',
+    image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800',
   },
 ];
 

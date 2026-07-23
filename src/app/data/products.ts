@@ -73,7 +73,7 @@ export const allProducts: Product[] = [
     name: 'PermitFlows',
     tagline: 'Digital Permit-to-Work',
     category: 'Factory 5.0',
-    image: 'https://images.unsplash.com/photo-1609188076864-c35269136c09?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&h=700&fit=crop&auto=format',
     intro: 'PermitFlows digitalizes the full permit-to-work lifecycle, from permit request and risk assessment to multi-level approvals, active monitoring, and closure. Eliminate paper permits, prevent simultaneous conflicting work, and maintain a complete audit trail for every high-risk activity.',
     modules: [
       { name: 'Permit Request Portal', desc: 'Workers submit permit requests with work description, location, hazards identified, and precautions required.' },
@@ -1086,7 +1086,7 @@ export const allProducts: Product[] = [
     name: 'TurfTrack',
     tagline: 'Smart Turf Booking & Management Platform',
     category: 'Specialized',
-    image: 'https://images.unsplash.com/photo-1551958219-acbc595d7c09?w=1600&h=700&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=1600&h=700&fit=crop&auto=format',
     intro: 'TurfTrack is a complete digital solution designed to simplify turf operations, bookings, slot management, pricing, offers, and customer engagement. All from one powerful platform. From real-time slot booking to admin-level analytics and revenue tracking, TurfTrack helps turf owners manage their business efficiently while delivering a smooth booking experience for players.',
     modules: [
       { name: 'Centralized Admin Dashboard', desc: 'Monitor bookings, turfs, offers, payments, and reports from one clean and intuitive dashboard built for turf owners and managers.' },
