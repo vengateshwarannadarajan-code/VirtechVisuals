@@ -10,6 +10,7 @@ import Technologies from './pages/Technologies';
 import TechPlatformDetail from './pages/TechPlatformDetail';
 import AI from './pages/AI';
 import CaseStudies from './pages/CaseStudies';
+import CaseStudyDetail from './pages/CaseStudyDetail';
 import CreativeStudio from './pages/CreativeStudio';
 import SolutionDetail from './pages/SolutionDetail';
 import ProductDetail from './pages/ProductDetail';
@@ -41,6 +42,7 @@ export const router = createBrowserRouter([
       { path: 'technologies/:slug', Component: TechPlatformDetail },
       { path: 'ai', Component: AI },
       { path: 'case-studies', Component: CaseStudies },
+      { path: 'case-studies/:slug', Component: CaseStudyDetail },
       { path: 'creative-studio', Component: CreativeStudio },
       { path: 'contact', Component: Contact },
     ],

@@ -10,7 +10,7 @@ export const caseStudies = [
     challenge: "The client struggled with locating critical tools, jigs, and fixtures across a 200,000 sq. ft. manufacturing floor, leading to significant downtime and delayed production schedules.",
     results: ["40% reduction in tool search time", "18% improvement in overall production throughput", "Real-time visibility of 2,500+ assets across 3 shop floors", "Automated audit trail for compliance reporting"],
     technologies: ["BLE Beacons", "RTLS", "IoT Gateway", "Custom Dashboard"],
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80",
   },
   {
     slug: "real-time-oee-monitoring-analytics",
@@ -23,7 +23,7 @@ export const caseStudies = [
     challenge: "Manual OEE tracking using spreadsheets resulted in delayed insights, inaccurate data, and an inability to identify bottlenecks in real time across 12 production lines.",
     results: ["OEE improved from 62% to 81% within 6 months", "Downtime reduced by 35%", "Real-time alerts enabled 15-minute response time", "₹2.3 Cr annual savings from reduced waste"],
     technologies: ["PLC Integration", "SCADA", "AI Analytics", "Power BI"],
-    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
   },
   {
     slug: "end-to-end-batch-traceability-system",
@@ -62,7 +62,7 @@ export const caseStudies = [
     challenge: "Energy costs constituted 40% of total production costs. The client lacked visibility into energy consumption patterns across kilns, mills, and auxiliary systems.",
     results: ["12% reduction in overall energy consumption", "$1.8M annual energy cost savings", "Carbon footprint reduced by 3,200 tonnes/year", "Automated energy reports for sustainability compliance"],
     technologies: ["Smart Meters", "Energy Analytics", "AI Optimization", "Demand Forecasting"],
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80",
   },
   {
     slug: "smart-warehouse-management-system",
@@ -114,7 +114,7 @@ export const caseStudies = [
     challenge: "Production managers relied on end-of-shift reports to understand line performance, making it impossible to react to issues in real time across 8 packaging lines.",
     results: ["Real-time visibility across all 8 lines", "Production waste reduced by 25%", "Shift handover time cut by 60%", "15% improvement in lines-per-hour output"],
     technologies: ["PLC Connectivity", "Real-Time Dashboard", "Alert Engine", "Shift Analytics"],
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=800&q=80",
   },
   {
     slug: "cleanroom-environmental-monitoring-system",
@@ -153,7 +153,7 @@ export const caseStudies = [
     challenge: "Poor visibility into haul truck locations, idle times, and route efficiency across a 50 km² open-pit mining operation resulted in fuel wastage and missed production targets.",
     results: ["Fuel consumption reduced by 14%", "Fleet utilization improved by 22%", "Haul cycle times optimized by 18%", "Annual savings of AUD 2.1M"],
     technologies: ["GPS Tracking", "Fleet Analytics", "Route Optimization", "Driver Scoring"],
-    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1445251836269-d158eaa028a6?w=800&q=80",
   },
   {
     slug: "garbage-truck-tracking-maintenance-system",
@@ -179,7 +179,7 @@ export const caseStudies = [
     challenge: "The stray dog management process was entirely manual — from complaint logging to catch team dispatch, vaccination tracking, and release documentation — causing delays and poor accountability.",
     results: ["Response time reduced from 48 hours to 6 hours", "100% digital record of all captured and released animals", "Vaccination compliance tracking improved to 98%", "Process transparency increased with real-time citizen updates"],
     technologies: ["Mobile App", "QR Tagging", "GPS Dispatch", "Compliance Dashboard"],
-    image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80",
   },
   {
     slug: "government-turf-booking-application",
@@ -192,7 +192,7 @@ export const caseStudies = [
     challenge: "Booking public turfs and community spaces was a manual, paper-based process prone to double bookings, revenue leakage, and lack of transparency for citizens.",
     results: ["Revenue collection increased by 35% with zero leakage", "Double bookings eliminated completely", "Citizen satisfaction improved with 24/7 online booking", "Admin workload reduced by 70% through automation"],
     technologies: ["Web Application", "Payment Gateway", "SMS Integration", "Analytics Dashboard"],
-    image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1551958219-acbc595d7c09?w=800&q=80",
   },
   {
     slug: "car-booking-management-system",
@@ -205,7 +205,7 @@ export const caseStudies = [
     challenge: "HCL Foundation's field teams across multiple locations needed a streamlined way to book vehicles for CSR project visits, but the manual process led to scheduling conflicts, underutilized vehicles, and poor trip documentation.",
     results: ["Vehicle utilization improved by 45%", "Scheduling conflicts eliminated with real-time availability", "Trip documentation automated for CSR compliance reporting", "Administrative overhead reduced by 60%"],
     technologies: ["Web Application", "Role-Based Access", "Approval Workflows", "Reporting Engine"],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
   },
   {
     slug: "ngo-management-impact-tracking-platform",
@@ -218,7 +218,7 @@ export const caseStudies = [
     challenge: "The NGO managed 50+ programs across 12 states with donor reporting, volunteer coordination, and beneficiary tracking all handled through disconnected spreadsheets, making impact measurement nearly impossible.",
     results: ["Program data consolidated from 200+ spreadsheets into one platform", "Donor reporting time reduced from 2 weeks to 2 hours", "Beneficiary reach tracking improved across 12 states", "Field data collection digitized with offline-capable mobile app"],
     technologies: ["Web Platform", "Mobile App", "Impact Analytics", "Donor Management"],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1536010305525-f7aa0834e2c7?w=800&q=80",
   },
   {
     slug: "tree-plantation-tracker-application",
@@ -231,7 +231,7 @@ export const caseStudies = [
     challenge: "A large-scale tree plantation CSR initiative needed to track every planted tree's survival, growth, and geo-location across hundreds of plantation sites to provide verifiable impact data to stakeholders.",
     results: ["100,000+ trees tracked with GPS coordinates", "Survival rate monitoring improved accountability to 92%", "Carbon offset reports generated automatically for stakeholders", "Plantation site health visible in real-time dashboards"],
     technologies: ["GPS Mapping", "Photo Documentation", "Carbon Analytics", "Impact Reporting"],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80",
   },
   {
     slug: "production-planning-scheduling-platform",
@@ -244,7 +244,7 @@ export const caseStudies = [
     challenge: "The refinery managed complex multi-stage copper refining processes with fluctuating ore grades, furnace capacities, and customer delivery commitments using manual spreadsheets, leading to suboptimal throughput and frequent delivery delays.",
     results: ["Production throughput improved by 18%", "On-time delivery rate increased from 72% to 94%", "Planning cycle reduced from 3 days to 4 hours", "Material waste reduced by 12% through optimized batch sequencing"],
     technologies: ["Production Scheduler", "Capacity Optimization", "ERP Integration", "Real-Time Dashboard"],
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
   },
   {
     slug: "manufacturing-efficiency-transformation-oee-ole",
@@ -257,7 +257,7 @@ export const caseStudies = [
     challenge: "Improve line and equipment efficiency with accurate loss capture, shift-wise visibility, and actionable performance insights.",
     results: ["Stronger visibility into losses and bottlenecks", "Faster review cycles and more data-driven improvement actions", "Shift-wise performance benchmarking enabled", "Actionable insights for continuous improvement teams"],
     technologies: ["OEE/OLE Framework", "Shopfloor Dashboards", "Loss Analytics", "Continuous Improvement"],
-    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
   },
   {
     slug: "automotive-safety-quality-digitization",
@@ -270,7 +270,7 @@ export const caseStudies = [
     challenge: "Ensure structured inspection for tank-related quality/safety checks with traceable records and quicker approvals.",
     results: ["Standardized inspection process across plants", "Reduced manual paperwork and improved traceability", "Faster approval cycles with digital workflows", "Complete audit trail for every inspection"],
     technologies: ["Digital Inspection", "Photo Evidence", "Approval Workflows", "Compliance Reports"],
-    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1486754735734-325b5831c3ad?w=800&q=80",
   },
   {
     slug: "industrial-digitization-program",
@@ -283,7 +283,7 @@ export const caseStudies = [
     challenge: "Digitize plant-level operations and improve visibility across departments using modern dashboards and integrated workflows.",
     results: ["Improved transparency and reporting efficiency", "Easier monitoring for leadership teams across functions", "Scalable architecture ready for multi-plant rollout", "Governance-ready reporting framework established"],
     technologies: ["Role-Based Dashboards", "ERP/MES Integration", "SCADA Connectivity", "Scalable Architecture"],
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=800&q=80",
   },
   {
     slug: "group-websites-multi-brand-web-presence",
@@ -296,7 +296,7 @@ export const caseStudies = [
     challenge: "Standardize and modernize web presence across multiple group companies while maintaining brand consistency and faster content updates.",
     results: ["Unified digital identity across group companies", "Improved credibility, discoverability, and lead confidence", "Admin-managed content updates without developer dependency", "SEO-optimized pages driving organic traffic growth"],
     technologies: ["Responsive Web Design", "SEO Optimization", "CMS", "Design System"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
   },
   {
     slug: "pharmacy-manufacturing-digitization-tooling-spare-management",
@@ -309,7 +309,7 @@ export const caseStudies = [
     challenge: "Manage tooling/spares lifecycle, availability, issuance/returns, traceability, and audit-ready records across departments.",
     results: ["Improved traceability and inventory control", "Reduced downtime caused by missing tools/spares", "Audit-ready records available on demand", "Cost control through consumption trend analysis"],
     technologies: ["Inventory Management", "Workflow Automation", "Audit Trails", "Alert Engine"],
-    image: "https://images.unsplash.com/photo-1563213126-a4273aed2016?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&q=80",
   },
   {
     slug: "contract-workforce-operations-portal",
@@ -322,7 +322,7 @@ export const caseStudies = [
     challenge: "Digitize contract manpower onboarding, attendance, compliance documents, approvals, and reporting.",
     results: ["Faster onboarding and smoother compliance tracking", "Reduced manual HR workload significantly", "Automated compliance renewal reminders", "Complete visibility into contract workforce status"],
     technologies: ["HR Portal", "Document Management", "Compliance Engine", "Role-Based Access"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80",
   },
   {
     slug: "sports-complex-operations-member-experience-platform",
@@ -335,7 +335,7 @@ export const caseStudies = [
     challenge: "Manage memberships, bookings, payments, renewals, rewards, and facility operations in a single system.",
     results: ["Higher member retention through reminders and rewards", "Smooth booking and payment experience with less admin effort", "Automated invoicing and receipt generation", "24/7 online booking and self-service portal"],
     technologies: ["Web & Mobile App", "Payment Gateway", "WhatsApp Integration", "Rewards Engine"],
-    image: "https://images.unsplash.com/photo-1551958219-acbc595d7c09?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
   },
   {
     slug: "fmcg-consumer-app-customer-engagement",
@@ -348,7 +348,7 @@ export const caseStudies = [
     challenge: "Improve customer engagement and brand connection through a mobile-first experience.",
     results: ["Stronger direct-to-consumer engagement channel", "Better campaign reach and customer touchpoints", "Analytics-driven campaign optimization", "Improved brand loyalty through app interactions"],
     technologies: ["Mobile App", "Push Notifications", "Campaign Analytics", "UX Design"],
-    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
   },
   {
     slug: "manufacturing-excellence-oee-ole",
@@ -361,7 +361,7 @@ export const caseStudies = [
     challenge: "Implement OEE/OLE visibility to identify losses, improve utilization, and support performance reviews.",
     results: ["Clear performance baseline and loss visibility established", "Better prioritization for improvement actions", "Downtime patterns identified and addressed", "Data-driven performance review culture adopted"],
     technologies: ["OEE/OLE Tracking", "Loss Analytics", "Supervisor Dashboards", "Performance Reports"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
   },
   {
     slug: "esg-climate-operations-platform",
@@ -374,7 +374,7 @@ export const caseStudies = [
     challenge: "Manage biomass operations and field execution with location-based controls and reliable data capture.",
     results: ["Clean, traceable operations data", "Reduced field-level errors and improved monitoring", "GPS-verified field data for compliance", "Centralized reporting for stakeholders"],
     technologies: ["Web Portal", "GPS Capture", "Photo Documentation", "Centralized Reporting"],
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80",
   },
   {
     slug: "multi-company-erp-foundation",
@@ -387,7 +387,7 @@ export const caseStudies = [
     challenge: "Build a single portal for multiple companies with separate data, starting with HR and expanding module-by-module.",
     results: ["Standardized internal operations roadmap", "Scalable ERP base for long-term rollout", "Data isolation ensured across entities", "Modular architecture enabling phased expansion"],
     technologies: ["Multi-Tenant Architecture", "HR Module", "Role-Based Access", "Scalable ERP"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
   },
   {
     slug: "warehouse-inventory-flow-digitization",
@@ -400,7 +400,7 @@ export const caseStudies = [
     challenge: "Define and digitize inward, location mapping, shortage handling, repair segregation, and pre-dispatch inspection.",
     results: ["Improved inventory traceability end-to-end", "Reduced dispatch issues and operational confusion", "Repair segregation streamlined with clear workflows", "Pre-dispatch quality checks digitized"],
     technologies: ["GRN/MRIR", "Location Mapping", "Inspection Workflows", "Inventory Tracking"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
   },
   {
     slug: "school-operations-digitization",
@@ -426,7 +426,7 @@ export const caseStudies = [
     challenge: "Track employee/vendor effort across projects, locations, and cost centers with approvals and audit-ready reporting.",
     results: ["Better manpower visibility and cost control", "Reduced manual timesheet errors and faster approvals", "Clear billable vs non-billable tracking", "Audit-ready project cost reporting"],
     technologies: ["Timesheet System", "Multi-Level Approvals", "Project Analytics", "Cost Reporting"],
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=800&q=80",
   },
   {
     slug: "ai-based-contract-automation-platform",
@@ -439,7 +439,7 @@ export const caseStudies = [
     challenge: "Speed up agreement preparation while ensuring standard clauses, version control, and compliance checks for NDA/NCA/agreement types.",
     results: ["Faster agreement cycles and reduced legal back-and-forth", "Improved standardization and governance", "Automated risk flagging and compliance checks", "Complete version control and audit trail"],
     technologies: ["AI Document Generation", "Clause Library", "Risk Validation", "Audit Trail"],
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&q=80",
   },
   {
     slug: "real-time-payments-platform-upi-like",
@@ -452,7 +452,7 @@ export const caseStudies = [
     challenge: "Build a scalable payment flow similar to UPI-style experience with strong security, reconciliation, and dispute handling.",
     results: ["Reliable transaction processing foundation established", "Clear operational visibility for finance and support teams", "KYC-compliant onboarding workflow", "Fraud detection and risk controls in place"],
     technologies: ["Payment Gateway", "QR Payments", "Reconciliation Engine", "Fraud Detection"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
   },
   {
     slug: "restaurant-chain-operations-management",
@@ -465,7 +465,7 @@ export const caseStudies = [
     challenge: "Manage multi-branch operations with centralized control over menus, orders, staff workflows, inventory, and reporting.",
     results: ["Better consistency across outlets", "Faster daily operations and improved reporting", "Reduced inventory wastage with alerts", "Centralized menu and pricing management"],
     technologies: ["Multi-Branch POS", "Inventory Management", "Order Workflows", "Sales Analytics"],
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
   },
   {
     slug: "crypto-based-payment-gateway",
@@ -478,7 +478,7 @@ export const caseStudies = [
     challenge: "Enable businesses to accept crypto payments with clear pricing, confirmations, settlements, and compliance-ready logs.",
     results: ["Streamlined crypto acceptance for merchants", "Improved payment transparency and operational tracking", "Compliance-ready transaction logging", "Flexible settlement options for merchants"],
     technologies: ["Blockchain Integration", "Crypto Wallets", "Settlement Engine", "Merchant API"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=800&q=80",
   },
   {
     slug: "digital-billboard-advertisement-management-platform",
@@ -504,7 +504,7 @@ export const caseStudies = [
     challenge: "Build a real-world asset (RWA) blockchain platform with traceability, ownership records, and compliance workflows.",
     results: ["Structured asset traceability and transparent ownership records", "Faster token lifecycle management with governance controls", "Compliance-ready audit trail", "Scalable platform for multiple asset types"],
     technologies: ["Blockchain", "Smart Contracts", "Asset Tokenization", "Compliance Engine"],
-    image: "https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
   },
 ];
 

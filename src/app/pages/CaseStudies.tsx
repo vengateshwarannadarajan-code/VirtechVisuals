@@ -87,7 +87,7 @@ export default function CaseStudies() {
                 viewport={{ once: true }}
                 transition={{ delay: (i % 6) * 0.06 }}
               >
-                <div className="group flex flex-col bg-[#111] border border-[#2a2a2a] rounded-xl overflow-hidden hover:border-[#d4af37]/40 transition-all duration-300 h-full">
+                <Link to={`/case-studies/${cs.slug}`} className="group flex flex-col bg-[#111] border border-[#2a2a2a] rounded-xl overflow-hidden hover:border-[#d4af37]/40 transition-all duration-300 h-full">
 
                   {/* Image */}
                   <div className="relative h-44 overflow-hidden">
@@ -159,7 +159,7 @@ export default function CaseStudies() {
                       {t('cases.read')} <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
