@@ -18,7 +18,6 @@ export function Navbar() {
     { labelKey: 'nav.services',   to: '/services' },
     { labelKey: 'nav.technologies', to: '/technologies' },
     { labelKey: 'nav.ai',         to: '/ai' },
-    { labelKey: 'nav.cases',      to: '/case-studies' },
   ];
 
   return (

@@ -111,8 +111,7 @@ export function Footer() {
             <h4 className="text-xs text-[#d4af37] tracking-widest uppercase mb-5">{t('footer.company')}</h4>
             <ul className="space-y-3 mb-8">
               {[
-                { label: 'Case Studies',    to: '/case-studies' },
-                { label: 'AI',              to: '/ai' },
+                  { label: 'AI',              to: '/ai' },
                 { label: 'Technologies',    to: '/technologies' },
                 { label: 'Creative Studio', to: '/creative-studio' },
               ].map(item => (
