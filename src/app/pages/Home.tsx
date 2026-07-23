@@ -142,13 +142,13 @@ export default function Home() {
         </motion.h2>
         {highlights.map((h, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}
-            className={`grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-[#2e2e2e] hover:border-[#d4af37]/40 transition-colors duration-300 group ${i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}
+            className={`grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-[#2e2e2e] hover:border-[#d4af37]/40 transition-colors duration-300 group md:h-[480px] ${i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}
           >
-            <div className="relative h-[320px] md:h-full min-h-[320px] overflow-hidden">
+            <div className="relative h-[320px] md:h-full overflow-hidden">
               <img src={h.image} alt={t(h.titleKey)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-black/30" />
             </div>
-            <div className="bg-[#222] p-10 md:p-14 flex flex-col justify-center">
+            <div className="bg-[#222] p-10 md:p-14 flex flex-col justify-center h-full">
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-4">{t(h.tagKey)}</span>
               <h3 className="font-display text-4xl mb-5">{t(h.titleKey)}</h3>
               <p className="text-[#a0a0a0] leading-relaxed mb-8">{t(h.descKey)}</p>
