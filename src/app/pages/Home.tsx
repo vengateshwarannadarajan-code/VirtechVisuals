@@ -88,7 +88,6 @@ export default function Home() {
             <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=960" alt="Creative" className="w-full h-full object-cover scale-110" />
           </div>
           <div className="absolute inset-0 bg-black/65" />
-          <div className="absolute inset-y-0 left-1/2 -translate-x-px w-px bg-gradient-to-b from-transparent via-[#d4af37]/60 to-transparent" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-16">
           <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="inline-block px-4 py-1.5 rounded-full border border-[#d4af37]/40 text-[#d4af37] text-xs tracking-widest uppercase mb-8">
@@ -100,7 +99,7 @@ export default function Home() {
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="text-lg md:text-xl text-[#c0c0c0] mb-12 max-w-2xl mx-auto leading-relaxed">
             {t('home.sub')}
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-col sm:flex-row gap-[24px] justify-center mb-6">
             <Link to="/smart-factory" className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 flex items-center justify-center gap-2">
               {t('home.cta.factory')} <ArrowRight className="w-4 h-4" />
             </Link>
@@ -108,7 +107,7 @@ export default function Home() {
               {t('home.cta.creative')} <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="flex items-center justify-center gap-6 text-sm">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="flex items-center justify-center gap-[24px] text-sm mb-8">
             <a href="https://wa.me/33780843487" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[#c0c0c0] hover:text-[#d4af37] transition-colors">
               <MessageCircle className="w-4 h-4" /> WhatsApp
             </a>
