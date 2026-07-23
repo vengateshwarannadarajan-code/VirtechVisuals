@@ -227,7 +227,7 @@ export default function AI() {
       {/* Outcomes */}
       <section className="border-y border-[#2a2a2a] py-10 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#555] text-xs tracking-widest uppercase mb-5">Outcomes We Typically Target</p>
+          <p className="text-[#999] text-xs tracking-widest uppercase mb-5">Outcomes We Typically Target</p>
           <div className="flex flex-wrap gap-3">
             {[
               'Reduce downtime & quality defects',
@@ -248,7 +248,7 @@ export default function AI() {
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-20">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
           <h2 className="font-display text-3xl md:text-5xl mb-3">AI Capability Areas</h2>
-          <p className="text-[#a0a0a0]">End-to-end AI capabilities, from GenAI chatbots to computer vision and MLOps, all designed for enterprise integration.</p>
+          <p className="text-[#c0c0c0]">End-to-end AI capabilities, from GenAI chatbots to computer vision and MLOps, all designed for enterprise integration.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-6">
           {capabilities.map((cap, i) => (
@@ -264,16 +264,16 @@ export default function AI() {
                 <div className="p-3 bg-[#d4af37]/10 rounded-lg flex-shrink-0">{cap.icon}</div>
                 <div>
                   <h3 className="font-display text-xl mb-0.5">{t(cap.titleKey)}</h3>
-                  <p className="text-[#555] text-xs">{cap.sub}</p>
+                  <p className="text-[#999] text-xs">{cap.sub}</p>
                 </div>
               </div>
-              <p className="text-[#a0a0a0] text-sm leading-relaxed mb-5">{t(cap.descKey)}</p>
+              <p className="text-[#c0c0c0] text-sm leading-relaxed mb-5">{t(cap.descKey)}</p>
               {cap.builds.length > 0 && (
                 <div className="mb-5">
-                  <p className="text-[#555] text-xs tracking-widest uppercase mb-3">We Build</p>
+                  <p className="text-[#999] text-xs tracking-widest uppercase mb-3">We Build</p>
                   <ul className="space-y-1.5">
                     {cap.builds.map((b, bi) => (
-                      <li key={bi} className="text-xs text-[#777] flex items-start gap-2">
+                      <li key={bi} className="text-xs text-[#bbb] flex items-start gap-2">
                         <span className="w-1 h-1 rounded-full bg-[#d4af37] flex-shrink-0 mt-1.5" /> {b}
                       </li>
                     ))}
@@ -310,7 +310,7 @@ export default function AI() {
                 <h3 className="text-[#d4af37] text-xs tracking-widest uppercase mb-4">{cat.category}</h3>
                 <ul className="space-y-2">
                   {cat.cases.map((c, ci) => (
-                    <li key={ci} className="flex items-start gap-2 text-sm text-[#a0a0a0]">
+                    <li key={ci} className="flex items-start gap-2 text-sm text-[#c0c0c0]">
                       <span className="w-1 h-1 rounded-full bg-[#d4af37] flex-shrink-0 mt-2" /> {c}
                     </li>
                   ))}
@@ -325,7 +325,7 @@ export default function AI() {
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-20">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
           <h2 className="font-display text-3xl md:text-4xl mb-3">AI in Action</h2>
-          <p className="text-[#a0a0a0]">Sample Workflow Automations</p>
+          <p className="text-[#c0c0c0]">Sample Workflow Automations</p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
           {workflows.map((wf, i) => (
@@ -340,7 +340,7 @@ export default function AI() {
               <h3 className="font-display text-lg mb-5 text-[#d4af37]">{wf.title}</h3>
               <ol className="space-y-3">
                 {wf.steps.map((step, si) => (
-                  <li key={si} className="flex items-start gap-3 text-xs text-[#a0a0a0]">
+                  <li key={si} className="flex items-start gap-3 text-xs text-[#c0c0c0]">
                     <span className="w-5 h-5 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">{si + 1}</span>
                     {step}
                   </li>
@@ -356,7 +356,7 @@ export default function AI() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="font-display text-2xl mb-6">Deployment Options</h2>
-            <p className="text-[#a0a0a0] text-sm mb-8">Enterprise-grade deployment flexibility with seamless integration into your existing tech stack.</p>
+            <p className="text-[#c0c0c0] text-sm mb-8">Enterprise-grade deployment flexibility with seamless integration into your existing tech stack.</p>
             <div className="grid grid-cols-3 gap-4 mb-10">
               {[
                 { icon: <Cloud className="w-5 h-5" />, label: 'Cloud', desc: 'Fast rollout, scalable, cost-effective' },
@@ -366,11 +366,11 @@ export default function AI() {
                 <div key={i} className="p-4 bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg text-center">
                   <div className="text-[#d4af37] mb-2 flex justify-center">{d.icon}</div>
                   <div className="text-sm font-medium mb-1">{d.label}</div>
-                  <div className="text-[#666] text-xs">{d.desc}</div>
+                  <div className="text-[#aaa] text-xs">{d.desc}</div>
                 </div>
               ))}
             </div>
-            <h3 className="text-xs text-[#555] tracking-widest uppercase mb-4">Supported Integrations</h3>
+            <h3 className="text-xs text-[#999] tracking-widest uppercase mb-4">Supported Integrations</h3>
             <div className="flex flex-wrap gap-2">
               {integrations.map((integ, i) => (
                 <span key={i} className="px-3 py-1.5 bg-[#1a1a1a] border border-[#2e2e2e] rounded-md text-xs text-[#888]">{integ}</span>
@@ -386,7 +386,7 @@ export default function AI() {
                   <div className="text-[#d4af37] text-xs font-medium w-24 flex-shrink-0">{em.duration}</div>
                   <div>
                     <div className="text-sm font-medium mb-1">{em.phase}</div>
-                    <div className="text-[#666] text-xs">{em.desc}</div>
+                    <div className="text-[#aaa] text-xs">{em.desc}</div>
                   </div>
                 </div>
               ))}
@@ -394,7 +394,7 @@ export default function AI() {
             <h2 className="font-display text-xl mb-5">What You Actually Get</h2>
             <ul className="space-y-2">
               {deliverables.map((d, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-[#a0a0a0]">
+                <li key={i} className="flex items-start gap-2 text-sm text-[#c0c0c0]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37] flex-shrink-0 mt-2" /> {d}
                 </li>
               ))}
@@ -407,7 +407,7 @@ export default function AI() {
       <section className="py-20 px-4 md:px-8 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl mb-4">Ready to Build AI That Works?</h2>
-          <p className="text-[#a0a0a0] mb-8">Let's discuss your AI opportunity, from assessment to production in weeks, not months.</p>
+          <p className="text-[#c0c0c0] mb-8">Let's discuss your AI opportunity, from assessment to production in weeks, not months.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 font-medium">
               Request AI Consultation <ArrowRight className="w-4 h-4" />

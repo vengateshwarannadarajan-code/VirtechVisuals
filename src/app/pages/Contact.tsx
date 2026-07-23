@@ -19,15 +19,15 @@ export default function Contact() {
       {/* Quick contact strip */}
       <section className="border-y border-[#222] bg-[#111] py-4 px-4 md:px-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
-          <a href="mailto:business@virtechvisuals.com" className="flex items-center gap-2 text-[#a0a0a0] hover:text-[#d4af37] transition-colors">
+          <a href="mailto:business@virtechvisuals.com" className="flex items-center gap-2 text-[#c0c0c0] hover:text-[#d4af37] transition-colors">
             📧 business@virtechvisuals.com
           </a>
           <span className="hidden sm:block w-px h-4 bg-[#333]" />
-          <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#a0a0a0] hover:text-[#d4af37] transition-colors">
+          <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#c0c0c0] hover:text-[#d4af37] transition-colors">
             💬 +33 7 80 84 34 87
           </a>
           <span className="hidden sm:block w-px h-4 bg-[#333]" />
-          <span className="text-[#a0a0a0]">📍 Paris, France</span>
+          <span className="text-[#c0c0c0]">📍 Paris, France</span>
         </div>
       </section>
 

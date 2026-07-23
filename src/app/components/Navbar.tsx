@@ -40,7 +40,7 @@ export function Navbar() {
                 end={link.to === '/'}
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-sm transition-all duration-200 ${
-                    isActive ? 'text-[#d4af37] bg-white/5' : 'text-[#a0a0a0] hover:text-white hover:bg-white/5'
+                    isActive ? 'text-[#d4af37] bg-white/5' : 'text-[#c0c0c0] hover:text-white hover:bg-white/5'
                   }`
                 }
               >
@@ -58,7 +58,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
-            className="p-2 text-[#a0a0a0] hover:text-[#25D366] transition-colors"
+            className="p-2 text-[#c0c0c0] hover:text-[#25D366] transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
           </a>
@@ -98,7 +98,7 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
                     `block px-3 py-3 rounded-md text-sm transition-colors ${
-                      isActive ? 'text-[#d4af37] bg-white/5' : 'text-[#a0a0a0] hover:text-white'
+                      isActive ? 'text-[#d4af37] bg-white/5' : 'text-[#c0c0c0] hover:text-white'
                     }`
                   }
                 >
@@ -111,7 +111,7 @@ export function Navbar() {
                 href="https://wa.me/33780843487"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-[#a0a0a0] hover:text-white"
+                className="flex items-center gap-2 text-sm text-[#c0c0c0] hover:text-white"
               >
                 <MessageCircle className="w-4 h-4 text-[#25D366]" />
                 +33 7 80 84 34 87

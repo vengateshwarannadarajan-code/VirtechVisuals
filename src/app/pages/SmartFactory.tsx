@@ -82,7 +82,7 @@ export default function SmartFactory() {
           {metrics.map((m, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
               <div className="font-display text-3xl md:text-4xl text-[#d4af37] mb-1">{m.value}</div>
-              <div className="text-[#666] text-xs leading-snug">{t(m.labelKey)}</div>
+              <div className="text-[#aaa] text-xs leading-snug">{t(m.labelKey)}</div>
             </motion.div>
           ))}
         </div>
@@ -94,7 +94,7 @@ export default function SmartFactory() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('sf.shopfloor.tag')}</span>
             <h2 className="font-display text-3xl md:text-4xl mb-3">{t('sf.shopfloor.title')}</h2>
-            <p className="text-[#666] text-sm max-w-2xl">{t('sf.shopfloor.sub')}</p>
+            <p className="text-[#aaa] text-sm max-w-2xl">{t('sf.shopfloor.sub')}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -109,8 +109,8 @@ export default function SmartFactory() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-display text-sm mb-1.5 group-hover:text-[#d4af37] transition-colors leading-snug">{t(s.titleKey)}</h3>
-                    <p className="text-[#555] text-xs leading-relaxed mb-3">{t(s.descKey)}</p>
-                    <span className="inline-flex items-center gap-1 text-xs text-[#444] group-hover:text-[#d4af37] transition-colors">
+                    <p className="text-[#999] text-xs leading-relaxed mb-3">{t(s.descKey)}</p>
+                    <span className="inline-flex items-center gap-1 text-xs text-[#888] group-hover:text-[#d4af37] transition-colors">
                       Explore <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </div>
@@ -127,7 +127,7 @@ export default function SmartFactory() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('sf.enterprise.tag')}</span>
             <h2 className="font-display text-3xl md:text-4xl mb-3">{t('sf.enterprise.title')}</h2>
-            <p className="text-[#666] text-sm max-w-2xl">{t('sf.enterprise.sub')}</p>
+            <p className="text-[#aaa] text-sm max-w-2xl">{t('sf.enterprise.sub')}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -142,8 +142,8 @@ export default function SmartFactory() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-display text-sm mb-1.5 group-hover:text-[#d4af37] transition-colors leading-snug">{t(s.titleKey)}</h3>
-                    <p className="text-[#555] text-xs leading-relaxed mb-3">{t(s.descKey)}</p>
-                    <span className="inline-flex items-center gap-1 text-xs text-[#444] group-hover:text-[#d4af37] transition-colors">
+                    <p className="text-[#999] text-xs leading-relaxed mb-3">{t(s.descKey)}</p>
+                    <span className="inline-flex items-center gap-1 text-xs text-[#888] group-hover:text-[#d4af37] transition-colors">
                       Explore <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </div>
@@ -174,7 +174,7 @@ export default function SmartFactory() {
                   <span className="font-display text-sm text-white">{t(faq.qKey)}</span>
                   {openFaq === i
                     ? <Minus className="w-4 h-4 text-[#d4af37] flex-shrink-0" />
-                    : <Plus className="w-4 h-4 text-[#555] flex-shrink-0" />
+                    : <Plus className="w-4 h-4 text-[#999] flex-shrink-0" />
                   }
                 </button>
                 <AnimatePresence>
@@ -186,7 +186,7 @@ export default function SmartFactory() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <p className="px-5 pb-5 text-[#666] text-sm leading-relaxed bg-[#111]">{t(faq.aKey)}</p>
+                      <p className="px-5 pb-5 text-[#aaa] text-sm leading-relaxed bg-[#111]">{t(faq.aKey)}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -201,7 +201,7 @@ export default function SmartFactory() {
         <div className="max-w-3xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-display text-3xl md:text-4xl mb-4">{t('sf.cta.title')}</h2>
-            <p className="text-[#666] text-sm mb-8 max-w-xl mx-auto leading-relaxed">
+            <p className="text-[#aaa] text-sm mb-8 max-w-xl mx-auto leading-relaxed">
               Schedule a free assessment with our Industry 4.0 specialists. A pilot line deployment typically goes live in 4-8 weeks.
             </p>
             <Link

@@ -307,7 +307,7 @@ export default function Products() {
               className={`px-5 py-2 rounded-full text-sm border transition-all duration-200 ${
                 active === cat
                   ? 'bg-[#d4af37] text-[#1a1a1a] border-[#d4af37]'
-                  : 'border-[#333] text-[#a0a0a0] hover:border-[#d4af37]/50 hover:text-white'
+                  : 'border-[#333] text-[#c0c0c0] hover:border-[#d4af37]/50 hover:text-white'
               }`}
             >
               {cat}
@@ -345,11 +345,11 @@ export default function Products() {
                 <div className="p-6 flex flex-col flex-1">
                   <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-2">{product.category}</span>
                   <h3 className="font-display text-xl mb-1 group-hover:text-[#d4af37] transition-colors">{product.name}</h3>
-                  <p className="text-[#a0a0a0] text-sm mb-4">{product.tagline}</p>
+                  <p className="text-[#c0c0c0] text-sm mb-4">{product.tagline}</p>
                   <p className="text-[#888] text-sm leading-relaxed mb-6 flex-1">{product.desc}</p>
                   <ul className="space-y-2 mb-6">
                     {product.specs.map((s, si) => (
-                      <li key={si} className="flex items-center gap-2 text-xs text-[#a0a0a0]">
+                      <li key={si} className="flex items-center gap-2 text-xs text-[#c0c0c0]">
                         <span className="w-1 h-1 rounded-full bg-[#d4af37]" />
                         {s}
                       </li>
@@ -358,7 +358,7 @@ export default function Products() {
                   <div className={`w-full py-2.5 border rounded-lg text-sm flex items-center justify-center gap-2 transition-all duration-300 ${
                     product.slug
                       ? 'border-[#d4af37]/50 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#1a1a1a]'
-                      : 'border-[#333] text-[#555]'
+                      : 'border-[#333] text-[#999]'
                   }`}>
                     {product.slug ? (
                       <>Explore Product <ArrowRight className="w-3.5 h-3.5" /></>

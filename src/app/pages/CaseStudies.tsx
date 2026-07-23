@@ -39,7 +39,7 @@ export default function CaseStudies() {
           ].map((s, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="text-center">
               <div className="font-display text-3xl md:text-4xl text-[#d4af37] mb-1">{s.value}</div>
-              <div className="text-[#666] text-xs">{s.label}</div>
+              <div className="text-[#aaa] text-xs">{s.label}</div>
             </motion.div>
           ))}
         </div>
@@ -56,7 +56,7 @@ export default function CaseStudies() {
                 className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
                   active === ind
                     ? 'bg-[#d4af37] text-[#1a1a1a]'
-                    : 'border border-[#2a2a2a] text-[#666] hover:border-[#d4af37]/40 hover:text-[#d4af37]'
+                    : 'border border-[#2a2a2a] text-[#aaa] hover:border-[#d4af37]/40 hover:text-[#d4af37]'
                 }`}
               >
                 {ind}
@@ -74,7 +74,7 @@ export default function CaseStudies() {
       {/* Case study grid */}
       <section className="py-16 px-4 md:px-8 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-6 text-[#555] text-sm">
+          <div className="mb-6 text-[#999] text-sm">
             Showing {filtered.length} case {filtered.length === 1 ? 'study' : 'studies'}
             {active !== 'All' && ` in ${active}`}
           </div>
@@ -106,22 +106,22 @@ export default function CaseStudies() {
 
                   {/* Content */}
                   <div className="p-5 flex flex-col flex-1">
-                    <p className="text-[10px] text-[#555] tracking-widest uppercase mb-2">{cs.category}</p>
+                    <p className="text-[10px] text-[#999] tracking-widest uppercase mb-2">{cs.category}</p>
                     <h3 className="font-display text-base mb-1 group-hover:text-[#d4af37] transition-colors leading-snug">
                       {cs.title}
                     </h3>
-                    <p className="text-[#555] text-xs mb-3">{cs.client}</p>
+                    <p className="text-[#999] text-xs mb-3">{cs.client}</p>
 
                     {/* Duration + engineers */}
                     {(cs.duration || cs.engineers) && (
                       <div className="flex gap-3 mb-4">
                         {cs.duration && (
-                          <span className="text-[10px] text-[#444] border border-[#222] px-2 py-0.5 rounded">
+                          <span className="text-[10px] text-[#888] border border-[#222] px-2 py-0.5 rounded">
                             ⏱ {cs.duration}
                           </span>
                         )}
                         {cs.engineers && (
-                          <span className="text-[10px] text-[#444] border border-[#222] px-2 py-0.5 rounded">
+                          <span className="text-[10px] text-[#888] border border-[#222] px-2 py-0.5 rounded">
                             👥 {cs.engineers}
                           </span>
                         )}
@@ -138,7 +138,7 @@ export default function CaseStudies() {
                         {cs.results.slice(0, 2).map((r, j) => (
                           <div key={j} className="flex items-start gap-2">
                             <CheckCircle2 className="w-3 h-3 text-[#d4af37] flex-shrink-0 mt-0.5" />
-                            <span className="text-[#777] text-[11px] leading-snug">{r}</span>
+                            <span className="text-[#bbb] text-[11px] leading-snug">{r}</span>
                           </div>
                         ))}
                       </div>
@@ -148,14 +148,14 @@ export default function CaseStudies() {
                     {cs.technologies.length > 0 && (
                       <div className="flex flex-wrap gap-1.5 mb-4">
                         {cs.technologies.slice(0, 3).map((tech, j) => (
-                          <span key={j} className="text-[10px] text-[#444] border border-[#222] px-2 py-0.5 rounded">
+                          <span key={j} className="text-[10px] text-[#888] border border-[#222] px-2 py-0.5 rounded">
                             {tech}
                           </span>
                         ))}
                       </div>
                     )}
 
-                    <div className="mt-auto pt-3 border-t border-[#1e1e1e] flex items-center gap-1 text-xs text-[#555] group-hover:text-[#d4af37] transition-colors">
+                    <div className="mt-auto pt-3 border-t border-[#1e1e1e] flex items-center gap-1 text-xs text-[#999] group-hover:text-[#d4af37] transition-colors">
                       {t('cases.read')} <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </div>
                   </div>
@@ -171,7 +171,7 @@ export default function CaseStudies() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl mb-4">{t('cases.cta.title')}</h2>
-            <p className="text-[#666] text-sm max-w-xl mx-auto">{t('cases.cta.sub')}</p>
+            <p className="text-[#aaa] text-sm max-w-xl mx-auto">{t('cases.cta.sub')}</p>
           </motion.div>
           <ContactForm showSidebar={true} defaultService="Smart Factory Solutions" />
         </div>

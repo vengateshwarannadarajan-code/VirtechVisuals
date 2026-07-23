@@ -32,8 +32,8 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
         onClick={() => setOpen(!open)}
         className={`flex items-center gap-1.5 text-sm transition-colors hover:text-white ${
           compact
-            ? 'text-[#a0a0a0] px-2 py-1.5'
-            : 'text-[#a0a0a0] px-3 py-1.5 border border-[#2a2a2a] rounded-md hover:border-[#d4af37]/40'
+            ? 'text-[#c0c0c0] px-2 py-1.5'
+            : 'text-[#c0c0c0] px-3 py-1.5 border border-[#2a2a2a] rounded-md hover:border-[#d4af37]/40'
         }`}
         aria-label="Select language"
       >
@@ -51,7 +51,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
               className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors hover:bg-[#1e1e1e] ${
                 lang === l.code
                   ? 'text-[#d4af37] bg-[#d4af37]/5'
-                  : 'text-[#a0a0a0]'
+                  : 'text-[#c0c0c0]'
               }`}
             >
               <span className="text-base">{l.flag}</span>

@@ -151,7 +151,7 @@ export default function Technologies() {
       <section className="max-w-7xl mx-auto px-4 md:px-8 pb-20">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
           <h2 className="font-display text-3xl md:text-4xl mb-3">Enterprise Platforms & Integrations</h2>
-          <p className="text-[#a0a0a0]">ERP: SAP, Oracle / NetSuite, Microsoft Dynamics 365, Odoo, Salesforce</p>
+          <p className="text-[#c0c0c0]">ERP: SAP, Oracle / NetSuite, Microsoft Dynamics 365, Odoo, Salesforce</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {erpPlatforms.map((plat, i) => (
@@ -169,10 +169,10 @@ export default function Technologies() {
               </div>
               <div className="p-5">
                 <h3 className="font-display text-base mb-1">{plat.name}</h3>
-                <p className="text-[#777] text-xs leading-relaxed mb-4">{plat.label}</p>
+                <p className="text-[#bbb] text-xs leading-relaxed mb-4">{plat.label}</p>
                 <ul className="space-y-1 mb-4">
                   {plat.modules.map((m, mi) => (
-                    <li key={mi} className="text-xs text-[#666] flex items-center gap-1.5">
+                    <li key={mi} className="text-xs text-[#aaa] flex items-center gap-1.5">
                       <span className="w-1 h-1 rounded-full bg-[#d4af37]" /> {m}
                     </li>
                   ))}
@@ -194,7 +194,7 @@ export default function Technologies() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <h2 className="font-display text-3xl md:text-4xl mb-3">Complete Technology Ecosystem</h2>
-            <p className="text-[#a0a0a0]">Best-of-breed, open-standards technology at every layer, no vendor lock-in, no black boxes.</p>
+            <p className="text-[#c0c0c0]">Best-of-breed, open-standards technology at every layer, no vendor lock-in, no black boxes.</p>
           </motion.div>
           <div className="space-y-10">
             {stackLayers.map((layer, li) => (
@@ -209,7 +209,7 @@ export default function Technologies() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {layer.groups.map((group, gi) => (
                     <div key={gi} className="p-4 bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg">
-                      <div className="text-[#555] text-[10px] tracking-widest uppercase mb-3">{group.label}</div>
+                      <div className="text-[#999] text-[10px] tracking-widest uppercase mb-3">{group.label}</div>
                       <div className="flex flex-wrap gap-1.5">
                         {group.items.map((item, ii) => (
                           <span
@@ -233,7 +233,7 @@ export default function Technologies() {
       <section className="py-20 px-4 md:px-8 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl mb-4">Need Help Choosing the Right Stack?</h2>
-          <p className="text-[#a0a0a0] mb-8">Our architects will recommend the ideal technology mix for your use case, budget, and scale.</p>
+          <p className="text-[#c0c0c0] mb-8">Our architects will recommend the ideal technology mix for your use case, budget, and scale.</p>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 font-medium"

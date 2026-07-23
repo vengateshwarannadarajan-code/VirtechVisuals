@@ -123,7 +123,7 @@ function Services() {
               {service.icon}
             </div>
             <h3 className="font-display text-2xl mb-4">{service.title}</h3>
-            <ul className="space-y-3 text-[#a0a0a0]">
+            <ul className="space-y-3 text-[#c0c0c0]">
               {service.items.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
@@ -242,7 +242,7 @@ function WhyChooseUs() {
               className="bg-[#1a1a1a] px-8 py-10 text-center"
             >
               <div className="font-display text-4xl md:text-5xl text-[#d4af37] mb-2">{stat.number}</div>
-              <div className="text-[#666] text-sm tracking-wide">{stat.label}</div>
+              <div className="text-[#aaa] text-sm tracking-wide">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -263,7 +263,7 @@ function WhyChooseUs() {
               </div>
               <div>
                 <h3 className="font-display text-base mb-2 group-hover:text-[#d4af37] transition-colors">{t(benefit.titleKey)}</h3>
-                <p className="text-[#666] text-sm leading-relaxed">{t(benefit.descKey)}</p>
+                <p className="text-[#aaa] text-sm leading-relaxed">{t(benefit.descKey)}</p>
               </div>
             </motion.div>
           ))}
@@ -324,7 +324,7 @@ function ShootPackages() {
         >
           <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">Photography & Content Shoots</span>
           <h2 className="font-display text-5xl">Shoot Packages</h2>
-          <p className="text-[#666] text-sm mt-3 max-w-xl">One-time and recurring content shoot packages. Ideal for brands that need fresh photography and reels.</p>
+          <p className="text-[#aaa] text-sm mt-3 max-w-xl">One-time and recurring content shoot packages. Ideal for brands that need fresh photography and reels.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
@@ -520,7 +520,7 @@ function Contact() {
         >
           <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('cs.contact')}</span>
           <h2 className="font-display text-5xl md:text-6xl">{t('contact.title')}</h2>
-          <p className="text-[#a0a0a0] mt-4 max-w-xl mx-auto">{t('contact.sub')}</p>
+          <p className="text-[#c0c0c0] mt-4 max-w-xl mx-auto">{t('contact.sub')}</p>
         </motion.div>
         <ContactForm
           defaultService="Creative Studio — Photography"

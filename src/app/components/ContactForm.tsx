@@ -138,18 +138,18 @@ export function ContactForm({
                     {item.icon}
                   </div>
                   <div>
-                    <div className="text-[10px] text-[#555] tracking-widest uppercase mb-1">{item.label}</div>
+                    <div className="text-[10px] text-[#999] tracking-widest uppercase mb-1">{item.label}</div>
                     <div className="text-sm text-white group-hover:text-[#d4af37] transition-colors">{item.value}</div>
-                    {item.sub && <div className="text-xs text-[#555] mt-0.5">{item.sub}</div>}
+                    {item.sub && <div className="text-xs text-[#999] mt-0.5">{item.sub}</div>}
                   </div>
                 </a>
               ) : (
                 <div className={`flex items-start gap-4 p-5 ${cardBg} border border-[#2a2a2a] rounded-xl`}>
                   <div className="p-2.5 bg-[#d4af37]/10 rounded-lg flex-shrink-0">{item.icon}</div>
                   <div>
-                    <div className="text-[10px] text-[#555] tracking-widest uppercase mb-1">{item.label}</div>
+                    <div className="text-[10px] text-[#999] tracking-widest uppercase mb-1">{item.label}</div>
                     <div className="text-sm text-white">{item.value}</div>
-                    {item.sub && <div className="text-xs text-[#555] mt-0.5">{item.sub}</div>}
+                    {item.sub && <div className="text-xs text-[#999] mt-0.5">{item.sub}</div>}
                   </div>
                 </div>
               )}
@@ -183,7 +183,7 @@ export function ContactForm({
               <CheckCircle2 className="w-7 h-7 text-[#d4af37]" />
             </div>
             <h3 className="font-display text-2xl mb-3">{t('contact.sent.title')}</h3>
-            <p className="text-[#666] text-sm max-w-sm mb-6">{t('contact.sent.sub')}</p>
+            <p className="text-[#aaa] text-sm max-w-sm mb-6">{t('contact.sent.sub')}</p>
             <a
               href="https://wa.me/33780843487"
               target="_blank"
@@ -201,7 +201,7 @@ export function ContactForm({
             {/* Name + Email */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label htmlFor="vv-name" className="block text-xs text-[#555] tracking-widest uppercase mb-2">
+                <label htmlFor="vv-name" className="block text-xs text-[#999] tracking-widest uppercase mb-2">
                   {t('contact.name')} *
                 </label>
                 <input
@@ -215,7 +215,7 @@ export function ContactForm({
                 />
               </div>
               <div>
-                <label htmlFor="vv-email" className="block text-xs text-[#555] tracking-widest uppercase mb-2">
+                <label htmlFor="vv-email" className="block text-xs text-[#999] tracking-widest uppercase mb-2">
                   {t('contact.email')} *
                 </label>
                 <input
@@ -232,7 +232,7 @@ export function ContactForm({
 
             {/* Company */}
             <div>
-              <label htmlFor="vv-company" className="block text-xs text-[#555] tracking-widest uppercase mb-2">
+              <label htmlFor="vv-company" className="block text-xs text-[#999] tracking-widest uppercase mb-2">
                 {t('contact.company')}
               </label>
               <input
@@ -247,7 +247,7 @@ export function ContactForm({
 
             {/* Service */}
             <div>
-              <label htmlFor="vv-service" className="block text-xs text-[#555] tracking-widest uppercase mb-2">
+              <label htmlFor="vv-service" className="block text-xs text-[#999] tracking-widest uppercase mb-2">
                 {t('contact.interest')} *
               </label>
               <select
@@ -266,7 +266,7 @@ export function ContactForm({
 
             {/* Message */}
             <div>
-              <label htmlFor="vv-message" className="block text-xs text-[#555] tracking-widest uppercase mb-2">
+              <label htmlFor="vv-message" className="block text-xs text-[#999] tracking-widest uppercase mb-2">
                 {t('contact.message')} *
               </label>
               <textarea
@@ -293,7 +293,7 @@ export function ContactForm({
               }
             </button>
 
-            <p className="text-[#444] text-xs text-center">
+            <p className="text-[#888] text-xs text-center">
               {t('contact.response')}{' '}
               <a href="mailto:business@virtechvisuals.com" className="text-[#d4af37] hover:underline">
                 business@virtechvisuals.com

@@ -97,7 +97,7 @@ export default function Home() {
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.8 }} className="font-display text-6xl md:text-8xl mb-6 leading-tight">
             Virtech Visuals
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="text-lg md:text-xl text-[#a0a0a0] mb-12 max-w-2xl mx-auto leading-relaxed">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="text-lg md:text-xl text-[#c0c0c0] mb-12 max-w-2xl mx-auto leading-relaxed">
             {t('home.sub')}
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -109,16 +109,16 @@ export default function Home() {
             </Link>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="flex items-center justify-center gap-6 text-sm">
-            <a href="https://wa.me/33780843487" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[#a0a0a0] hover:text-[#d4af37] transition-colors">
+            <a href="https://wa.me/33780843487" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[#c0c0c0] hover:text-[#d4af37] transition-colors">
               <MessageCircle className="w-4 h-4" /> WhatsApp
             </a>
-            <a href="mailto:business@virtechvisuals.com" className="flex items-center gap-1.5 text-[#a0a0a0] hover:text-[#d4af37] transition-colors">
+            <a href="mailto:business@virtechvisuals.com" className="flex items-center gap-1.5 text-[#c0c0c0] hover:text-[#d4af37] transition-colors">
               <Mail className="w-4 h-4" /> Email Us
             </a>
           </motion.div>
         </div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-xs text-[#666] tracking-widest uppercase">Scroll</span>
+          <span className="text-xs text-[#aaa] tracking-widest uppercase">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-[#d4af37]/60 to-transparent" />
         </motion.div>
       </section>
@@ -129,7 +129,7 @@ export default function Home() {
           {statsData.map((s, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
               <div className="font-display text-4xl md:text-5xl text-[#d4af37] mb-2">{s.value}</div>
-              <div className="text-[#a0a0a0] text-sm">{t(s.key)}</div>
+              <div className="text-[#c0c0c0] text-sm">{t(s.key)}</div>
             </motion.div>
           ))}
         </div>
@@ -151,7 +151,7 @@ export default function Home() {
             <div className="bg-[#222] p-10 md:p-14 flex flex-col justify-center h-full">
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-4">{t(h.tagKey)}</span>
               <h3 className="font-display text-4xl mb-5">{t(h.titleKey)}</h3>
-              <p className="text-[#a0a0a0] leading-relaxed mb-8">{t(h.descKey)}</p>
+              <p className="text-[#c0c0c0] leading-relaxed mb-8">{t(h.descKey)}</p>
               <Link to={h.to} className="inline-flex items-center gap-2 text-[#d4af37] hover:text-white transition-colors group/link">
                 {t(h.ctaKey)} <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
               </Link>
@@ -167,7 +167,7 @@ export default function Home() {
             <div>
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('home.sf.tag')}</span>
               <h2 className="font-display text-4xl md:text-5xl">{t('home.sf.title')}</h2>
-              <p className="text-[#a0a0a0] mt-4 max-w-2xl text-sm leading-relaxed">{t('home.sf.sub')}</p>
+              <p className="text-[#c0c0c0] mt-4 max-w-2xl text-sm leading-relaxed">{t('home.sf.sub')}</p>
             </div>
             <Link to="/smart-factory" className="inline-flex items-center gap-2 text-sm text-[#d4af37] border border-[#d4af37]/30 px-5 py-2.5 rounded-lg hover:bg-[#d4af37]/10 transition-colors whitespace-nowrap flex-shrink-0">
               {t('home.sf.cta')} <ArrowRight className="w-4 h-4" />
@@ -180,9 +180,9 @@ export default function Home() {
                   <div className="p-2.5 bg-[#d4af37]/10 rounded-lg w-fit group-hover:bg-[#d4af37]/20 transition-colors">{s.icon}</div>
                   <div>
                     <h3 className="font-display text-base mb-2 group-hover:text-[#d4af37] transition-colors">{t(s.titleKey)}</h3>
-                    <p className="text-[#777] text-xs leading-relaxed">{t(s.descKey)}</p>
+                    <p className="text-[#bbb] text-xs leading-relaxed">{t(s.descKey)}</p>
                   </div>
-                  <div className="mt-auto flex items-center gap-1 text-xs text-[#555] group-hover:text-[#d4af37] transition-colors">
+                  <div className="mt-auto flex items-center gap-1 text-xs text-[#999] group-hover:text-[#d4af37] transition-colors">
                     {t('common.explore')} <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                   </div>
                 </Link>
@@ -199,7 +199,7 @@ export default function Home() {
             <div>
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('home.svc.tag')}</span>
               <h2 className="font-display text-4xl md:text-5xl">{t('home.svc.title')}</h2>
-              <p className="text-[#a0a0a0] mt-4 max-w-2xl text-sm leading-relaxed">{t('home.svc.sub')}</p>
+              <p className="text-[#c0c0c0] mt-4 max-w-2xl text-sm leading-relaxed">{t('home.svc.sub')}</p>
             </div>
             <Link to="/services" className="inline-flex items-center gap-2 text-sm text-[#d4af37] border border-[#d4af37]/30 px-5 py-2.5 rounded-lg hover:bg-[#d4af37]/10 transition-colors whitespace-nowrap flex-shrink-0">
               {t('home.svc.cta')} <ArrowRight className="w-4 h-4" />
@@ -212,8 +212,8 @@ export default function Home() {
                   <div className="p-2.5 bg-[#d4af37]/10 rounded-lg flex-shrink-0 group-hover:bg-[#d4af37]/20 transition-colors">{s.icon}</div>
                   <div>
                     <h3 className="font-display text-base mb-2 group-hover:text-[#d4af37] transition-colors">{t(s.titleKey)}</h3>
-                    <p className="text-[#777] text-xs leading-relaxed">{t(s.descKey)}</p>
-                    <div className="mt-3 flex items-center gap-1 text-xs text-[#555] group-hover:text-[#d4af37] transition-colors">
+                    <p className="text-[#bbb] text-xs leading-relaxed">{t(s.descKey)}</p>
+                    <div className="mt-3 flex items-center gap-1 text-xs text-[#999] group-hover:text-[#d4af37] transition-colors">
                       {t('svc.explore')} <ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -231,7 +231,7 @@ export default function Home() {
             <div>
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">{t('home.prod.tag')}</span>
               <h2 className="font-display text-4xl md:text-5xl">{t('home.prod.title')}</h2>
-              <p className="text-[#a0a0a0] mt-4 max-w-2xl text-sm leading-relaxed">{t('home.prod.sub')}</p>
+              <p className="text-[#c0c0c0] mt-4 max-w-2xl text-sm leading-relaxed">{t('home.prod.sub')}</p>
             </div>
             <Link to="/products" className="inline-flex items-center gap-2 text-sm text-[#d4af37] border border-[#d4af37]/30 px-5 py-2.5 rounded-lg hover:bg-[#d4af37]/10 transition-colors whitespace-nowrap flex-shrink-0">
               {t('home.prod.cta')} <ArrowRight className="w-4 h-4" />
@@ -243,13 +243,13 @@ export default function Home() {
                 <Link to={p.to} className="group flex flex-col gap-5 p-7 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl hover:border-[#d4af37]/40 hover:bg-[#1e1e1e] transition-all duration-300 h-full">
                   <div className="flex items-center justify-between">
                     <div className="p-2.5 bg-[#d4af37]/10 rounded-lg group-hover:bg-[#d4af37]/20 transition-colors">{p.icon}</div>
-                    <span className="text-[10px] text-[#555] tracking-widest uppercase border border-[#2e2e2e] px-2.5 py-1 rounded-full group-hover:border-[#d4af37]/30 group-hover:text-[#d4af37]/70 transition-colors">{t(p.taglineKey)}</span>
+                    <span className="text-[10px] text-[#999] tracking-widest uppercase border border-[#2e2e2e] px-2.5 py-1 rounded-full group-hover:border-[#d4af37]/30 group-hover:text-[#d4af37]/70 transition-colors">{t(p.taglineKey)}</span>
                   </div>
                   <div>
                     <h3 className="font-display text-lg mb-2 group-hover:text-[#d4af37] transition-colors">{p.name}</h3>
-                    <p className="text-[#777] text-xs leading-relaxed">{t(p.descKey)}</p>
+                    <p className="text-[#bbb] text-xs leading-relaxed">{t(p.descKey)}</p>
                   </div>
-                  <div className="mt-auto flex items-center gap-1 text-xs text-[#555] group-hover:text-[#d4af37] transition-colors">
+                  <div className="mt-auto flex items-center gap-1 text-xs text-[#999] group-hover:text-[#d4af37] transition-colors">
                     {t('prod.explore')} <ArrowRight className="w-3 h-3" />
                   </div>
                 </Link>
@@ -273,7 +273,7 @@ export default function Home() {
                   <div className="p-2 bg-[#d4af37]/10 rounded-lg group-hover:bg-[#d4af37]/20 transition-colors flex-shrink-0">{item.icon}</div>
                   <h3 className="font-display text-base leading-snug">{t(item.labelKey)}</h3>
                 </div>
-                <p className="text-[#777] text-sm leading-relaxed">{t(item.bodyKey)}</p>
+                <p className="text-[#bbb] text-sm leading-relaxed">{t(item.bodyKey)}</p>
               </motion.div>
             ))}
           </div>
@@ -285,7 +285,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-display text-4xl md:text-5xl mb-6">{t('home.cta.title')}</h2>
-            <p className="text-[#a0a0a0] text-lg mb-10 max-w-2xl mx-auto">{t('home.cta.sub')}</p>
+            <p className="text-[#c0c0c0] text-lg mb-10 max-w-2xl mx-auto">{t('home.cta.sub')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#e5c24a] transition-colors flex items-center justify-center gap-2 font-medium">
                 {t('home.cta.btn')} <ArrowRight className="w-4 h-4" />

@@ -156,12 +156,12 @@ export default function TechPlatformDetail() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/80 via-[#1a1a1a]/60 to-[#1a1a1a]" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2 text-[#555] text-xs mb-6">
-            <Link to="/" className="hover:text-[#a0a0a0] transition-colors">Home</Link>
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2 text-[#999] text-xs mb-6">
+            <Link to="/" className="hover:text-[#c0c0c0] transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/technologies" className="hover:text-[#a0a0a0] transition-colors">Technologies</Link>
+            <Link to="/technologies" className="hover:text-[#c0c0c0] transition-colors">Technologies</Link>
             <span>/</span>
-            <span className="text-[#a0a0a0]">{platform.name}</span>
+            <span className="text-[#c0c0c0]">{platform.name}</span>
           </motion.div>
           <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="inline-block px-4 py-1.5 rounded-full border border-[#d4af37]/40 text-[#d4af37] text-xs tracking-widest uppercase mb-6">
             {platform.tagline}
@@ -169,7 +169,7 @@ export default function TechPlatformDetail() {
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="font-display text-5xl md:text-7xl mb-6 max-w-4xl">
             {platform.name}
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg text-[#a0a0a0] max-w-3xl leading-relaxed mb-8">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg text-[#c0c0c0] max-w-3xl leading-relaxed mb-8">
             {platform.subtitle}
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
@@ -198,7 +198,7 @@ export default function TechPlatformDetail() {
             >
               <div className="w-2 h-2 rounded-full bg-[#d4af37] mb-4" />
               <h3 className="font-medium mb-2 text-sm">{mod.title}</h3>
-              <p className="text-[#777] text-xs leading-relaxed">{mod.desc}</p>
+              <p className="text-[#bbb] text-xs leading-relaxed">{mod.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -211,7 +211,7 @@ export default function TechPlatformDetail() {
             <h2 className="font-display text-2xl mb-6">Our Capabilities</h2>
             <ul className="space-y-3">
               {platform.capabilities.map((cap, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm text-[#a0a0a0]">
+                <li key={i} className="flex items-center gap-3 text-sm text-[#c0c0c0]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37] flex-shrink-0" />
                   {cap}
                 </li>
@@ -235,7 +235,7 @@ export default function TechPlatformDetail() {
       <section className="py-20 px-4 md:px-8 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl mb-4">Ready to Transform with {platform.name.split(' ')[0]}?</h2>
-          <p className="text-[#a0a0a0] mb-8">Let's discuss how our {platform.name} expertise can accelerate your digital transformation journey.</p>
+          <p className="text-[#c0c0c0] mb-8">Let's discuss how our {platform.name} expertise can accelerate your digital transformation journey.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 font-medium">
               Contact Us <ArrowRight className="w-4 h-4" />

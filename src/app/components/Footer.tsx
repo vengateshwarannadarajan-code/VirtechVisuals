@@ -13,28 +13,28 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-10 mb-10 border-b border-[#1a1a1a]">
           <div>
             <img src="/logo.png" alt="Virtech Visuals" className="h-14 w-auto mb-2" />
-            <p className="text-[#444] text-xs tracking-wide">{t('footer.tagline')}</p>
+            <p className="text-[#888] text-xs tracking-wide">{t('footer.tagline')}</p>
           </div>
           <div className="flex flex-wrap gap-4 items-start">
             <div className="flex flex-col gap-1">
-              <span className="text-[10px] text-[#333] tracking-widest uppercase">{t('footer.industrial')}</span>
-              <span className="font-display text-base text-[#a0a0a0]">Digi Sailor</span>
-              <a href="mailto:business@virtechvisuals.com" className="text-[10px] text-[#444] hover:text-[#d4af37] transition-colors">
+              <span className="text-[10px] text-[#bbb] tracking-widest uppercase">{t('footer.industrial')}</span>
+              <span className="font-display text-base text-[#c0c0c0]">Digi Sailor</span>
+              <a href="mailto:business@virtechvisuals.com" className="text-[10px] text-[#888] hover:text-[#d4af37] transition-colors">
                 business@virtechvisuals.com
               </a>
             </div>
             <div className="w-px bg-[#1e1e1e] hidden md:block self-stretch" />
             <div className="flex flex-col gap-1">
-              <span className="text-[10px] text-[#333] tracking-widest uppercase">{t('footer.creative')}</span>
-              <span className="font-display text-base text-[#a0a0a0]">Creative Studio</span>
-              <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" className="text-[10px] text-[#444] hover:text-[#d4af37] transition-colors">
+              <span className="text-[10px] text-[#bbb] tracking-widest uppercase">{t('footer.creative')}</span>
+              <span className="font-display text-base text-[#c0c0c0]">Creative Studio</span>
+              <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" className="text-[10px] text-[#888] hover:text-[#d4af37] transition-colors">
                 +33 7 80 84 34 87
               </a>
             </div>
             <div className="w-px bg-[#1e1e1e] hidden md:block self-stretch" />
             {/* Language switcher in footer */}
             <div className="flex flex-col gap-1">
-              <span className="text-[10px] text-[#333] tracking-widest uppercase">Language</span>
+              <span className="text-[10px] text-[#bbb] tracking-widest uppercase">Language</span>
               <LanguageSwitcher />
             </div>
           </div>
@@ -43,7 +43,7 @@ export function Footer() {
         {/* Main grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-[40px] mb-14">
           <div className="col-span-2 md:col-span-1" style={{minWidth: 0}}>
-            <p className="text-[#555] text-xs leading-relaxed mb-5">{t('footer.desc')}</p>
+            <p className="text-[#999] text-xs leading-relaxed mb-5">{t('footer.desc')}</p>
           </div>
 
           <div>
@@ -58,7 +58,7 @@ export function Footer() {
                 { label: 'Digital Twin & Robotics', to: '/smart-factory/digital-twins-simulation' },
               ].map(item => (
                 <li key={item.label}>
-                  <Link to={item.to} className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors">{item.label}</Link>
+                  <Link to={item.to} className="text-[#888] text-xs hover:text-[#c0c0c0] transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -76,7 +76,7 @@ export function Footer() {
                 { label: 'Talent Solutions',        slug: 'talent-solutions' },
               ].map(item => (
                 <li key={item.label}>
-                  <Link to={`/services/${item.slug}`} className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors">{item.label}</Link>
+                  <Link to={`/services/${item.slug}`} className="text-[#888] text-xs hover:text-[#c0c0c0] transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -94,7 +94,7 @@ export function Footer() {
                 { label: 'PredictPulse',  slug: 'predictpulse' },
               ].map(item => (
                 <li key={item.label}>
-                  <Link to={`/products/${item.slug}`} className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors">{item.label}</Link>
+                  <Link to={`/products/${item.slug}`} className="text-[#888] text-xs hover:text-[#c0c0c0] transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -109,15 +109,15 @@ export function Footer() {
                 { label: 'Creative Studio', to: '/creative-studio' },
               ].map(item => (
                 <li key={item.label}>
-                  <Link to={item.to} className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors">{item.label}</Link>
+                  <Link to={item.to} className="text-[#888] text-xs hover:text-[#c0c0c0] transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
             <h4 className="text-xs text-[#d4af37] tracking-widest uppercase mb-3">{t('footer.touch')}</h4>
-            <a href="mailto:business@virtechvisuals.com" className="text-[#444] text-xs hover:text-[#a0a0a0] transition-colors block mb-1">
+            <a href="mailto:business@virtechvisuals.com" className="text-[#888] text-xs hover:text-[#c0c0c0] transition-colors block mb-1">
               business@virtechvisuals.com
             </a>
-            <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="text-[#444] text-xs hover:text-[#25D366] transition-colors block">
+            <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="text-[#888] text-xs hover:text-[#25D366] transition-colors block">
               +33 7 80 84 34 87
             </a>
           </div>
@@ -125,14 +125,14 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-[#161616] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[#2e2e2e] text-xs">{t('footer.copyright')}</p>
+          <p className="text-[#aaa] text-xs">{t('footer.copyright')}</p>
           <div className="flex gap-6">
             {[
               { key: 'footer.privacy', href: '#' },
               { key: 'footer.terms',   href: '#' },
               { key: 'footer.cookies', href: '#' },
             ].map(item => (
-              <a key={item.key} href={item.href} className="text-[#2e2e2e] text-xs hover:text-[#555] transition-colors">
+              <a key={item.key} href={item.href} className="text-[#aaa] text-xs hover:text-[#999] transition-colors">
                 {t(item.key)}
               </a>
             ))}

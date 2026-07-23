@@ -17,10 +17,10 @@ export default function ProductDetail() {
 
       {/* Breadcrumb */}
       <div className="border-b border-[#222] px-4 md:px-8 py-3">
-        <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs text-[#555]">
-          <Link to="/" className="hover:text-[#a0a0a0] transition-colors">Home</Link>
+        <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs text-[#999]">
+          <Link to="/" className="hover:text-[#c0c0c0] transition-colors">Home</Link>
           <span>›</span>
-          <Link to="/products" className="hover:text-[#a0a0a0] transition-colors">Products</Link>
+          <Link to="/products" className="hover:text-[#c0c0c0] transition-colors">Products</Link>
           <span>›</span>
           <span className="text-[#888]">{product.name}</span>
         </div>
@@ -47,7 +47,7 @@ export default function ProductDetail() {
                   )}
                 </div>
                 <h1 className="font-display text-4xl md:text-6xl mb-4 leading-tight">{product.name}</h1>
-                <p className="text-[#a0a0a0] text-base md:text-lg max-w-2xl leading-relaxed">{product.tagline}</p>
+                <p className="text-[#c0c0c0] text-base md:text-lg max-w-2xl leading-relaxed">{product.tagline}</p>
               </motion.div>
             </div>
           </div>
@@ -61,12 +61,12 @@ export default function ProductDetail() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col md:flex-row md:items-start md:justify-between gap-8"
           >
-            <p className="text-[#666] text-sm max-w-2xl leading-relaxed">{product.intro}</p>
+            <p className="text-[#aaa] text-sm max-w-2xl leading-relaxed">{product.intro}</p>
             <div className="flex flex-wrap gap-3 flex-shrink-0">
               <Link to="/contact" className="px-7 py-3.5 bg-[#d4af37] text-[#1a1a1a] rounded-lg font-display text-sm hover:bg-[#e5c24a] transition-colors">
                 Request a Demo
               </Link>
-              <Link to="/contact" className="px-7 py-3.5 border border-[#333] text-[#a0a0a0] rounded-lg text-sm hover:border-[#d4af37]/50 hover:text-white transition-colors">
+              <Link to="/contact" className="px-7 py-3.5 border border-[#333] text-[#c0c0c0] rounded-lg text-sm hover:border-[#d4af37]/50 hover:text-white transition-colors">
                 Talk to Sales
               </Link>
             </div>
@@ -105,7 +105,7 @@ export default function ProductDetail() {
                 </div>
                 <h3 className="font-display text-sm mb-2 group-hover:text-[#d4af37] transition-colors">{mod.name}</h3>
                 <AnimatePresence initial={false}>
-                  <p className="text-[#666] text-xs leading-relaxed">{mod.desc}</p>
+                  <p className="text-[#aaa] text-xs leading-relaxed">{mod.desc}</p>
                 </AnimatePresence>
               </motion.div>
             ))}
@@ -198,7 +198,7 @@ export default function ProductDetail() {
                 className="flex items-center gap-2 px-4 py-2.5 bg-[#111] border border-[#2a2a2a] rounded-lg"
               >
                 <Plug className="w-3.5 h-3.5 text-[#d4af37] flex-shrink-0" />
-                <span className="text-xs text-[#777]">{intg}</span>
+                <span className="text-xs text-[#bbb]">{intg}</span>
               </motion.div>
             ))}
           </div>
@@ -236,9 +236,9 @@ export default function ProductDetail() {
                   </div>
                   <div>
                     <div className="font-display text-sm group-hover:text-[#d4af37] transition-colors">{prod.name}</div>
-                    <div className="text-[10px] text-[#555] mt-0.5">{prod.tagline}</div>
+                    <div className="text-[10px] text-[#999] mt-0.5">{prod.tagline}</div>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-[#333] group-hover:text-[#d4af37] ml-auto transition-colors" />
+                  <ArrowRight className="w-4 h-4 text-[#bbb] group-hover:text-[#d4af37] ml-auto transition-colors" />
                 </Link>
               </motion.div>
             ))}
@@ -251,7 +251,7 @@ export default function ProductDetail() {
         <div className="max-w-3xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-display text-3xl md:text-4xl mb-4">Ready to deploy {product.name}?</h2>
-            <p className="text-[#666] text-sm mb-10">Let our team help you configure and deploy {product.name} for your organization.</p>
+            <p className="text-[#aaa] text-sm mb-10">Let our team help you configure and deploy {product.name} for your organization.</p>
             <Link to="/contact" className="inline-block px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg font-display hover:bg-[#e5c24a] transition-colors">
               Get Started
             </Link>
@@ -265,7 +265,7 @@ export default function ProductDetail() {
           {product.prev ? (
             <Link
               to={`/products/${product.prev}`}
-              className="group flex items-center gap-3 text-sm text-[#555] hover:text-[#d4af37] transition-colors"
+              className="group flex items-center gap-3 text-sm text-[#999] hover:text-[#d4af37] transition-colors"
             >
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
               <div>
@@ -277,14 +277,14 @@ export default function ProductDetail() {
             </Link>
           ) : <div />}
 
-          <Link to="/products" className="text-xs text-[#444] hover:text-[#888] transition-colors tracking-widest uppercase">
+          <Link to="/products" className="text-xs text-[#888] hover:text-[#888] transition-colors tracking-widest uppercase">
             All Products
           </Link>
 
           {product.next ? (
             <Link
               to={`/products/${product.next}`}
-              className="group flex items-center gap-3 text-sm text-[#555] hover:text-[#d4af37] transition-colors text-right"
+              className="group flex items-center gap-3 text-sm text-[#999] hover:text-[#d4af37] transition-colors text-right"
             >
               <div>
                 <div className="text-[10px] tracking-widest uppercase mb-0.5">Next</div>

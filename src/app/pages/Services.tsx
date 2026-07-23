@@ -131,10 +131,10 @@ export default function Services() {
               </div>
               <div className="p-6">
                 <h3 className="font-display text-lg mb-2">{t(s.titleKey)}</h3>
-                <p className="text-[#a0a0a0] text-sm leading-relaxed mb-4">{s.desc}</p>
+                <p className="text-[#c0c0c0] text-sm leading-relaxed mb-4">{s.desc}</p>
                 <ul className="space-y-1 mb-5">
                   {s.highlights.map((h, hi) => (
-                    <li key={hi} className="flex items-center gap-2 text-xs text-[#777]">
+                    <li key={hi} className="flex items-center gap-2 text-xs text-[#bbb]">
                       <span className="w-1 h-1 rounded-full bg-[#d4af37] flex-shrink-0" />
                       {h}
                     </li>
@@ -162,7 +162,7 @@ export default function Services() {
           >
             Need a Custom Solution?
           </motion.h2>
-          <p className="text-[#a0a0a0] mb-8">Let's discuss how our services can help you achieve your business goals.</p>
+          <p className="text-[#c0c0c0] mb-8">Let's discuss how our services can help you achieve your business goals.</p>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 font-medium"

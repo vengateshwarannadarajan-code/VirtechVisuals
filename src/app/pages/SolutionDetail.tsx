@@ -17,10 +17,10 @@ export default function SolutionDetail() {
 
       {/* Breadcrumb */}
       <div className="border-b border-[#222] px-4 md:px-8 py-3">
-        <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs text-[#555]">
-          <Link to="/" className="hover:text-[#a0a0a0] transition-colors">Home</Link>
+        <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs text-[#999]">
+          <Link to="/" className="hover:text-[#c0c0c0] transition-colors">Home</Link>
           <span>›</span>
-          <Link to="/smart-factory" className="hover:text-[#a0a0a0] transition-colors">Smart Factory Solutions</Link>
+          <Link to="/smart-factory" className="hover:text-[#c0c0c0] transition-colors">Smart Factory Solutions</Link>
           <span>›</span>
           <span className="text-[#888]">{solution.title}</span>
         </div>
@@ -42,7 +42,7 @@ export default function SolutionDetail() {
               <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
                 <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-4 block">Smart Factory Solution</span>
                 <h1 className="font-display text-4xl md:text-6xl mb-4 max-w-3xl leading-tight">{solution.title}</h1>
-                <p className="text-[#a0a0a0] text-base md:text-lg max-w-2xl leading-relaxed">{solution.tagline}</p>
+                <p className="text-[#c0c0c0] text-base md:text-lg max-w-2xl leading-relaxed">{solution.tagline}</p>
               </motion.div>
             </div>
           </div>
@@ -56,12 +56,12 @@ export default function SolutionDetail() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col md:flex-row md:items-start md:justify-between gap-8"
           >
-            <p className="text-[#666] text-sm max-w-2xl leading-relaxed">{solution.intro}</p>
+            <p className="text-[#aaa] text-sm max-w-2xl leading-relaxed">{solution.intro}</p>
             <div className="flex flex-wrap gap-3 flex-shrink-0">
               <Link to="/contact" className="px-7 py-3.5 bg-[#d4af37] text-[#1a1a1a] rounded-lg font-display text-sm hover:bg-[#e5c24a] transition-colors">
                 Request a Demo
               </Link>
-              <Link to="/contact" className="px-7 py-3.5 border border-[#333] text-[#a0a0a0] rounded-lg text-sm hover:border-[#d4af37]/50 hover:text-white transition-colors">
+              <Link to="/contact" className="px-7 py-3.5 border border-[#333] text-[#c0c0c0] rounded-lg text-sm hover:border-[#d4af37]/50 hover:text-white transition-colors">
                 Talk to Sales
               </Link>
             </div>
@@ -83,7 +83,7 @@ export default function SolutionDetail() {
               <h2 className="font-display text-2xl md:text-3xl">Why this matters</h2>
             </div>
             <div className="md:col-span-2">
-              <p className="text-[#777] leading-relaxed">{solution.problem}</p>
+              <p className="text-[#bbb] leading-relaxed">{solution.problem}</p>
             </div>
           </motion.div>
         </div>
@@ -116,7 +116,7 @@ export default function SolutionDetail() {
                   <span className="text-xs font-display text-[#d4af37]">{String(i + 1).padStart(2, '0')}</span>
                 </div>
                 <h3 className="font-display text-sm mb-2 group-hover:text-[#d4af37] transition-colors">{mod.name}</h3>
-                <p className="text-[#666] text-xs leading-relaxed">{mod.desc}</p>
+                <p className="text-[#aaa] text-xs leading-relaxed">{mod.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -185,7 +185,7 @@ export default function SolutionDetail() {
                   <span className="flex-shrink-0 p-1.5 rounded-full border border-[#2e2e2e] group-hover:border-[#d4af37]/40 transition-colors">
                     {openFaq === i
                       ? <Minus className="w-3.5 h-3.5 text-[#d4af37]" />
-                      : <Plus className="w-3.5 h-3.5 text-[#666]" />}
+                      : <Plus className="w-3.5 h-3.5 text-[#aaa]" />}
                   </span>
                 </button>
                 <AnimatePresence initial={false}>
@@ -198,7 +198,7 @@ export default function SolutionDetail() {
                       transition={{ duration: 0.22 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-[#777] text-sm leading-relaxed pb-5">{faq.a}</p>
+                      <p className="text-[#bbb] text-sm leading-relaxed pb-5">{faq.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -239,9 +239,9 @@ export default function SolutionDetail() {
                   </div>
                   <div>
                     <div className="font-display text-sm group-hover:text-[#d4af37] transition-colors">{prod.name}</div>
-                    <div className="text-[10px] text-[#555] mt-0.5">{prod.tagline}</div>
+                    <div className="text-[10px] text-[#999] mt-0.5">{prod.tagline}</div>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-[#333] group-hover:text-[#d4af37] ml-auto transition-colors" />
+                  <ArrowRight className="w-4 h-4 text-[#bbb] group-hover:text-[#d4af37] ml-auto transition-colors" />
                 </Link>
               </motion.div>
             ))}
@@ -275,7 +275,7 @@ export default function SolutionDetail() {
                   to="/case-studies"
                   className="group block p-5 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl hover:border-[#d4af37]/40 transition-all duration-300"
                 >
-                  <span className="text-[10px] text-[#555] tracking-widest uppercase border border-[#2a2a2a] px-2.5 py-1 rounded-full inline-block mb-3 group-hover:border-[#d4af37]/30 group-hover:text-[#888] transition-colors">
+                  <span className="text-[10px] text-[#999] tracking-widest uppercase border border-[#2a2a2a] px-2.5 py-1 rounded-full inline-block mb-3 group-hover:border-[#d4af37]/30 group-hover:text-[#888] transition-colors">
                     {cs.industry}
                   </span>
                   <p className="font-display text-sm leading-snug group-hover:text-[#d4af37] transition-colors">{cs.title}</p>
@@ -295,7 +295,7 @@ export default function SolutionDetail() {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-3xl md:text-4xl mb-4">Ready to implement {solution.title}?</h2>
-            <p className="text-[#666] text-sm mb-10">Let our team help you design and deploy the right solution for your shopfloor.</p>
+            <p className="text-[#aaa] text-sm mb-10">Let our team help you design and deploy the right solution for your shopfloor.</p>
             <Link to="/contact" className="inline-block px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg font-display hover:bg-[#e5c24a] transition-colors">
               Request a Demo
             </Link>
@@ -309,7 +309,7 @@ export default function SolutionDetail() {
           {solution.prev ? (
             <Link
               to={`/smart-factory/${solution.prev}`}
-              className="group flex items-center gap-3 text-sm text-[#555] hover:text-[#d4af37] transition-colors"
+              className="group flex items-center gap-3 text-sm text-[#999] hover:text-[#d4af37] transition-colors"
             >
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
               <div>
@@ -321,14 +321,14 @@ export default function SolutionDetail() {
             </Link>
           ) : <div />}
 
-          <Link to="/smart-factory" className="text-xs text-[#444] hover:text-[#888] transition-colors tracking-widest uppercase">
+          <Link to="/smart-factory" className="text-xs text-[#888] hover:text-[#888] transition-colors tracking-widest uppercase">
             All Solutions
           </Link>
 
           {solution.next ? (
             <Link
               to={`/smart-factory/${solution.next}`}
-              className="group flex items-center gap-3 text-sm text-[#555] hover:text-[#d4af37] transition-colors text-right"
+              className="group flex items-center gap-3 text-sm text-[#999] hover:text-[#d4af37] transition-colors text-right"
             >
               <div>
                 <div className="text-[10px] tracking-widest uppercase mb-0.5">Next</div>

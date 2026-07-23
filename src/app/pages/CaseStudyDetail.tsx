@@ -58,25 +58,25 @@ export default function CaseStudyDetail() {
         <section className="border-b border-[#2a2a2a] bg-[#111] py-5 px-4 md:px-8">
           <div className="max-w-7xl mx-auto flex flex-wrap gap-8">
             {cs.duration && (
-              <div className="flex items-center gap-2 text-sm text-[#a0a0a0]">
+              <div className="flex items-center gap-2 text-sm text-[#c0c0c0]">
                 <Clock className="w-4 h-4 text-[#d4af37]" />
-                <span className="text-[#555] text-xs uppercase tracking-widest mr-1">Duration</span>
+                <span className="text-[#999] text-xs uppercase tracking-widest mr-1">Duration</span>
                 {cs.duration}
               </div>
             )}
             {cs.engineers && (
-              <div className="flex items-center gap-2 text-sm text-[#a0a0a0]">
+              <div className="flex items-center gap-2 text-sm text-[#c0c0c0]">
                 <Users className="w-4 h-4 text-[#d4af37]" />
-                <span className="text-[#555] text-xs uppercase tracking-widest mr-1">Team</span>
+                <span className="text-[#999] text-xs uppercase tracking-widest mr-1">Team</span>
                 {cs.engineers}
               </div>
             )}
             {cs.technologies.length > 0 && (
               <div className="flex items-center gap-2 flex-wrap">
                 <Wrench className="w-4 h-4 text-[#d4af37]" />
-                <span className="text-[#555] text-xs uppercase tracking-widest mr-1">Tech</span>
+                <span className="text-[#999] text-xs uppercase tracking-widest mr-1">Tech</span>
                 {cs.technologies.map(t => (
-                  <span key={t} className="px-2 py-0.5 bg-[#1a1a1a] border border-[#2a2a2a] rounded text-xs text-[#666]">{t}</span>
+                  <span key={t} className="px-2 py-0.5 bg-[#1a1a1a] border border-[#2a2a2a] rounded text-xs text-[#aaa]">{t}</span>
                 ))}
               </div>
             )}
@@ -95,7 +95,7 @@ export default function CaseStudyDetail() {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <span className="text-xs text-[#d4af37] tracking-widest uppercase mb-3 block">The Challenge</span>
               <h2 className="font-display text-2xl mb-4">Why This Mattered</h2>
-              <p className="text-[#a0a0a0] leading-relaxed">{cs.challenge}</p>
+              <p className="text-[#c0c0c0] leading-relaxed">{cs.challenge}</p>
             </motion.div>
 
             {/* Key Results */}
@@ -133,26 +133,26 @@ export default function CaseStudyDetail() {
               <h3 className="font-display text-base mb-4 text-[#d4af37]">Project Overview</h3>
               <dl className="space-y-3">
                 <div>
-                  <dt className="text-[10px] text-[#555] tracking-widest uppercase mb-0.5">Client</dt>
+                  <dt className="text-[10px] text-[#999] tracking-widest uppercase mb-0.5">Client</dt>
                   <dd className="text-sm text-white">{cs.client}</dd>
                 </div>
                 <div>
-                  <dt className="text-[10px] text-[#555] tracking-widest uppercase mb-0.5">Industry</dt>
+                  <dt className="text-[10px] text-[#999] tracking-widest uppercase mb-0.5">Industry</dt>
                   <dd className="text-sm text-white">{cs.industry}</dd>
                 </div>
                 <div>
-                  <dt className="text-[10px] text-[#555] tracking-widest uppercase mb-0.5">Category</dt>
+                  <dt className="text-[10px] text-[#999] tracking-widest uppercase mb-0.5">Category</dt>
                   <dd className="text-sm text-white">{cs.category}</dd>
                 </div>
                 {cs.duration && (
                   <div>
-                    <dt className="text-[10px] text-[#555] tracking-widest uppercase mb-0.5">Duration</dt>
+                    <dt className="text-[10px] text-[#999] tracking-widest uppercase mb-0.5">Duration</dt>
                     <dd className="text-sm text-white">{cs.duration}</dd>
                   </div>
                 )}
                 {cs.engineers && (
                   <div>
-                    <dt className="text-[10px] text-[#555] tracking-widest uppercase mb-0.5">Team Size</dt>
+                    <dt className="text-[10px] text-[#999] tracking-widest uppercase mb-0.5">Team Size</dt>
                     <dd className="text-sm text-white">{cs.engineers}</dd>
                   </div>
                 )}
@@ -165,7 +165,7 @@ export default function CaseStudyDetail() {
                 <h3 className="font-display text-base mb-4 text-[#d4af37]">Technologies Used</h3>
                 <div className="flex flex-wrap gap-2">
                   {cs.technologies.map(tech => (
-                    <span key={tech} className="px-3 py-1.5 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg text-xs text-[#a0a0a0]">
+                    <span key={tech} className="px-3 py-1.5 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg text-xs text-[#c0c0c0]">
                       {tech}
                     </span>
                   ))}
@@ -176,7 +176,7 @@ export default function CaseStudyDetail() {
             {/* CTA */}
             <div className="p-6 bg-[#d4af37]/5 border border-[#d4af37]/20 rounded-xl">
               <h3 className="font-display text-base mb-2">Want Similar Results?</h3>
-              <p className="text-[#666] text-xs mb-4 leading-relaxed">Let us discuss how we can transform your operations.</p>
+              <p className="text-[#aaa] text-xs mb-4 leading-relaxed">Let us discuss how we can transform your operations.</p>
               <Link
                 to="/contact"
                 className="flex items-center justify-center gap-2 w-full py-3 bg-[#d4af37] text-[#1a1a1a] rounded-lg text-sm font-medium hover:bg-[#e5c24a] transition-colors"
@@ -207,7 +207,7 @@ export default function CaseStudyDetail() {
                       <img src={rc.image} alt={rc.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-4">
-                      <p className="text-[10px] text-[#555] uppercase tracking-widest mb-1">{rc.category}</p>
+                      <p className="text-[10px] text-[#999] uppercase tracking-widest mb-1">{rc.category}</p>
                       <h3 className="font-display text-sm group-hover:text-[#d4af37] transition-colors leading-snug">{rc.title}</h3>
                     </div>
                   </motion.div>
@@ -223,7 +223,7 @@ export default function CaseStudyDetail() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl mb-3">Ready to Transform Your Operations?</h2>
-            <p className="text-[#666] text-sm max-w-xl mx-auto">Tell us about your challenge and we will get back to you within 24 hours.</p>
+            <p className="text-[#aaa] text-sm max-w-xl mx-auto">Tell us about your challenge and we will get back to you within 24 hours.</p>
           </div>
           <ContactForm showSidebar={true} />
         </div>

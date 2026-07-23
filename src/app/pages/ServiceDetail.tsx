@@ -631,17 +631,17 @@ export default function ServiceDetail() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/80 via-[#1a1a1a]/60 to-[#1a1a1a]" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2 text-[#555] text-xs mb-6">
-            <Link to="/" className="hover:text-[#a0a0a0] transition-colors">Home</Link>
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2 text-[#999] text-xs mb-6">
+            <Link to="/" className="hover:text-[#c0c0c0] transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/services" className="hover:text-[#a0a0a0] transition-colors">Services</Link>
+            <Link to="/services" className="hover:text-[#c0c0c0] transition-colors">Services</Link>
             <span>/</span>
-            <span className="text-[#a0a0a0]">{service.title}</span>
+            <span className="text-[#c0c0c0]">{service.title}</span>
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="font-display text-5xl md:text-7xl mb-6 max-w-4xl">
             {service.title}
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-[#a0a0a0] max-w-3xl leading-relaxed mb-8">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-[#c0c0c0] max-w-3xl leading-relaxed mb-8">
             {service.subtitle}
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-col sm:flex-row gap-4">
@@ -658,18 +658,18 @@ export default function ServiceDetail() {
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="font-display text-3xl mb-5 text-[#d4af37]">The Challenge</h2>
-            <p className="text-[#a0a0a0] leading-relaxed">{service.challenge}</p>
+            <p className="text-[#c0c0c0] leading-relaxed">{service.challenge}</p>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="font-display text-3xl mb-5">Delivery Framework</h2>
-            <p className="text-[#a0a0a0] text-sm mb-6">A structured engagement model ensuring quality, transparency, and measurable outcomes.</p>
+            <p className="text-[#c0c0c0] text-sm mb-6">A structured engagement model ensuring quality, transparency, and measurable outcomes.</p>
             <div className="space-y-4">
               {service.frameworkSteps.map((step, i) => (
                 <div key={i} className="flex gap-4">
                   <span className="font-display text-sm text-[#d4af37] flex-shrink-0 mt-0.5">0{i + 1}</span>
                   <div>
                     <div className="text-sm font-medium mb-1">{step.title}</div>
-                    <div className="text-xs text-[#777] leading-relaxed">{step.desc}</div>
+                    <div className="text-xs text-[#bbb] leading-relaxed">{step.desc}</div>
                   </div>
                 </div>
               ))}
@@ -683,7 +683,7 @@ export default function ServiceDetail() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <h2 className="font-display text-3xl md:text-4xl mb-3">What We Offer</h2>
-            <p className="text-[#a0a0a0]">Our Sub-Services</p>
+            <p className="text-[#c0c0c0]">Our Sub-Services</p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.subServices.map((sub, i) => (
@@ -697,7 +697,7 @@ export default function ServiceDetail() {
               >
                 <SubServiceIcon name={service.subServiceIcons?.[i]} />
                 <h3 className="font-medium mb-2 text-sm group-hover:text-[#d4af37] transition-colors">{sub.title}</h3>
-                <p className="text-[#777] text-xs leading-relaxed">{sub.desc}</p>
+                <p className="text-[#bbb] text-xs leading-relaxed">{sub.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -708,7 +708,7 @@ export default function ServiceDetail() {
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-20">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
           <h2 className="font-display text-3xl md:text-4xl mb-3">Real-World Impact</h2>
-          <p className="text-[#a0a0a0]">Industry Use Cases</p>
+          <p className="text-[#c0c0c0]">Industry Use Cases</p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {service.useCases.map((uc, i) => (
@@ -726,7 +726,7 @@ export default function ServiceDetail() {
                 </div>
                 <span className="text-[#d4af37] text-xs tracking-widest uppercase font-medium">{uc.industry}</span>
               </div>
-              <p className="text-[#a0a0a0] text-sm leading-relaxed">{uc.desc}</p>
+              <p className="text-[#c0c0c0] text-sm leading-relaxed">{uc.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -749,7 +749,7 @@ export default function ServiceDetail() {
             <h2 className="font-display text-2xl mb-6">Why Choose Us</h2>
             <ul className="space-y-3">
               {service.benefits.map((b, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm text-[#a0a0a0]">
+                <li key={i} className="flex items-center gap-3 text-sm text-[#c0c0c0]">
                   <CheckCircle2 className="w-4 h-4 text-[#d4af37] flex-shrink-0" />
                   {b}
                 </li>
@@ -814,7 +814,7 @@ export default function ServiceDetail() {
       <section className="py-20 px-4 md:px-8 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl mb-4">Ready to Get Started?</h2>
-          <p className="text-[#a0a0a0] mb-8">Let's discuss how our {service.title.toLowerCase()} can transform your business.</p>
+          <p className="text-[#c0c0c0] mb-8">Let's discuss how our {service.title.toLowerCase()} can transform your business.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#f5f5f5] transition-all duration-300 font-medium">
               Contact Us <ArrowRight className="w-4 h-4" />
