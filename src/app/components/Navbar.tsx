@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router';
-import { Menu, X, Camera, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { useI18n } from '../i18n/context';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
@@ -27,9 +27,8 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
 
         {/* Logo */}
-        <NavLink to="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)}>
-          <Camera className="w-5 h-5 text-[#d4af37]" />
-          <span className="font-display text-lg tracking-wide">Virtech Visuals</span>
+        <NavLink to="/" className="flex items-center group" onClick={() => setOpen(false)}>
+          <img src="/logo.png" alt="Virtech Visuals" className="h-9 w-auto" />
         </NavLink>
 
         {/* Desktop nav */}

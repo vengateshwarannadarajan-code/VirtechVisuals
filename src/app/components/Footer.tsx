@@ -12,7 +12,7 @@ export function Footer() {
         {/* Top bar */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-10 mb-10 border-b border-[#1a1a1a]">
           <div>
-            <div className="font-display text-3xl text-[#d4af37] mb-1">Virtech Visuals</div>
+            <img src="/logo.png" alt="Virtech Visuals" className="h-14 w-auto mb-2" />
             <p className="text-[#444] text-xs tracking-wide">{t('footer.tagline')}</p>
           </div>
           <div className="flex flex-wrap gap-4 items-start">
