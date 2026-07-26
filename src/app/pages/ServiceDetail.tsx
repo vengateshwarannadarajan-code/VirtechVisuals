@@ -61,7 +61,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['Globe', 'Smartphone', 'Building2', 'Plug', 'LayoutTemplate', 'Wrench'],
     title: 'Custom Software Development',
     subtitle: 'We design and develop custom software applications that solve real business problems. From enterprise platforms to mobile apps and cloud-native solutions, our team delivers scalable, secure, and high-performance software tailored to your workflows and goals.',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Off-the-shelf software forces businesses to adapt their processes to rigid tools. Custom workflows, industry-specific logic, and integration requirements are ignored, leading to workarounds, data silos, and operational inefficiency.',
     frameworkSteps: [
       { title: 'Discovery & Architecture', desc: 'Requirements gathering, technical architecture design, and technology stack selection aligned to your business goals.' },
@@ -97,7 +97,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['BarChart3', 'CalendarClock', 'ShieldCheck', 'Warehouse', 'Navigation', 'Layers'],
     title: 'Industrial Automation & Smart Factory',
     subtitle: 'We help manufacturers transform their shopfloors with smart factory solutions, from production intelligence and quality digitization to warehouse automation and digital twins. Our solutions connect machines, people, and processes for real-time visibility and control.',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920',
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Disconnected shopfloor systems, manual data collection, and reactive operations lead to poor OEE, quality escapes, and costly downtime. Without digital integration, factories operate blind, unable to optimize what they cannot measure.',
     frameworkSteps: [
       { title: 'Shopfloor Assessment', desc: 'Current-state analysis, maturity assessment, and digital roadmap creation for smart factory transformation.' },
@@ -133,7 +133,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['ScanEye', 'TrendingUp', 'MessageSquareDot', 'AlertTriangle', 'Lightbulb', 'Puzzle'],
     title: 'Artificial Intelligence',
     subtitle: 'We build and deploy AI-powered solutions that transform how businesses operate. From computer vision and NLP to predictive analytics and generative AI, our team delivers production-ready AI that integrates with your existing systems and delivers measurable ROI.',
-    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1920',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1920&q=80&auto=format&fit=crop',
     challenge: 'AI proof-of-concepts that never reach production, models that degrade without monitoring, and implementations that do not integrate with existing workflows. Most AI initiatives fail to deliver the promised ROI because they lack engineering discipline.',
     frameworkSteps: [
       { title: 'AI Strategy & Assessment', desc: 'Use-case identification, feasibility analysis, data readiness assessment, and AI roadmap creation.' },
@@ -169,7 +169,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['Cpu', 'Server', 'Radio', 'MonitorSmartphone', 'Brain', 'Gauge'],
     title: 'IoT & Edge Computing',
     subtitle: 'We design and deploy IoT and edge computing solutions that connect your physical operations to digital systems. From PLC/SCADA data acquisition to edge AI deployment, we enable real-time monitoring, control, and intelligence at the source.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Machines and sensors generate massive amounts of data that never reaches decision-makers. Disconnected OT systems, proprietary protocols, and lack of edge processing create blind spots that prevent real-time response and predictive operations.',
     frameworkSteps: [
       { title: 'Connectivity Assessment', desc: 'OT landscape audit, protocol mapping, and connectivity architecture design for your facility.' },
@@ -205,7 +205,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['Cloud', 'MoveRight', 'GitMerge', 'Container', 'Activity', 'DollarSign'],
     title: 'Cloud & DevOps Services',
     subtitle: 'We help organizations design cloud-native architectures, migrate workloads, and implement DevOps practices that accelerate delivery while maintaining security and cost efficiency. Our certified engineers work across AWS, Azure, and GCP.',
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Unoptimized cloud spending, manual deployments, lack of observability, and security misconfigurations slow down development and expose infrastructure to risk. Without DevOps maturity, teams ship slower and break things more often.',
     frameworkSteps: [
       { title: 'Cloud Strategy', desc: 'Cloud readiness assessment, architecture design, provider selection, and migration planning.' },
@@ -241,7 +241,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['Workflow', 'Database', 'PieChart', 'ClipboardCheck', 'GitFork', 'LineChart'],
     title: 'Data Engineering & Analytics',
     subtitle: 'We build modern data platforms that unify, transform, and visualize your data. From ETL pipelines and data warehouses to BI dashboards and data governance, we help organizations make faster, smarter decisions backed by trusted data.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Data is scattered across silos, reports are manually created in spreadsheets, and there\'s no single source of truth. Poor data quality, missing governance, and lack of self-service analytics prevent organizations from becoming truly data-driven.',
     frameworkSteps: [
       { title: 'Data Strategy', desc: 'Data maturity assessment, architecture design, and roadmap for building a modern data platform.' },
@@ -277,7 +277,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['ShieldAlert', 'Search', 'Lock', 'Bell', 'GraduationCap', 'Map'],
     title: 'Cybersecurity',
     subtitle: 'We provide comprehensive cybersecurity services, from vulnerability assessments and penetration testing to managed security monitoring and global privacy compliance. Our security experts help organizations identify risks, strengthen defenses, and meet regulatory requirements across GDPR, DPDP, HIPAA, and more.',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Cyber threats are evolving faster than most organizations can respond. Undetected vulnerabilities, unpatched systems, lack of incident response plans, and non-compliance with data privacy regulations expose businesses to breaches, fines, and reputational damage.',
     frameworkSteps: [
       { title: 'Security Assessment', desc: 'Comprehensive vulnerability scanning, penetration testing, and risk assessment across your entire attack surface.' },
@@ -313,7 +313,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['Box', 'ScanLine', 'Scan', 'Compass', 'FileText', 'ClipboardCheck'],
     title: 'CAD CAM Services',
     subtitle: 'We deliver comprehensive CAD/CAM services that bridge design and manufacturing. From 3D modeling and CNC programming to simulation and toolpath optimization, our team leverages industry-leading software to reduce cycle times, minimize material waste, and accelerate your product-to-production pipeline.',
-    image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=1920',
+    image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Design-to-manufacturing handoff is plagued by errors, rework, and miscommunication. Manual CNC programming is time-consuming, toolpath inefficiencies increase cycle times, and legacy part documentation is incomplete or lost.',
     frameworkSteps: [
       { title: 'CAD Engineering', desc: 'Parametric modeling, surface modeling, and assembly design in SolidWorks, CATIA, NX, Creo, and AutoCAD.' },
@@ -349,7 +349,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['UserCheck', 'Users', 'Star', 'Receipt', 'Building', 'BarChart2'],
     title: 'Talent Solutions',
     subtitle: 'We provide comprehensive talent solutions spanning permanent recruitment, contract staffing, payroll outsourcing, HR compliance, and managed workforce services. From sourcing and screening to onboarding, payroll processing, and workforce analytics, we handle the entire employee lifecycle so you can focus on your business.',
-    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920',
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Hiring takes too long, candidate quality is inconsistent, payroll errors create compliance risks, and workforce scaling for projects is unpredictable. Without a strategic talent partner, companies miss deadlines, overspend on recruitment, face statutory penalties, and lose top candidates to faster-moving competitors.',
     frameworkSteps: [
       { title: 'Recruitment & Talent Acquisition', desc: 'Full-cycle recruitment from JD creation, multi-channel sourcing, screening, and assessments to offer management and onboarding.' },
@@ -385,7 +385,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['Code2', 'Presentation', 'Factory', 'FlaskConical', 'ShieldX', 'Trophy'],
     title: 'Training',
     subtitle: 'We design and deliver corporate training programs that bridge skill gaps and accelerate professional development. From technology bootcamps to leadership workshops, our training solutions are customized to your industry, roles, and organizational goals.',
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920',
+    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Generic training programs do not address industry-specific skill gaps, certifications expire without tracking, and there is no measurement of training effectiveness, making L&D budgets hard to justify and skill development unpredictable.',
     frameworkSteps: [
       { title: 'Training Needs Analysis', desc: 'Skills gap assessment, competency mapping, and prioritized training plan development.' },
@@ -421,7 +421,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['SearchCode', 'Share2', 'BookOpen', 'Megaphone', 'Palette', 'MousePointerClick'],
     title: 'Digital Marketing',
     subtitle: 'We help businesses build brand visibility, generate qualified leads, and drive revenue through strategic digital marketing. Our full-service approach covers everything from SEO and content to paid media and social engagement, all backed by analytics and performance tracking.',
-    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1920',
+    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Marketing budgets are wasted on channels that do not convert, content is created without strategy, and there is no connection between marketing spend and revenue. Without data-driven optimization, growth stalls and competitors capture market share.',
     frameworkSteps: [
       { title: 'SEO & Technical Audit', desc: 'Site crawl analysis, keyword research, technical fixes, content optimization, and link building strategies.' },
@@ -457,7 +457,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['LifeBuoy', 'CloudCog', 'Eye', 'PackageCheck', 'Timer', 'RefreshCw'],
     title: 'Managed Services & Support',
     subtitle: 'We provide end-to-end managed services and support, from application maintenance and cloud operations to incident handling and continuous improvement. Our dedicated support teams ensure your systems are always available, secure, and optimized.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Post-go-live systems degrade without proactive monitoring, patches pile up, incidents take too long to resolve, and there is no structured improvement plan. Without managed services, operational risk grows and system health deteriorates over time.',
     frameworkSteps: [
       { title: 'Service Desk Setup', desc: 'Ticketing system configuration, SLA definition, escalation matrix, and team onboarding.' },
@@ -493,7 +493,7 @@ const servicesData: Record<string, ServiceData> = {
     subServiceIcons: ['Glasses', 'HandHelping', 'Boxes', 'MapPin', 'MonitorPlay', 'Radar'],
     title: 'VR/AR & Spatial Intelligence',
     subtitle: 'We design and develop VR, AR, and mixed reality solutions that transform how teams visualize, interact, and collaborate. From immersive training and remote assistance to spatial digital twins and indoor intelligence, our XR practice bridges the physical and digital worlds.',
-    image: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=1920',
+    image: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=1920&q=80&auto=format&fit=crop',
     challenge: 'Traditional 2D screens cannot communicate spatial complexity, such as factory layouts, equipment assemblies, hazardous procedures, or facility operations. Teams waste time interpreting flat drawings, travel for on-site inspections, and struggle with training that does not translate to real-world performance.',
     frameworkSteps: [
       { title: 'XR Strategy & Assessment', desc: 'Use-case identification, hardware selection, platform evaluation, and immersive experience roadmap creation.' },
