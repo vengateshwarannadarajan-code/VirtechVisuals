@@ -90,9 +90,9 @@ export function ContactForm({
     {
       icon: <MessageCircle className="w-5 h-5 text-[#d4af37]" />,
       label: 'WhatsApp',
-      value: '+33 7 80 84 34 87',
+      value: '+33 7 51 06 43 87',
       sub: 'Mon-Sat, 9am to 7pm CET',
-      href: 'https://wa.me/33780843487',
+      href: 'https://wa.me/33751064387',
     },
     {
       icon: <MapPin className="w-5 h-5 text-[#d4af37]" />,
@@ -158,7 +158,7 @@ export function ContactForm({
 
           {/* WhatsApp CTA */}
           <a
-            href="https://wa.me/33780843487"
+            href="https://wa.me/33751064387"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
@@ -185,7 +185,7 @@ export function ContactForm({
             <h3 className="font-display text-2xl mb-3">{t('contact.sent.title')}</h3>
             <p className="text-[#aaa] text-sm max-w-sm mb-6">{t('contact.sent.sub')}</p>
             <a
-              href="https://wa.me/33780843487"
+              href="https://wa.me/33751064387"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-[#25D366]/10 border border-[#25D366]/30 rounded-lg text-[#25D366] text-sm hover:bg-[#25D366]/20 transition-colors"

@@ -54,7 +54,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-2">
           <LanguageSwitcher />
           <a
-            href="https://wa.me/33780843487"
+            href="https://wa.me/33751064387"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
@@ -108,13 +108,13 @@ export function Navbar() {
             ))}
             <li className="pt-3 border-t border-white/5 mt-2 flex items-center justify-between">
               <a
-                href="https://wa.me/33780843487"
+                href="https://wa.me/33751064387"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-[#c0c0c0] hover:text-white"
               >
                 <MessageCircle className="w-4 h-4 text-[#25D366]" />
-                +33 7 80 84 34 87
+                +33 7 51 06 43 87
               </a>
               <LanguageSwitcher compact />
             </li>

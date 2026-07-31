@@ -27,8 +27,8 @@ export function Footer() {
             <div className="flex flex-col gap-1">
               <span className="text-[10px] text-[#bbb] tracking-widest uppercase">{t('footer.creative')}</span>
               <span className="font-display text-base text-[#c0c0c0]">Creative Studio</span>
-              <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" className="text-[10px] text-[#888] hover:text-[#d4af37] transition-colors">
-                +33 7 80 84 34 87
+              <a href="https://wa.me/33751064387" target="_blank" rel="noopener noreferrer" className="text-[10px] text-[#888] hover:text-[#d4af37] transition-colors">
+                +33 7 51 06 43 87
               </a>
             </div>
             <div className="w-px bg-[#1e1e1e] hidden md:block self-stretch" />
@@ -117,8 +117,8 @@ export function Footer() {
             <a href="mailto:business@virtechvisuals.com" className="text-[#888] text-xs hover:text-[#c0c0c0] transition-colors block mb-1">
               business@virtechvisuals.com
             </a>
-            <a href="https://wa.me/33780843487" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="text-[#888] text-xs hover:text-[#25D366] transition-colors block">
-              +33 7 80 84 34 87
+            <a href="https://wa.me/33751064387" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="text-[#888] text-xs hover:text-[#25D366] transition-colors block">
+              +33 7 51 06 43 87
             </a>
           </div>
         </div>

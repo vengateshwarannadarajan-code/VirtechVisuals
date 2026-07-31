@@ -108,7 +108,7 @@ export default function Home() {
             </Link>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="flex items-center justify-center gap-[24px] text-sm mb-8">
-            <a href="https://wa.me/33780843487" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[#c0c0c0] hover:text-[#d4af37] transition-colors">
+            <a href="https://wa.me/33751064387" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[#c0c0c0] hover:text-[#d4af37] transition-colors">
               <MessageCircle className="w-4 h-4" /> WhatsApp
             </a>
             <a href="mailto:business@virtechvisuals.com" className="flex items-center gap-1.5 text-[#c0c0c0] hover:text-[#d4af37] transition-colors">
@@ -285,7 +285,7 @@ export default function Home() {
               <Link to="/contact" className="px-8 py-4 bg-[#d4af37] text-[#1a1a1a] rounded-lg hover:bg-[#e5c24a] transition-colors flex items-center justify-center gap-2 font-medium">
                 {t('home.cta.btn')} <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="https://wa.me/33780843487" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-[#25D366]/40 text-[#25D366] rounded-lg hover:bg-[#25D366]/10 transition-colors flex items-center justify-center gap-2">
+              <a href="https://wa.me/33751064387" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-[#25D366]/40 text-[#25D366] rounded-lg hover:bg-[#25D366]/10 transition-colors flex items-center justify-center gap-2">
                 <MessageCircle className="w-4 h-4" /> {t('home.cta.wa')}
               </a>
             </div>
