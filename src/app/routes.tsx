@@ -1,4 +1,5 @@
 import { createBrowserRouter, Outlet } from 'react-router';
+import BusinessCard from './pages/BusinessCard';
 import { Navbar } from './components/Navbar';
 import { ScrollToTop } from './components/ScrollToTop';
 import { BackToTop } from './components/BackToTop';
@@ -29,6 +30,10 @@ function Root() {
 }
 
 export const router = createBrowserRouter([
+  {
+    path: '/profile/card/vengateshwaran',
+    Component: BusinessCard,
+  },
   {
     path: '/',
     Component: Root,
