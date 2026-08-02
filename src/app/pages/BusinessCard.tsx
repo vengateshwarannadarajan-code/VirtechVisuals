@@ -29,7 +29,7 @@ const links = [
   { icon: Phone,    label: 'Phone',           href: 'tel:+33751064387',                  display: '+33 7 51 06 43 87' },
   { icon: Globe,    label: 'Smart Factory',   href: 'https://virtechvisuals.com/smart-factory', display: 'virtechvisuals.com/smart-factory' },
   { icon: Building2,label: 'Creative Studio', href: 'https://virtechvisuals.com/creative-studio', display: 'virtechvisuals.com/creative-studio' },
-  { icon: ExternalLink, label: 'LinkedIn',    href: 'https://linkedin.com/in/venkatwar', display: '/in/venkatwar' },
+  { icon: Building2,    label: 'Digi Sailor', href: 'https://www.digisailor.com',        display: 'digisailor.com' },
 ];
 
 export default function BusinessCard() {
@@ -89,17 +89,9 @@ export default function BusinessCard() {
               </span>
             </div>
 
-            {/* Logo monogram */}
+            {/* Logo */}
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
-              <div style={{
-                width: 80, height: 80, borderRadius: '50%',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                border: '2px solid rgba(212,175,55,0.4)',
-                background: 'linear-gradient(135deg, #1A2A50 0%, #0F1526 100%)',
-                boxShadow: '0 0 0 4px rgba(212,175,55,0.06), 0 8px 24px rgba(0,0,0,0.4)',
-              }}>
-                <span style={{ fontSize: 24, fontWeight: 700, letterSpacing: 2, color: '#d4af37', fontFamily: "'Cinzel', serif" }}>VV</span>
-              </div>
+              <img src="/logo.png" alt="Virtech Visuals" style={{ height: 80, width: 80, objectFit: 'contain' }} />
             </div>
 
             {/* Name */}
