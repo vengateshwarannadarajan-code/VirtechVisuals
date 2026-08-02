@@ -90,10 +90,10 @@ export default function BusinessCard() {
             </div>
 
             {/* Logos */}
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 16, marginBottom: 20 }}>
-              <img src="/logo.png" alt="Virtech Visuals" style={{ height: 72, width: 72, objectFit: 'contain' }} />
-              <div style={{ width: 1, height: 50, background: 'rgba(212,175,55,0.3)' }} />
-              <img src="/digisailor-logo.png" alt="Digi Sailor" style={{ height: 40, width: 100, objectFit: 'contain' }} />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 24, marginBottom: 20 }}>
+              <img src="/logo.png" alt="Virtech Visuals" style={{ height: 64, objectFit: 'contain' }} />
+              <div style={{ width: 1, height: 44, background: 'rgba(212,175,55,0.3)' }} />
+              <img src="/digisailor-logo.png" alt="Digi Sailor" style={{ height: 44, objectFit: 'contain' }} />
             </div>
 
             {/* Name */}
