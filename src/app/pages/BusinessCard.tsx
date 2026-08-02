@@ -45,7 +45,7 @@ export default function BusinessCard() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: '#071528',
+      background: 'linear-gradient(135deg, #0D1B3E 0%, #0A1628 100%)',
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       padding: '40px 16px',
       fontFamily: "'DM Sans', sans-serif",
