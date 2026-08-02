@@ -76,19 +76,6 @@ export default function BusinessCard() {
           {/* Header */}
           <div style={{ padding: '40px 32px 32px', textAlign: 'center', position: 'relative' }}>
 
-            {/* Badge */}
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-              <span style={{
-                display: 'inline-flex', alignItems: 'center', gap: 6,
-                padding: '4px 12px', fontSize: 10, letterSpacing: '0.18em',
-                textTransform: 'uppercase', border: '1px solid rgba(212,175,55,0.3)',
-                color: '#d4af37', background: 'rgba(212,175,55,0.06)',
-                fontFamily: "'Geist Mono', monospace",
-              }}>
-                <CheckCircle size={9} strokeWidth={2.5} /> VIRTECH VISUALS
-              </span>
-            </div>
-
             {/* Logos */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 24, marginBottom: 20 }}>
               <img src="/logo.png" alt="Virtech Visuals" style={{ height: 64, objectFit: 'contain', mixBlendMode: 'screen' }} />
