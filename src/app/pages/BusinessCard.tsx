@@ -45,7 +45,7 @@ export default function BusinessCard() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: '#0A0D1A',
+      background: '#071528',
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       padding: '40px 16px',
       fontFamily: "'DM Sans', sans-serif",
@@ -66,7 +66,7 @@ export default function BusinessCard() {
           position: 'relative', borderRadius: 4,
           border: '1px solid rgba(212,175,55,0.2)',
           overflow: 'hidden',
-          background: 'linear-gradient(160deg, #0F1526 0%, #0A0D1A 60%, #0d1020 100%)',
+          background: 'linear-gradient(160deg, #0D1B3E 0%, #0A1628 60%, #071020 100%)',
           boxShadow: '0 0 0 1px rgba(212,175,55,0.06), 0 32px 80px rgba(0,0,0,0.6)',
         }}>
           {/* Corner accents */}
@@ -89,9 +89,11 @@ export default function BusinessCard() {
               </span>
             </div>
 
-            {/* Logo */}
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
-              <img src="/logo.png" alt="Virtech Visuals" style={{ height: 80, width: 80, objectFit: 'contain' }} />
+            {/* Logos */}
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 16, marginBottom: 20 }}>
+              <img src="/logo.png" alt="Virtech Visuals" style={{ height: 72, width: 72, objectFit: 'contain' }} />
+              <div style={{ width: 1, height: 50, background: 'rgba(212,175,55,0.3)' }} />
+              <img src="/digisailor-logo.png" alt="Digi Sailor" style={{ height: 40, width: 100, objectFit: 'contain' }} />
             </div>
 
             {/* Name */}
