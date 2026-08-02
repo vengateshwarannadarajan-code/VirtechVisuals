@@ -95,8 +95,8 @@ export default function BusinessCard() {
             </div>
 
             {/* Name */}
-            <h1 style={{ fontFamily: "'Cinzel', serif", fontSize: 24, letterSpacing: '0.06em', color: '#EDE8DC', fontWeight: 600, margin: '0 0 2px', lineHeight: 1.2 }}>
-              Vengateshwaran
+            <h1 style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.06em', color: '#EDE8DC', fontWeight: 600, margin: '0 0 2px', lineHeight: 1.2 }}>
+              <span style={{ fontSize: 26 }}>V</span><span style={{ fontSize: 18 }}>ENGATESHWARAN</span>
             </h1>
             <h1 style={{ fontFamily: "'Cinzel', serif", fontSize: 24, letterSpacing: '0.06em', color: '#d4af37', fontWeight: 700, margin: '0 0 12px', lineHeight: 1.2 }}>
               NADARAJAN
